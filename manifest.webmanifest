@@ -1,0 +1,16 @@
+{
+  "name": "Santo Rosario — En el Auto",
+  "short_name": "Rosario",
+  "description": "Guía de audio para rezar el Santo Rosario manejando · Lazos de Amor Mariano",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d1117",
+  "theme_color": "#0d1117",
+  "icons": [
+    { "src": "icono.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icono.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

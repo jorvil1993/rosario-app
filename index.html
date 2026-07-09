@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#0d1117">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icono.svg" type="image/svg+xml">
+<title>Santo Rosario — En el Auto</title>
+<style>
+  :root{
+    --bg:#0d1117; --card:#161b22; --card2:#1f2630; --border:#30363d;
+    --text:#e6edf3; --dim:#8b949e; --gold:#d4a843; --blue:#4d8edb;
+    --green:#3fb950; --red:#e5534b;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  body{margin:0; background:var(--bg); color:var(--text);
+    font-family:'Segoe UI',Roboto,system-ui,sans-serif; font-size:17px; line-height:1.45;}
+  .screen{display:none; max-width:560px; margin:0 auto; padding:18px 16px 40px;}
+  .screen.active{display:block;}
+  h1{font-size:1.35em; color:var(--gold); text-align:center; margin:.4em 0 .2em;}
+  h2{font-size:1.05em; color:var(--gold); margin:1.2em 0 .5em;}
+  .sub{text-align:center; color:var(--dim); font-size:.85em; margin:0 0 1.2em;}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+  button{font-family:inherit; border:none; cursor:pointer;}
+  .opt{background:var(--card); color:var(--text); border:2px solid var(--border);
+    border-radius:14px; padding:14px 10px; font-size:1em; text-align:center; width:100%;}
+  .opt.sel{border-color:var(--gold); background:#2a2210; color:var(--gold); font-weight:600;}
+  .opt.off{opacity:.38; pointer-events:none;}
+  .opt small{display:block; color:var(--dim); font-size:.75em; margin-top:2px;}
+  .opt.sel small{color:var(--gold);}
+  .tema{margin-bottom:8px; text-align:left; padding:12px 14px;}
+  .big{display:block; width:100%; border-radius:16px; padding:17px; font-size:1.15em;
+    font-weight:600; margin-top:12px;}
+  .b-gold{background:var(--gold); color:#1a1200;}
+  .b-blue{background:var(--blue); color:#fff;}
+  .b-dark{background:var(--card2); color:var(--text); border:1px solid var(--border);}
+  .b-red{background:var(--red); color:#fff;}
+  .big:disabled{opacity:.35;}
+  #p-status{text-align:center; color:var(--gold); font-size:.95em; min-height:1.4em; margin-top:8px;}
+  #p-text{background:var(--card); border:1px solid var(--border); border-radius:18px;
+    padding:24px 18px; margin:14px 0; min-height:170px; display:flex; align-items:center;
+    justify-content:center; text-align:center; font-size:1.3em; line-height:1.5;}
+  #p-count{font-size:3.4em; font-weight:700; text-align:center; color:var(--blue);
+    min-height:1.2em; line-height:1.2;}
+  #p-countlabel{text-align:center; color:var(--dim); min-height:1.4em; font-size:.95em;}
+  .p-controls{display:flex; gap:10px; margin-top:16px;}
+  .p-controls button{flex:1; border-radius:14px; padding:16px 6px; font-size:1.05em; font-weight:600;}
+  .mini{background:var(--card2); color:var(--text); border:1px solid var(--border);}
+  .alt-med{color:var(--dim); font-style:italic; margin:.4em 0 1em; font-size:.95em;}
+  .jac{background:var(--card); border-left:4px solid var(--gold); border-radius:0 12px 12px 0;
+    padding:13px 14px; margin-bottom:10px; font-size:1.12em;}
+  .jac b{color:var(--gold); margin-right:6px;}
+  .cfg-row{display:flex; align-items:center; justify-content:space-between; gap:8px;
+    background:var(--card); border:1px solid var(--border); border-radius:12px;
+    padding:10px 12px; margin-bottom:8px;}
+  .cfg-row label{flex:1; font-size:.95em;}
+  .stepper{display:flex; align-items:center; gap:2px;}
+  .stepper button{width:42px; height:42px; border-radius:10px; background:var(--card2);
+    color:var(--gold); font-size:1.4em; border:1px solid var(--border);}
+  .stepper span{min-width:58px; text-align:center; font-weight:700; font-size:1.05em;}
+  .note{color:var(--dim); font-size:.85em; margin:6px 2px;}
+  .fin{text-align:center; font-size:1.15em; padding:30px 10px; color:var(--gold);}
+  #dl-banner{background:#25200e; border:1px solid var(--gold); border-radius:12px;
+    padding:12px 14px; margin-top:14px; font-size:.9em; display:none;}
+  #dl-barra-fondo{background:var(--card2); border-radius:8px; height:14px; margin-top:8px; overflow:hidden; display:none;}
+  #dl-barra{background:var(--gold); height:100%; width:0%;}
+  #dl-estado{color:var(--dim); font-size:.85em; margin-top:6px;}
+  #cargando{text-align:center; padding:60px 20px; color:var(--dim);}
+</style>
+</head>
+<body>
+
+<div id="cargando">✝️<br><br>Cargando el rosario…</div>
+
+<!-- ============ PANTALLA: INICIO ============ -->
+<div class="screen" id="scr-home">
+  <h1>✝️ Santo Rosario</h1>
+  <p class="sub">Guía para rezar en el auto · Lazos de Amor Mariano</p>
+
+  <h2>1 · Misterios</h2>
+  <div class="grid2" id="home-sets"></div>
+
+  <h2>2 · Tema de las jaculatorias</h2>
+  <div id="home-temas"></div>
+
+  <button class="big b-gold" id="btn-rezar">▶ &nbsp;Rezar con audio</button>
+  <button class="big b-blue" id="btn-altar">📖 &nbsp;Modo altar (solo lectura)</button>
+  <button class="big b-dark" id="btn-config">⚙️ &nbsp;Ajustes</button>
+  <button class="big b-dark" id="btn-instalar" style="display:none">📲 &nbsp;Instalar en el teléfono</button>
+
+  <div id="dl-banner">
+    ⬇️ Para usar la app sin internet (y sin cortes en el carro), descarga todo el
+    audio una sola vez, de preferencia con WiFi.
+    <button class="big b-gold" id="dl-btn" style="margin-top:10px">⬇ Descargar todo el audio</button>
+    <div id="dl-barra-fondo"><div id="dl-barra"></div></div>
+    <div id="dl-estado"></div>
+  </div>
+</div>
+
+<!-- ============ PANTALLA: REZO CON AUDIO ============ -->
+<div class="screen" id="scr-player">
+  <div id="p-status"></div>
+  <div id="p-text"></div>
+  <div id="p-count"></div>
+  <div id="p-countlabel"></div>
+  <div class="p-controls">
+    <button class="mini" id="p-prev">⏮</button>
+    <button class="b-gold" id="p-pause" style="flex:2">⏸ Pausar</button>
+    <button class="mini" id="p-next">⏭</button>
+  </div>
+  <button class="big b-red" id="p-exit">✖ &nbsp;Terminar</button>
+  <p class="note">Puedes bloquear la pantalla: el audio sigue. Pausa y continúa
+  desde la pantalla de bloqueo o los botones del volante.</p>
+</div>
+
+<!-- ============ PANTALLA: MODO ALTAR ============ -->
+<div class="screen" id="scr-altar">
+  <h1 id="alt-title"></h1>
+  <p class="sub" id="alt-tema"></p>
+  <div id="alt-body"></div>
+  <div class="p-controls">
+    <button class="mini" id="alt-prev">⏮ Anterior</button>
+    <button class="mini" id="alt-next">Siguiente ⏭</button>
+  </div>
+  <button class="big b-dark" id="alt-exit">← Volver al inicio</button>
+</div>
+
+<!-- ============ PANTALLA: AJUSTES ============ -->
+<div class="screen" id="scr-config">
+  <h1>⚙️ Ajustes</h1>
+  <p class="sub">Los silencios se configuran una sola vez, en segundos.</p>
+
+  <h2>Voz</h2>
+  <p class="note" id="cfg-voz-info"></p>
+  <div class="cfg-row">
+    <label>Velocidad de reproducción</label>
+    <div class="stepper">
+      <button data-k="rate" data-d="-1">−</button><span id="v-rate"></span><button data-k="rate" data-d="1">＋</button>
+    </div>
+  </div>
+  <button class="big b-blue" id="cfg-test">🔊 Probar voz</button>
+
+  <h2>Silencios — oraciones iniciales</h2>
+  <div id="cfg-ini"></div>
+  <h2>Silencios — cuerpo del rosario</h2>
+  <div id="cfg-cuerpo"></div>
+  <h2>Silencios — después del Gloria</h2>
+  <div id="cfg-fin"></div>
+
+  <h2>Audio sin internet</h2>
+  <p class="note" id="cfg-dl-estado">Comprobando descarga…</p>
+
+  <button class="big b-dark" id="cfg-reset">↺ Restaurar valores originales</button>
+  <button class="big b-gold" id="cfg-ok">✔ Guardar y volver</button>
+</div>
+
+<script>
+"use strict";
+/* ================================================================
+   App PWA — reproduce clips MP3 de voz neuronal + clips de silencio.
+   El contenido llega de contenido.json; el mapa texto→clip, de
+   manifiesto.json. NO usa el TTS del navegador.
+   ================================================================ */
+const ORDINAL = ["Primer","Segundo","Tercer","Cuarto","Quinto"];
+const PIES_INI = [
+  {k:"senal",      cue:"Por la señal…",              label:"Señal de la Cruz"},
+  {k:"contricion", cue:"Señor mío Jesucristo…",      label:"Acto de contrición"},
+  {k:"credo",      cue:"Creo en Dios…",              label:"Credo"},
+  {k:"intenciones",cue:"Ofrecemos este rosario por:",label:"Intenciones"},
+  {k:"fatima",     cue:"Dios mío, yo creo…",         label:"Oraciones de Fátima"},
+  {k:"espiritu",   cue:"Ven, Espíritu Santo…",       label:"Invocación al Espíritu Santo"}
+];
+const PIES_GLORIA = [
+  {k:"gloria",      cue:"Gloria…",                  label:"Gloria"},
+  {k:"mariamadre",  cue:"María es Madre de gracia…",label:"María es Madre de gracia"},
+  {k:"seaamado",    cue:"Sea amado y adorado…",     label:"Sea amado y adorado"},
+  {k:"ohjesus",     cue:"Oh Jesús mío…",            label:"Oh Jesús mío"},
+  {k:"rosariomaria",cue:"El Rosario de María…",     label:"El Rosario de María"},
+  {k:"divina",      cue:"Ven, Divina Voluntad…",    label:"Ven, Divina Voluntad"}
+];
+const SIL_BASE = [60,30,10,5,2,1];   // clips de silencio disponibles para componer
+
+const CFG_DEF = { senal:8, contricion:50, credo:45, intenciones:45, fatima:60,
+  espiritu:25, padrenuestro:30, avemaria:19, gloria:10, mariamadre:10,
+  seaamado:8, ohjesus:14, rosariomaria:9, divina:10, rate:1.0 };
+let cfg = Object.assign({}, CFG_DEF, JSON.parse(localStorage.getItem("rosarioCfg")||"{}"));
+function saveCfg(){ localStorage.setItem("rosarioCfg", JSON.stringify(cfg)); }
+
+const $ = id => document.getElementById(id);
+function show(id){ document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active")); $(id).classList.add("active"); window.scrollTo(0,0); }
+
+/* ================== DATOS ================== */
+let SETS=null, TEMAS=null, CONTENIDO=null, MANIFIESTO=null, PRECACHE=null, VOZINFO="";
+async function cargarDatos(){
+  const [c, m, p] = await Promise.all([
+    fetch("contenido.json").then(r=>r.json()),
+    fetch("manifiesto.json").then(r=>r.json()),
+    fetch("precache.json").then(r=>r.json()).catch(()=>null)
+  ]);
+  SETS = c.sets; TEMAS = c.temas; CONTENIDO = c.contenido;
+  MANIFIESTO = m; PRECACHE = p;
+  VOZINFO = (p && p.voz) ? p.voz : "voz del paquete";
+}
+
+/* ================== INICIO ================== */
+let sel = { set:null, tema:null };
+function setDelDia(){
+  const d = new Date().getDay();
+  for(const id in SETS) if(SETS[id].dias.includes(d)) return id;
+  return "gloriosos";
+}
+function pintarHome(){
+  const cont = $("home-sets"); cont.innerHTML = "";
+  const hoy = setDelDia();
+  for(const id in SETS){
+    const b = document.createElement("button");
+    b.className = "opt" + (sel.set===id ? " sel":"");
+    b.innerHTML = SETS[id].nombre.replace("Misterios ","") +
+      (id===hoy ? "<small>📅 hoy</small>" : "<small>&nbsp;</small>");
+    b.onclick = ()=>{ sel.set=id; pintarHome(); };
+    cont.appendChild(b);
+  }
+  const ct = $("home-temas"); ct.innerHTML = "";
+  for(const tid in TEMAS){
+    const hay = !!(sel.set && CONTENIDO[sel.set] && CONTENIDO[sel.set][tid]);
+    const b = document.createElement("button");
+    b.className = "opt tema" + (sel.tema===tid ? " sel":"") + (sel.set && !hay ? " off":"");
+    b.innerHTML = TEMAS[tid] + (sel.set && !hay ? " <small>· próximamente</small>":"");
+    b.onclick = ()=>{ sel.tema=tid; pintarHome(); };
+    ct.appendChild(b);
+  }
+  const listo = sel.set && sel.tema && CONTENIDO[sel.set] && CONTENIDO[sel.set][sel.tema];
+  $("btn-rezar").disabled = !listo;
+  $("btn-altar").disabled = !listo;
+  localStorage.setItem("rosarioSel", JSON.stringify(sel));
+}
+
+/* ================== CLIPS Y COLAS ================== */
+function clipDeTexto(t){
+  const f = MANIFIESTO[t];
+  if(!f){ console.warn("Sin clip para:", t); return null; }
+  return "clips/" + f;
+}
+function cadenaSilencio(seg){
+  const out = []; let r = Math.max(0, Math.round(seg));
+  for(const b of SIL_BASE){ while(r >= b){ out.push({src:`clips/sil-${b}.mp3`, sil:b}); r -= b; } }
+  return out;
+}
+function microSil(s){ return {src:`clips/sil-${s}.mp3`, sil:s}; }
+
+/* ================== GUION ================== */
+function armarGuion(setId, temaId){
+  const g = [];
+  const dec = CONTENIDO[setId][temaId];
+  const S = SETS[setId];
+  PIES_INI.forEach(p=> g.push({textos:[p.cue], micro:[], pausa:p.k, muestra:p.cue,
+    label:p.label, status:"Oraciones iniciales"}));
+  for(let m=0; m<5; m++){
+    const st = `${ORDINAL[m]} Misterio ${S.adj}`;
+    const anuncio = `${ORDINAL[m]} Misterio ${S.adj}: ${S.titulos[m]}.`;
+    g.push({textos:[anuncio, "SIL1.2", dec[m].med], fija:2,
+      muestra:`${anuncio} ${dec[m].med}`, label:"Meditación", status:st});
+    g.push({textos:["Padre Nuestro…"], pausa:"padrenuestro",
+      muestra:"Padre Nuestro…", label:"Padre Nuestro", status:st});
+    for(let j=0; j<10; j++){
+      g.push({textos:[dec[m].jacs[j], "SIL0.8", "Dios te salve."], pausa:"avemaria",
+        muestra:`${dec[m].jacs[j]}  →  Dios te salve…`,
+        label:`Ave María ${j+1} de 10`, status:st});
+    }
+    if(m<4) PIES_GLORIA.forEach(p=> g.push({textos:[p.cue], pausa:p.k, muestra:p.cue,
+      label:p.label, status:st}));
+  }
+  return g;
+}
+
+/* ================== MOTOR DE AUDIO ================== */
+const player = new Audio();
+player.preload = "auto";
+let guion=[], paso=0, estado="idle";     // idle | sonando | pausado | fin
+let cola=[], colaIdx=0;
+let silTotal=0, silHecho=0, uiTimer=null;
+
+function armarColaPaso(st){
+  const q = [];
+  st.textos.forEach(t=>{
+    if(t==="SIL1.2") q.push(microSil("1.2"));
+    else if(t==="SIL0.8") q.push(microSil("0.8"));
+    else { const c = clipDeTexto(t); if(c) q.push({src:c, sil:0}); }
+  });
+  const seg = st.pausa ? cfg[st.pausa] : (st.fija || 0);
+  cadenaSilencio(seg).forEach(x=> q.push(x));
+  return q;
+}
+
+function correrPaso(){
+  if(paso >= guion.length){ terminarRezo(); return; }
+  if(paso < 0) paso = 0;
+  const st = guion[paso];
+  cola = armarColaPaso(st); colaIdx = 0;
+  silTotal = cola.reduce((a,x)=> a + (x.sil && x.sil>=1 ? x.sil : 0), 0);
+  silHecho = 0;
+  pintarPaso(st);
+  setMediaSession(st);
+  estado = "sonando";
+  sonarClip();
+}
+function sonarClip(){
+  if(colaIdx >= cola.length){ paso++; correrPaso(); return; }
+  const item = cola[colaIdx];
+  player.src = item.src;
+  player.playbackRate = item.sil ? 1.0 : cfg.rate;
+  player.play().catch(e=>{
+    console.warn("play() falló", e);
+    pintarCuentaLabel("⚠ Toca ▶ para continuar");
+    estado = "pausado"; $("p-pause").textContent = "▶ Continuar";
+  });
+}
+player.addEventListener("ended", ()=>{
+  if(estado !== "sonando") return;
+  const item = cola[colaIdx];
+  if(item && item.sil && item.sil >= 1) silHecho += item.sil;
+  colaIdx++;
+  sonarClip();
+});
+player.addEventListener("error", ()=>{
+  if(estado !== "sonando") return;
+  console.warn("Error de clip, salto:", player.src);
+  colaIdx++; sonarClip();
+});
+
+/* ---- UI del paso ---- */
+function pintarPaso(st){
+  $("p-text").textContent = st.muestra;
+  $("p-status").textContent = `${st.status}  ·  ${st.label}`;
+  $("p-count").textContent = "";
+  $("p-countlabel").textContent = "";
+  if(uiTimer) clearInterval(uiTimer);
+  uiTimer = setInterval(pintarCuenta, 500);
+}
+function enSilencio(){
+  const item = cola[colaIdx];
+  return estado==="sonando" && item && item.sil && item.sil >= 1;
+}
+function pintarCuenta(){
+  if(document.visibilityState !== "visible") return;
+  const st = guion[paso];
+  if(!st){ return; }
+  if(enSilencio()){
+    const item = cola[colaIdx];
+    const rest = Math.max(0, silTotal - silHecho - (player.currentTime||0));
+    $("p-count").textContent = Math.ceil(rest);
+    $("p-countlabel").textContent = st.pausa ? "(rezas tú: " + st.label + ")" : "";
+  } else if(estado==="sonando"){
+    $("p-count").textContent = "";
+    $("p-countlabel").textContent = "";
+  }
+}
+function pintarCuentaLabel(t){ $("p-countlabel").textContent = t; }
+
+/* ---- Controles ---- */
+function pausar(){
+  if(estado!=="sonando") return;
+  estado = "pausado"; player.pause();
+  $("p-pause").textContent = "▶ Continuar";
+  pintarCuentaLabel("⏸ en pausa");
+  if("mediaSession" in navigator) navigator.mediaSession.playbackState = "paused";
+}
+function continuar(){
+  if(estado!=="pausado") return;
+  estado = "sonando";
+  $("p-pause").textContent = "⏸ Pausar";
+  player.play().catch(()=>{});
+  if("mediaSession" in navigator) navigator.mediaSession.playbackState = "playing";
+}
+function saltar(d){
+  player.pause();
+  paso = Math.max(0, paso + d);
+  $("p-pause").textContent = "⏸ Pausar";
+  correrPaso();
+}
+function terminarRezo(){
+  estado = "fin"; player.pause();
+  if(uiTimer){ clearInterval(uiTimer); uiTimer=null; }
+  $("p-status").textContent = "";
+  $("p-text").innerHTML = "<div class='fin'>🙏<br>Hasta aquí te acompaño.<br><br>Continúa tú solo: Gloria, jaculatorias<br>y oraciones finales.<br><br><b>Que la Virgen te bendiga.</b></div>";
+  $("p-count").textContent = ""; $("p-countlabel").textContent = "";
+}
+function salirRezo(){
+  estado = "idle"; player.pause(); player.removeAttribute("src");
+  if(uiTimer){ clearInterval(uiTimer); uiTimer=null; }
+  show("scr-home");
+}
+
+/* ---- Media Session (pantalla de bloqueo / volante) ---- */
+function setMediaSession(st){
+  if(!("mediaSession" in navigator)) return;
+  navigator.mediaSession.metadata = new MediaMetadata({
+    title: st.label, artist: st.status, album: "Santo Rosario",
+    artwork: [{src:"icono.svg", sizes:"any", type:"image/svg+xml"}]
+  });
+  navigator.mediaSession.playbackState = "playing";
+}
+if("mediaSession" in navigator){
+  navigator.mediaSession.setActionHandler("play", continuar);
+  navigator.mediaSession.setActionHandler("pause", pausar);
+  navigator.mediaSession.setActionHandler("previoustrack", ()=>saltar(-1));
+  navigator.mediaSession.setActionHandler("nexttrack", ()=>saltar(1));
+}
+
+$("btn-rezar").onclick = ()=>{
+  guion = armarGuion(sel.set, sel.tema); paso = 0;
+  show("scr-player");
+  $("p-pause").textContent = "⏸ Pausar";
+  correrPaso();
+};
+$("p-pause").onclick = ()=>{ estado==="pausado" ? continuar() : pausar(); };
+$("p-prev").onclick = ()=> saltar(-1);
+$("p-next").onclick = ()=> saltar(1);
+$("p-exit").onclick = salirRezo;
+
+/* ================== MODO ALTAR ================== */
+let altM = 0, wakeLock = null;
+async function pedirWakeLock(){
+  try{ if("wakeLock" in navigator) wakeLock = await navigator.wakeLock.request("screen"); }catch(e){}
+}
+function soltarWakeLock(){ try{ if(wakeLock){ wakeLock.release(); wakeLock=null; } }catch(e){} }
+document.addEventListener("visibilitychange", ()=>{
+  if(document.visibilityState==="visible" && $("scr-altar").classList.contains("active")) pedirWakeLock();
+});
+function pintarAltar(){
+  const S = SETS[sel.set], dec = CONTENIDO[sel.set][sel.tema];
+  $("alt-title").textContent = `${ORDINAL[altM]} Misterio ${S.adj}`;
+  $("alt-tema").textContent = `${S.titulos[altM]} · ${TEMAS[sel.tema]}`;
+  const b = $("alt-body"); b.innerHTML = "";
+  const med = document.createElement("p");
+  med.className = "alt-med"; med.textContent = dec[altM].med;
+  b.appendChild(med);
+  dec[altM].jacs.forEach((j,i)=>{
+    const d = document.createElement("div");
+    d.className = "jac"; d.innerHTML = `<b>${i+1}.</b>${j}`;
+    b.appendChild(d);
+  });
+  $("alt-prev").disabled = altM===0;
+  $("alt-next").disabled = altM===4;
+  window.scrollTo(0,0);
+}
+$("btn-altar").onclick = ()=>{ altM=0; show("scr-altar"); pedirWakeLock(); pintarAltar(); };
+$("alt-prev").onclick = ()=>{ if(altM>0){altM--; pintarAltar();} };
+$("alt-next").onclick = ()=>{ if(altM<4){altM++; pintarAltar();} };
+$("alt-exit").onclick = ()=>{ soltarWakeLock(); show("scr-home"); };
+
+/* ================== AJUSTES ================== */
+const CFG_CAMPOS = {
+  "cfg-ini": PIES_INI.map(p=>({k:p.k, label:p.label})),
+  "cfg-cuerpo": [{k:"padrenuestro",label:"Padre Nuestro (todos)"},{k:"avemaria",label:"Ave María (todas)"}],
+  "cfg-fin": PIES_GLORIA.map(p=>({k:p.k, label:p.label}))
+};
+function pintarConfig(){
+  for(const contId in CFG_CAMPOS){
+    const c = $(contId); c.innerHTML = "";
+    CFG_CAMPOS[contId].forEach(f=>{
+      const row = document.createElement("div"); row.className = "cfg-row";
+      row.innerHTML = `<label>${f.label}</label>
+        <div class="stepper">
+          <button data-k="${f.k}" data-d="-1">−</button>
+          <span id="v-${f.k}">${cfg[f.k]} s</span>
+          <button data-k="${f.k}" data-d="1">＋</button>
+        </div>`;
+      c.appendChild(row);
+    });
+  }
+  $("v-rate").textContent = "× " + cfg.rate.toFixed(2);
+  $("cfg-voz-info").textContent = "Voz del paquete: " + VOZINFO + " (voz humana pregrabada; para cambiarla se regenera el paquete en el PC).";
+  document.querySelectorAll(".stepper button").forEach(b=>{
+    b.onclick = ()=>{
+      const k = b.dataset.k, d = +b.dataset.d;
+      if(k==="rate"){ cfg.rate = Math.min(1.3, Math.max(0.8, +(cfg.rate + d*0.05).toFixed(2))); $("v-rate").textContent = "× " + cfg.rate.toFixed(2); }
+      else { cfg[k] = Math.min(180, Math.max(1, cfg[k] + d)); $("v-"+k).textContent = cfg[k] + " s"; }
+      saveCfg();
+    };
+  });
+  pintarEstadoDescarga("cfg-dl-estado");
+}
+$("btn-config").onclick = ()=>{ show("scr-config"); pintarConfig(); };
+$("cfg-test").onclick = ()=>{
+  const c = clipDeTexto("Dios te salve.");
+  if(c){ player.src = c; player.playbackRate = cfg.rate; player.play().catch(()=>{}); }
+};
+$("cfg-reset").onclick = ()=>{ cfg = Object.assign({}, CFG_DEF); saveCfg(); pintarConfig(); };
+$("cfg-ok").onclick = ()=>{ saveCfg(); show("scr-home"); pintarHome(); };
+
+/* ================== DESCARGA OFFLINE ================== */
+async function contarCacheados(){
+  if(!PRECACHE || !("caches" in window)) return null;
+  try{
+    const cache = await caches.open("clips-v1");
+    const keys = await cache.keys();
+    return keys.length;
+  }catch(e){ return null; }
+}
+async function pintarEstadoDescarga(idNota){
+  const n = await contarCacheados();
+  const total = PRECACHE ? PRECACHE.clips.length : 0;
+  const el = $(idNota); if(!el) return;
+  if(n===null){ el.textContent = "No se pudo comprobar la caché."; return; }
+  el.textContent = n >= total
+    ? `✅ Audio completo descargado (${total} clips). La app funciona sin internet.`
+    : `⚠ Descargados ${n} de ${total} clips. Usa "Descargar todo el audio" en la pantalla de inicio.`;
+}
+async function mostrarBannerSiFalta(){
+  if(!PRECACHE) return;
+  const n = await contarCacheados();
+  if(n !== null && n < PRECACHE.clips.length) $("dl-banner").style.display = "block";
+}
+$("dl-btn").onclick = async ()=>{
+  const lista = PRECACHE.clips;
+  const barraF = $("dl-barra-fondo"), barra = $("dl-barra"), est = $("dl-estado");
+  barraF.style.display = "block"; $("dl-btn").disabled = true;
+  let hechos = 0, errores = 0;
+  const LOTE = 6;
+  for(let i=0; i<lista.length; i+=LOTE){
+    const grupo = lista.slice(i, i+LOTE).map(u =>
+      fetch(u).then(r=>{ if(!r.ok) errores++; }).catch(()=>{ errores++; })
+    );
+    await Promise.all(grupo);
+    hechos = Math.min(lista.length, i+LOTE);
+    barra.style.width = (hechos/lista.length*100).toFixed(1) + "%";
+    est.textContent = `Descargando… ${hechos} / ${lista.length}`;
+  }
+  est.textContent = errores ? `Terminó con ${errores} errores — vuelve a intentar (continúa donde quedó).`
+                            : "✅ Listo. La app ya funciona sin internet.";
+  $("dl-btn").disabled = false;
+  if(!errores) $("dl-banner").style.display = "none";
+};
+
+/* ================== INSTALACIÓN PWA ================== */
+let deferredPrompt = null;
+window.addEventListener("beforeinstallprompt", e=>{
+  e.preventDefault(); deferredPrompt = e;
+  $("btn-instalar").style.display = "block";
+});
+$("btn-instalar").onclick = async ()=>{
+  if(!deferredPrompt) return;
+  deferredPrompt.prompt(); await deferredPrompt.userChoice;
+  deferredPrompt = null; $("btn-instalar").style.display = "none";
+};
+
+/* ================== ARRANQUE ================== */
+(async function init(){
+  if("serviceWorker" in navigator){
+    try{ await navigator.serviceWorker.register("sw.js"); }catch(e){ console.warn("SW no registrado", e); }
+  }
+  try{
+    await cargarDatos();
+  }catch(e){
+    $("cargando").innerHTML = "⚠️<br><br>No se pudo cargar el contenido.<br>Conéctate a internet la primera vez y recarga.";
+    return;
+  }
+  const guardada = JSON.parse(localStorage.getItem("rosarioSel")||"null");
+  sel.set = (guardada && SETS[guardada.set]) ? guardada.set : setDelDia();
+  sel.tema = (guardada && TEMAS[guardada.tema]) ? guardada.tema : null;
+  $("cargando").style.display = "none";
+  show("scr-home");
+  pintarHome();
+  mostrarBannerSiFalta();
+})();
+</script>
+</body>
+</html>
