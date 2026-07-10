@@ -236,7 +236,7 @@ function pintarHome(){
   localStorage.setItem("rosarioSel", JSON.stringify(sel));
 }
 
-/* ================== CLIPS Y COLAS ================== */
+/* ================== CLIPS Y SILENCIOS ================== */
 function clipDeTexto(t){
   const f = MANIFIESTO[t];
   if(!f){ console.warn("Sin clip para:", t); return null; }
@@ -244,10 +244,20 @@ function clipDeTexto(t){
 }
 function cadenaSilencio(seg){
   const out = []; let r = Math.max(0, Math.round(seg));
-  for(const b of SIL_BASE){ while(r >= b){ out.push({src:`clips/sil-${b}n.mp3`, sil:b}); r -= b; } }
+  for(const b of SIL_BASE){ while(r >= b){ out.push(`clips/sil2-${b}.mp3`); r -= b; } }
   return out;
 }
-function microSil(s){ return {src:`clips/sil-${s}n.mp3`, sil:s}; }
+function microSil(s){ return `clips/sil2-${s}.mp3`; }
+function partesDePaso(st){
+  const voz = [];
+  st.textos.forEach(t=>{
+    if(t==="SIL1.2") voz.push(microSil("1.2"));
+    else if(t==="SIL0.8") voz.push(microSil("0.8"));
+    else { const c = clipDeTexto(t); if(c) voz.push(c); }
+  });
+  const seg = st.pausa ? cfg[st.pausa] : (st.fija || 0);
+  return { voz, sil: cadenaSilencio(seg) };
+}
 
 /* ================== GUION ================== */
 function armarGuion(setId, temaId){
@@ -274,59 +284,74 @@ function armarGuion(setId, temaId){
   return g;
 }
 
-/* ================== MOTOR DE AUDIO ================== */
+/* ================== MOTOR DE AUDIO ==================
+   Todo el rosario se arma como UN SOLO audio continuo (Blob MP3 en
+   memoria, ~15 MB): los clips son 48 kbps CBR uniformes (lo garantiza
+   construir_app.py), así que concatenar sus bytes da un MP3 válido y
+   la duración exacta de cada clip es bytes/6000 segundos. Con un solo
+   stream, Android puede congelar la página al bloquear la pantalla y
+   el audio sigue hasta el final: no hace falta JavaScript entre clips
+   (el motor anterior, que encadenaba clips con el evento "ended",
+   moría a los ~5 min de pantalla bloqueada por ese congelamiento).
+   La UI se sincroniza leyendo player.currentTime al estar visible. */
 const player = new Audio();
 player.preload = "auto";
-let guion=[], paso=0, estado="idle";     // idle | sonando | pausado | fin
-let cola=[], colaIdx=0;
-let silTotal=0, silHecho=0, uiTimer=null;
+let guion=[], paso=0, estado="idle";   // idle | preparando | sonando | pausado | fin
+let blobUrl=null, uiTimer=null, pasoPintado=-1, durTotal=0;
 
-function armarColaPaso(st){
-  const q = [];
-  st.textos.forEach(t=>{
-    if(t==="SIL1.2") q.push(microSil("1.2"));
-    else if(t==="SIL0.8") q.push(microSil("0.8"));
-    else { const c = clipDeTexto(t); if(c) q.push({src:c, sil:0}); }
+async function prepararAudio(){
+  const rutas = new Set();
+  guion.forEach(st=>{
+    const p = partesDePaso(st);
+    st._voz = p.voz; st._sil = p.sil;
+    p.voz.concat(p.sil).forEach(u=> rutas.add(u));
   });
-  const seg = st.pausa ? cfg[st.pausa] : (st.fija || 0);
-  cadenaSilencio(seg).forEach(x=> q.push(x));
-  return q;
+  const bufs = new Map(), lista = [...rutas], LOTE = 12;
+  for(let i=0; i<lista.length; i+=LOTE){
+    await Promise.all(lista.slice(i, i+LOTE).map(async u=>{
+      const r = await fetch(u);
+      if(!r.ok) throw new Error("No se pudo cargar " + u);
+      bufs.set(u, await r.arrayBuffer());
+    }));
+  }
+  const partes = []; let t = 0;
+  const dur = u => bufs.get(u).byteLength / 6000;   // 48 kbps CBR
+  guion.forEach(st=>{
+    st.t0 = t;
+    st._voz.forEach(u=>{ partes.push(bufs.get(u)); t += dur(u); });
+    st.tVoz = t;
+    st._sil.forEach(u=>{ partes.push(bufs.get(u)); t += dur(u); });
+    st.t1 = t;
+  });
+  durTotal = t;
+  if(blobUrl) URL.revokeObjectURL(blobUrl);
+  blobUrl = URL.createObjectURL(new Blob(partes, {type:"audio/mpeg"}));
 }
 
-function correrPaso(){
-  if(paso >= guion.length){ terminarRezo(); return; }
-  if(paso < 0) paso = 0;
-  const st = guion[paso];
-  cola = armarColaPaso(st); colaIdx = 0;
-  silTotal = cola.reduce((a,x)=> a + (x.sil && x.sil>=1 ? x.sil : 0), 0);
-  silHecho = 0;
-  pintarPaso(st);
-  setMediaSession(st);
-  estado = "sonando";
-  sonarClip();
+function pasoDeTiempo(t){
+  let p = Math.max(0, Math.min(paso, guion.length-1));
+  while(p < guion.length-1 && t >= guion[p+1].t0) p++;
+  while(p > 0 && t < guion[p].t0) p--;
+  return p;
 }
-function sonarClip(){
-  if(colaIdx >= cola.length){ paso++; correrPaso(); return; }
-  const item = cola[colaIdx];
-  player.src = item.src;
-  player.playbackRate = item.sil ? 1.0 : cfg.rate;
-  player.play().catch(e=>{
-    console.warn("play() falló", e);
-    pintarCuentaLabel("⚠ Toca ▶ para continuar");
-    estado = "pausado"; $("p-pause").textContent = "▶ Continuar";
-  });
+function sincronizar(){
+  if(estado!=="sonando" && estado!=="pausado") return;
+  paso = pasoDeTiempo(player.currentTime);
+  if(paso !== pasoPintado){
+    pasoPintado = paso;
+    pintarPaso(guion[paso]);
+    setMediaSession(guion[paso]);
+  }
+  if(document.visibilityState === "visible") pintarCuenta();
 }
-player.addEventListener("ended", ()=>{
-  if(estado !== "sonando") return;
-  const item = cola[colaIdx];
-  if(item && item.sil && item.sil >= 1) silHecho += item.sil;
-  colaIdx++;
-  sonarClip();
-});
+player.addEventListener("ended", ()=>{ if(estado==="sonando") terminarRezo(); });
 player.addEventListener("error", ()=>{
-  if(estado !== "sonando") return;
-  console.warn("Error de clip, salto:", player.src);
-  colaIdx++; sonarClip();
+  if(estado!=="sonando") return;
+  console.warn("Error de audio", player.error);
+  pintarCuentaLabel("⚠ Error de audio — toca ⏮ o ⏭ para reintentar");
+});
+document.addEventListener("visibilitychange", ()=>{
+  if(document.visibilityState==="visible" && $("scr-player").classList.contains("active")) sincronizar();
 });
 
 /* ---- UI del paso ---- */
@@ -335,23 +360,15 @@ function pintarPaso(st){
   $("p-status").textContent = `${st.status}  ·  ${st.label}`;
   $("p-count").textContent = "";
   $("p-countlabel").textContent = "";
-  if(uiTimer) clearInterval(uiTimer);
-  uiTimer = setInterval(pintarCuenta, 500);
-}
-function enSilencio(){
-  const item = cola[colaIdx];
-  return estado==="sonando" && item && item.sil && item.sil >= 1;
 }
 function pintarCuenta(){
-  if(document.visibilityState !== "visible") return;
   const st = guion[paso];
-  if(!st){ return; }
-  if(enSilencio()){
-    const item = cola[colaIdx];
-    const rest = Math.max(0, silTotal - silHecho - (player.currentTime||0));
-    $("p-count").textContent = Math.ceil(rest);
+  if(!st || estado!=="sonando") return;
+  const t = player.currentTime;
+  if(t >= st.tVoz && (st.t1 - st.tVoz) >= 3){
+    $("p-count").textContent = Math.max(1, Math.ceil(st.t1 - t));
     $("p-countlabel").textContent = st.pausa ? "(rezas tú: " + st.label + ")" : "";
-  } else if(estado==="sonando"){
+  } else {
     $("p-count").textContent = "";
     $("p-countlabel").textContent = "";
   }
@@ -374,21 +391,27 @@ function continuar(){
   if("mediaSession" in navigator) navigator.mediaSession.playbackState = "playing";
 }
 function saltar(d){
-  player.pause();
-  paso = Math.max(0, paso + d);
-  $("p-pause").textContent = "⏸ Pausar";
-  correrPaso();
+  if(estado!=="sonando" && estado!=="pausado" && estado!=="fin") return;
+  paso = Math.max(0, Math.min(guion.length-1, paso + d));
+  player.currentTime = guion[paso].t0 + 0.01;
+  if(estado!=="sonando"){
+    estado = "sonando"; $("p-pause").textContent = "⏸ Pausar";
+    player.play().catch(()=>{});
+    if("mediaSession" in navigator) navigator.mediaSession.playbackState = "playing";
+  }
+  sincronizar();
 }
 function terminarRezo(){
-  estado = "fin"; player.pause();
-  if(uiTimer){ clearInterval(uiTimer); uiTimer=null; }
+  estado = "fin";
   $("p-status").textContent = "";
   $("p-text").innerHTML = "<div class='fin'>🙏<br>Hasta aquí te acompaño.<br><br>Continúa tú solo: Gloria, jaculatorias<br>y oraciones finales.<br><br><b>Que la Virgen te bendiga.</b></div>";
   $("p-count").textContent = ""; $("p-countlabel").textContent = "";
 }
 function salirRezo(){
   estado = "idle"; player.pause(); player.removeAttribute("src");
-  if(uiTimer){ clearInterval(uiTimer); uiTimer=null; }
+  if(blobUrl){ URL.revokeObjectURL(blobUrl); blobUrl = null; }
+  if(uiTimer){ clearInterval(uiTimer); uiTimer = null; }
+  pasoPintado = -1;
   show("scr-home");
 }
 
@@ -399,7 +422,13 @@ function setMediaSession(st){
     title: st.label, artist: st.status, album: "Santo Rosario",
     artwork: [{src:"icono.svg", sizes:"any", type:"image/svg+xml"}]
   });
-  navigator.mediaSession.playbackState = "playing";
+  if(estado==="sonando") navigator.mediaSession.playbackState = "playing";
+  try{
+    navigator.mediaSession.setPositionState({
+      duration: durTotal, playbackRate: player.playbackRate || 1,
+      position: Math.min(player.currentTime || 0, durTotal)
+    });
+  }catch(e){}
 }
 if("mediaSession" in navigator){
   navigator.mediaSession.setActionHandler("play", continuar);
@@ -408,11 +437,38 @@ if("mediaSession" in navigator){
   navigator.mediaSession.setActionHandler("nexttrack", ()=>saltar(1));
 }
 
-$("btn-rezar").onclick = ()=>{
-  guion = armarGuion(sel.set, sel.tema); paso = 0;
+$("btn-rezar").onclick = async ()=>{
+  guion = armarGuion(sel.set, sel.tema);
+  paso = 0; pasoPintado = -1; estado = "preparando";
   show("scr-player");
   $("p-pause").textContent = "⏸ Pausar";
-  correrPaso();
+  $("p-status").textContent = "";
+  $("p-count").textContent = ""; $("p-countlabel").textContent = "";
+  $("p-text").textContent = "⏳ Preparando el audio…";
+  // Reproducir algo DENTRO del gesto del usuario desbloquea el audio;
+  // luego se cambia el src al rosario completo ya armado.
+  player.src = "clips/sil2-1.mp3";
+  player.play().catch(()=>{});
+  try{
+    await prepararAudio();
+  }catch(e){
+    console.warn(e);
+    estado = "idle";
+    $("p-text").textContent = "⚠ No se pudo cargar el audio. Conéctate a internet o usa \"Descargar todo el audio\" en Inicio.";
+    return;
+  }
+  if(estado !== "preparando") return;   // salió mientras se preparaba
+  player.src = blobUrl;
+  player.playbackRate = cfg.rate;
+  estado = "sonando";
+  player.play().catch(e=>{
+    console.warn("play() falló", e);
+    estado = "pausado"; $("p-pause").textContent = "▶ Continuar";
+    pintarCuentaLabel("⚠ Toca ▶ para comenzar");
+  });
+  if(uiTimer) clearInterval(uiTimer);
+  uiTimer = setInterval(sincronizar, 500);
+  sincronizar();
 };
 $("p-pause").onclick = ()=>{ estado==="pausado" ? continuar() : pausar(); };
 $("p-prev").onclick = ()=> saltar(-1);
