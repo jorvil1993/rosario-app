@@ -244,10 +244,10 @@ function clipDeTexto(t){
 }
 function cadenaSilencio(seg){
   const out = []; let r = Math.max(0, Math.round(seg));
-  for(const b of SIL_BASE){ while(r >= b){ out.push({src:`clips/sil-${b}.mp3`, sil:b}); r -= b; } }
+  for(const b of SIL_BASE){ while(r >= b){ out.push({src:`clips/sil-${b}n.mp3`, sil:b}); r -= b; } }
   return out;
 }
-function microSil(s){ return {src:`clips/sil-${s}.mp3`, sil:s}; }
+function microSil(s){ return {src:`clips/sil-${s}n.mp3`, sil:s}; }
 
 /* ================== GUION ================== */
 function armarGuion(setId, temaId){
