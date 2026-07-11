@@ -1,5 +1,5 @@
 {
- "version": "67dead623e",
+ "version": "883ba2839d",
  "voz": "es-MX-JorgeNeural",
  "clips": [
   "clips/v-001ca80bdc8b1569.mp3",
@@ -3557,12 +3557,20 @@
   "clips/v-fff93970e61cfae9.mp3",
   "clips/v-ffff3c914b729b31.mp3",
   "clips/sil2-60.mp3",
+  "clips/silp-60.mp3",
   "clips/sil2-30.mp3",
+  "clips/silp-30.mp3",
   "clips/sil2-10.mp3",
+  "clips/silp-10.mp3",
   "clips/sil2-5.mp3",
+  "clips/silp-5.mp3",
   "clips/sil2-2.mp3",
+  "clips/silp-2.mp3",
   "clips/sil2-1.mp3",
+  "clips/silp-1.mp3",
   "clips/sil2-1.2.mp3",
-  "clips/sil2-0.8.mp3"
+  "clips/silp-1.2.mp3",
+  "clips/sil2-0.8.mp3",
+  "clips/silp-0.8.mp3"
  ]
 }

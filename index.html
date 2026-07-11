@@ -66,6 +66,9 @@
   .stepper input::-webkit-outer-spin-button,
   .stepper input::-webkit-inner-spin-button{-webkit-appearance:none; margin:0;}
   .note{color:var(--dim); font-size:.85em; margin:6px 2px;}
+  .tgl{min-width:110px; border-radius:10px; padding:11px 12px; background:var(--card2);
+    color:var(--dim); border:1px solid var(--border); font-weight:600; font-size:.95em;}
+  .tgl.on{background:#2a2210; color:var(--gold); border-color:var(--gold);}
   .fin{text-align:center; font-size:1.15em; padding:30px 10px; color:var(--gold);}
   #dl-banner{background:#25200e; border:1px solid var(--gold); border-radius:12px;
     padding:12px 14px; margin-top:14px; font-size:.9em; display:none;}
@@ -137,6 +140,15 @@
   <h1>⚙️ Ajustes</h1>
   <p class="sub">Los silencios se configuran una sola vez, en segundos.</p>
 
+  <h2>Modo auto 🚗</h2>
+  <div class="cfg-row">
+    <label>Evita que el carro corte el inicio de las frases (Android Auto / Bluetooth)</label>
+    <button class="tgl" id="cfg-auto"></button>
+  </div>
+  <p class="note">Los silencios llevan un piso de ruido inaudible (−60 dB) para que el
+  canal de audio del carro nunca se duerma. Con audífonos puedes apagarlo si prefieres
+  silencio absoluto. El cambio aplica al siguiente rosario.</p>
+
   <h2>Voz</h2>
   <p class="note" id="cfg-voz-info"></p>
   <div class="cfg-row">
@@ -189,7 +201,7 @@ const SIL_BASE = [60,30,10,5,2,1];   // clips de silencio disponibles para compo
 
 const CFG_DEF = { senal:8, contricion:50, credo:45, intenciones:45, fatima:60,
   espiritu:25, padrenuestro:30, avemaria:19, gloria:10, mariamadre:10,
-  seaamado:8, ohjesus:14, rosariomaria:9, divina:10, rate:1.0 };
+  seaamado:8, ohjesus:14, rosariomaria:9, divina:10, rate:1.0, auto:true };
 let cfg = Object.assign({}, CFG_DEF, JSON.parse(localStorage.getItem("rosarioCfg")||"{}"));
 function saveCfg(){ localStorage.setItem("rosarioCfg", JSON.stringify(cfg)); }
 
@@ -252,12 +264,18 @@ function clipDeTexto(t){
   if(!f){ console.warn("Sin clip para:", t); return null; }
   return "clips/" + f;
 }
+/* Modo auto: los silencios llevan piloto -60 dB (silp-*) en vez de silencio
+   digital puro (sil2-*). Android Auto/Bluetooth y los amplificadores del carro
+   silencian el canal al detectar silencio puro y tardan ~1 s en reabrirlo,
+   comiéndose las primeras palabras de cada frase; con el piloto (inaudible)
+   el canal nunca se duerme. */
+function silPrefijo(){ return cfg.auto ? "silp" : "sil2"; }
 function cadenaSilencio(seg){
   const out = []; let r = Math.max(0, Math.round(seg));
-  for(const b of SIL_BASE){ while(r >= b){ out.push(`clips/sil2-${b}.mp3`); r -= b; } }
+  for(const b of SIL_BASE){ while(r >= b){ out.push(`clips/${silPrefijo()}-${b}.mp3`); r -= b; } }
   return out;
 }
-function microSil(s){ return `clips/sil2-${s}.mp3`; }
+function microSil(s){ return `clips/${silPrefijo()}-${s}.mp3`; }
 function partesDePaso(st){
   const voz = [];
   st.textos.forEach(t=>{
@@ -311,6 +329,10 @@ let blobUrl=null, uiTimer=null, pasoPintado=-1, durTotal=0;
 
 async function prepararAudio(){
   const rutas = new Set();
+  // En Modo auto el rosario abre con 2 s de piloto: darle Play arranca el
+  // canal del carro desde cero y sin este colchón se comería la primera frase.
+  const lead = cfg.auto ? ["clips/silp-2.mp3"] : [];
+  lead.forEach(u=> rutas.add(u));
   guion.forEach(st=>{
     const p = partesDePaso(st);
     st._voz = p.voz; st._sil = p.sil;
@@ -326,6 +348,7 @@ async function prepararAudio(){
   }
   const partes = []; let t = 0;
   const dur = u => bufs.get(u).byteLength / 6000;   // 48 kbps CBR
+  lead.forEach(u=>{ partes.push(bufs.get(u)); t += dur(u); });
   guion.forEach(st=>{
     st.t0 = t;
     st._voz.forEach(u=>{ partes.push(bufs.get(u)); t += dur(u); });
@@ -456,8 +479,9 @@ $("btn-rezar").onclick = async ()=>{
   $("p-count").textContent = ""; $("p-countlabel").textContent = "";
   $("p-text").textContent = "⏳ Preparando el audio…";
   // Reproducir algo DENTRO del gesto del usuario desbloquea el audio;
-  // luego se cambia el src al rosario completo ya armado.
-  player.src = "clips/sil2-1.mp3";
+  // luego se cambia el src al rosario completo ya armado. En Modo auto se
+  // usa el clip piloto: el canal del carro empieza a despertar desde ya.
+  player.src = `clips/${silPrefijo()}-1.mp3`;
   player.play().catch(()=>{});
   try{
     await prepararAudio();
@@ -538,6 +562,11 @@ function pintarConfig(){
     });
   }
   $("v-rate").textContent = "× " + cfg.rate.toFixed(2);
+  const bAuto = $("cfg-auto");
+  const pintaAuto = ()=>{ bAuto.textContent = cfg.auto ? "Activado" : "Apagado";
+    bAuto.classList.toggle("on", !!cfg.auto); };
+  pintaAuto();
+  bAuto.onclick = ()=>{ cfg.auto = !cfg.auto; saveCfg(); pintaAuto(); };
   $("cfg-voz-info").textContent = "Voz del paquete: " + VOZINFO + " (voz humana pregrabada; para cambiarla se regenera el paquete en el PC).";
   document.querySelectorAll(".stepper button").forEach(b=>{
     b.onclick = ()=>{
