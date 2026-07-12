@@ -87,6 +87,11 @@
   <h1>✝️ Santo Rosario</h1>
   <p class="sub">Guía para rezar en el auto · Lazos de Amor Mariano</p>
 
+  <div id="reanudar-box" style="display:none; margin:2px 0 6px;">
+    <button class="big b-gold" id="btn-reanudar" style="margin-top:0">▶ &nbsp;Continuar donde quedaste</button>
+    <p class="note" id="reanudar-info" style="text-align:center; margin-top:6px"></p>
+  </div>
+
   <h2>1 · Misterios</h2>
   <div class="grid2" id="home-sets"></div>
 
@@ -205,6 +210,17 @@ const CFG_DEF = { senal:8, contricion:50, credo:45, intenciones:45, fatima:60,
 let cfg = Object.assign({}, CFG_DEF, JSON.parse(localStorage.getItem("rosarioCfg")||"{}"));
 function saveCfg(){ localStorage.setItem("rosarioCfg", JSON.stringify(cfg)); }
 
+/* Progreso del rosario: guarda el paso actual para poder retomarlo si se
+   cierra la app (p. ej. se apaga el auto). Se borra al terminar o salir. */
+const MAX_EDAD_PROGRESO = 12*60*60*1000;   // 12 h: pasado ese tiempo, empezar de cero
+function guardarProgreso(){
+  if((estado==="sonando" || estado==="pausado") && sel.set && sel.tema && paso>0){
+    localStorage.setItem("rosarioProgreso", JSON.stringify(
+      {set:sel.set, tema:sel.tema, paso, ts:Date.now()}));
+  }
+}
+function borrarProgreso(){ localStorage.removeItem("rosarioProgreso"); }
+
 const $ = id => document.getElementById(id);
 function show(id){ document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active")); $(id).classList.add("active"); window.scrollTo(0,0); }
 
@@ -306,8 +322,15 @@ function armarGuion(setId, temaId){
         muestra:`${dec[m].jacs[j]}  →  Dios te salve…`,
         label:`Ave María ${j+1} de 10`, status:st});
     }
-    if(m<4) PIES_GLORIA.forEach(p=> g.push({textos:[p.cue], pausa:p.k, muestra:p.cue,
-      label:p.label, status:st}));
+    if(m<4){
+      PIES_GLORIA.forEach(p=> g.push({textos:[p.cue], pausa:p.k, muestra:p.cue,
+        label:p.label, status:st}));
+    } else {
+      // 5.º misterio: se reza el Gloria como señal audible de que el rosario
+      // terminó (José lo pidió para saber cuándo se acabó).
+      const gl = PIES_GLORIA[0];   // "Gloria…"
+      g.push({textos:[gl.cue], pausa:gl.k, muestra:gl.cue, label:gl.label, status:st});
+    }
   }
   return g;
 }
@@ -374,6 +397,7 @@ function sincronizar(){
     pasoPintado = paso;
     pintarPaso(guion[paso]);
     setMediaSession(guion[paso]);
+    guardarProgreso();
   }
   if(document.visibilityState === "visible") pintarCuenta();
 }
@@ -385,6 +409,12 @@ player.addEventListener("error", ()=>{
 });
 document.addEventListener("visibilitychange", ()=>{
   if(document.visibilityState==="visible" && $("scr-player").classList.contains("active")) sincronizar();
+  // Al ocultar la app (bloquear pantalla / cambiar de app), guardar el paso real
+  // AHORA — poco después Android congela el JS y ya no se podrá guardar.
+  if(document.visibilityState==="hidden" && (estado==="sonando" || estado==="pausado")){
+    paso = pasoDeTiempo(player.currentTime);
+    guardarProgreso();
+  }
 });
 
 /* ---- UI del paso ---- */
@@ -437,7 +467,8 @@ function saltar(d){
 function terminarRezo(){
   estado = "fin";
   $("p-status").textContent = "";
-  $("p-text").innerHTML = "<div class='fin'>🙏<br>Hasta aquí te acompaño.<br><br>Continúa tú solo: Gloria, jaculatorias<br>y oraciones finales.<br><br><b>Que la Virgen te bendiga.</b></div>";
+  $("p-text").innerHTML = "<div class='fin'>🙏<br>Rosario completado.<br><br>Reza tú las oraciones finales<br>(Salve, letanías…).<br><br><b>Que la Virgen te bendiga.</b></div>";
+  borrarProgreso();
   $("p-count").textContent = ""; $("p-countlabel").textContent = "";
 }
 function salirRezo(){
@@ -445,6 +476,8 @@ function salirRezo(){
   if(blobUrl){ URL.revokeObjectURL(blobUrl); blobUrl = null; }
   if(uiTimer){ clearInterval(uiTimer); uiTimer = null; }
   pasoPintado = -1;
+  borrarProgreso();        // salida explícita: no ofrecer retomar
+  prepararReanudar();      // oculta el botón "Continuar donde quedaste"
   show("scr-home");
 }
 
@@ -470,14 +503,15 @@ if("mediaSession" in navigator){
   navigator.mediaSession.setActionHandler("nexttrack", ()=>saltar(1));
 }
 
-$("btn-rezar").onclick = async ()=>{
+async function iniciarRezo(pasoInicial){
   guion = armarGuion(sel.set, sel.tema);
-  paso = 0; pasoPintado = -1; estado = "preparando";
+  pasoInicial = Math.max(0, Math.min(guion.length-1, pasoInicial|0));
+  paso = pasoInicial; pasoPintado = -1; estado = "preparando";
   show("scr-player");
   $("p-pause").textContent = "⏸ Pausar";
   $("p-status").textContent = "";
   $("p-count").textContent = ""; $("p-countlabel").textContent = "";
-  $("p-text").textContent = "⏳ Preparando el audio…";
+  $("p-text").textContent = pasoInicial>0 ? "⏳ Retomando el rosario…" : "⏳ Preparando el audio…";
   // Reproducir algo DENTRO del gesto del usuario desbloquea el audio;
   // luego se cambia el src al rosario completo ya armado. En Modo auto se
   // usa el clip piloto: el canal del carro empieza a despertar desde ya.
@@ -495,6 +529,13 @@ $("btn-rezar").onclick = async ()=>{
   player.src = blobUrl;
   player.playbackRate = cfg.rate;
   estado = "sonando";
+  // Retomar: saltar al paso guardado en cuanto el blob tenga metadata (está en
+  // memoria, así que carga casi al instante; el salto ocurre antes de oírse).
+  if(pasoInicial > 0){
+    const seek = ()=>{ try{ player.currentTime = guion[pasoInicial].t0 + 0.01; }catch(e){} };
+    if(player.readyState >= 1) seek();
+    else player.addEventListener("loadedmetadata", seek, {once:true});
+  }
   player.play().catch(e=>{
     console.warn("play() falló", e);
     estado = "pausado"; $("p-pause").textContent = "▶ Continuar";
@@ -503,7 +544,29 @@ $("btn-rezar").onclick = async ()=>{
   if(uiTimer) clearInterval(uiTimer);
   uiTimer = setInterval(sincronizar, 500);
   sincronizar();
-};
+}
+$("btn-rezar").onclick = ()=>{ borrarProgreso(); iniciarRezo(0); };
+
+/* Botón "Continuar donde quedaste": aparece en Inicio si hay un rosario a
+   medias guardado (y no es demasiado viejo). Al tocarlo retoma ese paso. */
+function prepararReanudar(){
+  const box = $("reanudar-box");
+  let prog = null;
+  try{ prog = JSON.parse(localStorage.getItem("rosarioProgreso")||"null"); }catch(e){}
+  const valido = prog && prog.set && prog.tema && prog.paso>0
+    && CONTENIDO[prog.set] && CONTENIDO[prog.set][prog.tema]
+    && (Date.now() - (prog.ts||0)) <= MAX_EDAD_PROGRESO;
+  if(!valido){ box.style.display = "none"; return; }
+  const g = armarGuion(prog.set, prog.tema);
+  const st = g[Math.max(0, Math.min(g.length-1, prog.paso|0))];
+  $("reanudar-info").textContent = `${SETS[prog.set].nombre} · ${TEMAS[prog.tema]} — ${st.status} · ${st.label}`;
+  box.style.display = "block";
+  $("btn-reanudar").onclick = ()=>{
+    sel.set = prog.set; sel.tema = prog.tema;
+    localStorage.setItem("rosarioSel", JSON.stringify(sel));
+    iniciarRezo(prog.paso);
+  };
+}
 $("p-pause").onclick = ()=>{ estado==="pausado" ? continuar() : pausar(); };
 $("p-prev").onclick = ()=> saltar(-1);
 $("p-next").onclick = ()=> saltar(1);
@@ -673,6 +736,7 @@ $("btn-instalar").onclick = async ()=>{
   $("cargando").style.display = "none";
   show("scr-home");
   pintarHome();
+  prepararReanudar();
   mostrarBannerSiFalta();
 })();
 </script>

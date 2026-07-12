@@ -1,5 +1,5 @@
 {
- "version": "883ba2839d",
+ "version": "e72182dee4",
  "voz": "es-MX-JorgeNeural",
  "clips": [
   "clips/v-001ca80bdc8b1569.mp3",
@@ -1523,7 +1523,6 @@
   "clips/v-6e00676e81c5de60.mp3",
   "clips/v-6e012e3d3c02a26a.mp3",
   "clips/v-6e05da5b5b1ff457.mp3",
-  "clips/v-6e0fa8ece65077f7.mp3",
   "clips/v-6e107cb0585d8acf.mp3",
   "clips/v-6e1a104024751905.mp3",
   "clips/v-6e3af2965196ef4e.mp3",
@@ -1743,6 +1742,7 @@
   "clips/v-7e1c23b1d7b87d23.mp3",
   "clips/v-7e3d6530122a8dd9.mp3",
   "clips/v-7e4f59849f526627.mp3",
+  "clips/v-7e652b8365e0abbb.mp3",
   "clips/v-7e6e42c22256e509.mp3",
   "clips/v-7e7b90e2ab3be68d.mp3",
   "clips/v-7e8c44c25b2fc643.mp3",
