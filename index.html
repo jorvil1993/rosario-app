@@ -154,9 +154,12 @@
     <label>Evita que el carro corte el inicio de las frases (Android Auto / Bluetooth)</label>
     <button class="tgl" id="cfg-auto"></button>
   </div>
-  <p class="note">Los silencios llevan un piso de ruido inaudible (−60 dB) para que el
-  canal de audio del carro nunca se duerma. Con audífonos puedes apagarlo si prefieres
-  silencio absoluto. El cambio aplica al siguiente rosario.</p>
+  <p class="note">El canal de audio del carro se duerme cuando no oye nada y tarda
+  ~1 s en despertar, comiéndose las primeras palabras. <b>Con música de fondo no hace
+  falta nada</b>: la música ya mantiene el canal despierto y los silencios quedan
+  absolutos. Solo cuando rezas <b>sin música</b> (o si la pista no se pudo cargar) los
+  silencios llevan un piso de ruido inaudible (−60 dB). Con audífonos puedes apagarlo.
+  El cambio aplica al siguiente rosario.</p>
 
   <h2>Voz</h2>
   <p class="note" id="cfg-voz-info"></p>
@@ -329,7 +332,13 @@ function clipDeTexto(t){
    silencian el canal al detectar silencio puro y tardan ~1 s en reabrirlo,
    comiéndose las primeras palabras de cada frase; con el piloto (inaudible)
    el canal nunca se duerme. */
-function silPrefijo(){ return cfg.auto ? "silp" : "sil2"; }
+/* pilotoActivo se decide al empezar cada rosario (ver iniciarRezo): solo hace
+   falta el piloto cuando NO va a sonar música, porque la música ya mantiene
+   despierto el canal del carro por sí sola. Se mira la música REALMENTE
+   cargada, no la elegida: si la pista no se pudo bajar, el rosario suena en
+   silencio puro y ahí el piloto vuelve a hacer falta. */
+let pilotoActivo = false;
+function silPrefijo(){ return pilotoActivo ? "silp" : "sil2"; }
 function cadenaSilencio(seg){
   const out = []; let r = Math.max(0, Math.round(seg));
   for(const b of SIL_BASE){ while(r >= b){ out.push(`clips/${silPrefijo()}-${b}.mp3`); r -= b; } }
@@ -408,17 +417,25 @@ function pistaSel(){
   if(!MUSICA || !MUSICA.pistas || !cfg.musica) return null;
   return MUSICA.pistas.find(p => p.id === cfg.musica && p.archivo) || null;
 }
-async function prepararMusica(segNecesarios){
-  if(musBlobUrl){ URL.revokeObjectURL(musBlobUrl); musBlobUrl = null; }
+/* Se carga en dos tiempos a propósito: primero los bytes de la pista (para
+   saber si de verdad hay música antes de armar la voz), y ya con durTotal
+   calculado se arma el blob repetido. */
+async function cargarPistaMusica(){
   const p = pistaSel();
-  if(!p) return;
+  if(!p) return null;
   const r = await fetch(p.archivo);
   if(!r.ok) throw new Error("No se pudo cargar la música " + p.archivo);
   const buf = await r.arrayBuffer();
-  const dur = buf.byteLength / p.bps;
-  const nTope = Math.max(1, Math.floor(MUS_MAX_BYTES / buf.byteLength));
+  if(!buf.byteLength) throw new Error("Pista de música vacía: " + p.archivo);
+  return { buf, bps: p.bps };
+}
+function armarMusica(mus, segNecesarios){
+  if(musBlobUrl){ URL.revokeObjectURL(musBlobUrl); musBlobUrl = null; }
+  if(!mus) return;
+  const dur = mus.buf.byteLength / mus.bps;
+  const nTope = Math.max(1, Math.floor(MUS_MAX_BYTES / mus.buf.byteLength));
   const n = Math.min(nTope, Math.max(1, Math.ceil(segNecesarios / dur)));
-  musBlobUrl = URL.createObjectURL(new Blob(new Array(n).fill(buf), {type:"audio/mpeg"}));
+  musBlobUrl = URL.createObjectURL(new Blob(new Array(n).fill(mus.buf), {type:"audio/mpeg"}));
 }
 function musicaArrancar(){
   if(!musBlobUrl) return;
@@ -433,9 +450,11 @@ function musicaParar(){
 
 async function prepararAudio(){
   const rutas = new Set();
-  // En Modo auto el rosario abre con 2 s de piloto: darle Play arranca el
-  // canal del carro desde cero y sin este colchón se comería la primera frase.
-  const lead = cfg.auto ? ["clips/silp-2.mp3"] : [];
+  // En Modo auto el rosario abre con 2 s de colchón: darle Play arranca el
+  // canal del carro desde cero y sin esto se comería la primera frase. Sin
+  // música ese colchón es piloto; con música es silencio puro y quien abre
+  // el canal es la propia música, que arranca en el mismo instante.
+  const lead = cfg.auto ? [`clips/${silPrefijo()}-2.mp3`] : [];
   lead.forEach(u=> rutas.add(u));
   guion.forEach(st=>{
     const p = partesDePaso(st);
@@ -600,8 +619,16 @@ async function iniciarRezo(pasoInicial){
   // Reproducir algo DENTRO del gesto del usuario desbloquea el audio;
   // luego se cambia el src al rosario completo ya armado. En Modo auto se
   // usa el clip piloto: el canal del carro empieza a despertar desde ya.
-  player.src = `clips/${silPrefijo()}-1.mp3`;
+  player.src = `clips/${cfg.auto ? "silp" : "sil2"}-1.mp3`;
   player.play().catch(()=>{});
+  // La música va PRIMERO porque de ella depende el tipo de silencio del blob
+  // de voz. Es opcional: si falla (sin internet, pista no descargada), el
+  // rosario arranca igual, y entonces sí lleva piloto en los silencios.
+  let mus = null;
+  try{
+    mus = await cargarPistaMusica();
+  }catch(e){ console.warn("Música no disponible", e); }
+  pilotoActivo = cfg.auto && !mus;
   try{
     await prepararAudio();
   }catch(e){
@@ -611,12 +638,7 @@ async function iniciarRezo(pasoInicial){
     return;
   }
   if(estado !== "preparando") return;   // salió mientras se preparaba
-  // La música es opcional: si falla (sin internet, pista no descargada), el
-  // rosario arranca igual en silencio en vez de quedarse trabado.
-  try{
-    await prepararMusica(durTotal / (cfg.rate || 1) + 300);
-  }catch(e){ console.warn("Música no disponible", e); }
-  if(estado !== "preparando") return;
+  armarMusica(mus, durTotal / (cfg.rate || 1) + 300);
   player.src = blobUrl;
   player.playbackRate = cfg.rate;
   estado = "sonando";
