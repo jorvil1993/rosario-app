@@ -1,0 +1,40 @@
+{
+ "pistas": [
+  {
+   "id": "anima-christi",
+   "nombre": "Anima Christi",
+   "fuente": "https://www.youtube.com/watch?v=QkuM54ter80",
+   "archivo": "musica/anima-christi-06efaa6a.mp3",
+   "bytes": 2400480,
+   "bps": 8000,
+   "seg": 300.06
+  },
+  {
+   "id": "ave-maria",
+   "nombre": "Ave María",
+   "fuente": "https://www.youtube.com/watch?v=rzSOObvRtNI",
+   "archivo": "musica/ave-maria-4371bc4e.mp3",
+   "bytes": 1630944,
+   "bps": 8000,
+   "seg": 203.87
+  },
+  {
+   "id": "crux-sacra",
+   "nombre": "Crux Sacra",
+   "fuente": "https://www.youtube.com/watch?v=jSWJv9pf-yQ",
+   "archivo": "musica/crux-sacra-ef73bb9f.mp3",
+   "bytes": 2400480,
+   "bps": 8000,
+   "seg": 300.06
+  },
+  {
+   "id": "gregorianos-varios",
+   "nombre": "Gregorianos varios",
+   "fuente": "https://www.youtube.com/watch?v=ph40KCrKE24",
+   "archivo": "musica/gregorianos-varios-e4e0c994.mp3",
+   "bytes": 4800384,
+   "bps": 8000,
+   "seg": 600.05
+  }
+ ]
+}

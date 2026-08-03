@@ -98,6 +98,10 @@
   <h2>2 · Tema de las jaculatorias</h2>
   <div id="home-temas"></div>
 
+  <h2>3 · Canto gregoriano de fondo</h2>
+  <div class="grid2" id="home-musica"></div>
+  <p class="note" id="home-musica-nota"></p>
+
   <button class="big b-gold" id="btn-rezar">▶ &nbsp;Rezar con audio</button>
   <button class="big b-blue" id="btn-altar">📖 &nbsp;Modo altar (solo lectura)</button>
   <button class="big b-dark" id="btn-config">⚙️ &nbsp;Ajustes</button>
@@ -164,12 +168,20 @@
   </div>
   <button class="big b-blue" id="cfg-test">🔊 Probar voz</button>
 
-  <h2>Silencios — oraciones iniciales</h2>
-  <div id="cfg-ini"></div>
-  <h2>Silencios — cuerpo del rosario</h2>
-  <div id="cfg-cuerpo"></div>
-  <h2>Silencios — después del Gloria</h2>
-  <div id="cfg-fin"></div>
+  <h2>Música de fondo 🎼</h2>
+  <div class="cfg-row">
+    <label>Volumen del canto gregoriano</label>
+    <div class="stepper">
+      <button data-k="musvol" data-d="-1">−</button><span id="v-musvol"></span><button data-k="musvol" data-d="1">＋</button>
+    </div>
+  </div>
+  <p class="note" id="cfg-musica-info"></p>
+  <button class="big b-blue" id="cfg-musica-test">🎼 Probar la música</button>
+
+  <h2>Tiempos de silencio</h2>
+  <p class="note">La app solo da la entrada de cada oración; tú la rezas durante
+  el silencio, con la música de fondo. Estos son los segundos que espera.</p>
+  <div id="cfg-tiempos"></div>
 
   <h2>Audio sin internet</h2>
   <p class="note" id="cfg-dl-estado">Comprobando descarga…</p>
@@ -186,27 +198,33 @@
    manifiesto.json. NO usa el TTS del navegador.
    ================================================================ */
 const ORDINAL = ["Primer","Segundo","Tercer","Cuarto","Quinto"];
-const PIES_INI = [
-  {k:"senal",      cue:"Por la señal…",              label:"Señal de la Cruz"},
-  {k:"contricion", cue:"Señor mío Jesucristo…",      label:"Acto de contrición"},
-  {k:"credo",      cue:"Creo en Dios…",              label:"Credo"},
-  {k:"intenciones",cue:"Ofrecemos este rosario por:",label:"Intenciones"},
-  {k:"fatima",     cue:"Dios mío, yo creo…",         label:"Oraciones de Fátima"},
-  {k:"espiritu",   cue:"Ven, Espíritu Santo…",       label:"Invocación al Espíritu Santo"}
-];
-const PIES_GLORIA = [
-  {k:"gloria",      cue:"Gloria…",                  label:"Gloria"},
-  {k:"mariamadre",  cue:"María es Madre de gracia…",label:"María es Madre de gracia"},
-  {k:"seaamado",    cue:"Sea amado y adorado…",     label:"Sea amado y adorado"},
-  {k:"ohjesus",     cue:"Oh Jesús mío…",            label:"Oh Jesús mío"},
-  {k:"rosariomaria",cue:"El Rosario de María…",     label:"El Rosario de María"},
-  {k:"divina",      cue:"Ven, Divina Voluntad…",    label:"Ven, Divina Voluntad"}
-];
+/* Guion v3 (2-ago-2026, pedido por José): la app solo da la ENTRADA de cada
+   oración y luego se calla; él reza en el silencio, con la música de fondo
+   sonando de principio a fin. Voz de la app:
+     "Por la señal…"  → silencio [oraciones iniciales]
+     por misterio: anuncio + meditación · "Padre Nuestro…" [padrenuestro]
+                   10 × jaculatoria [avemaria]  (ya NO dice "Dios te salve")
+                   "Gloria…" → silencio [jaculatorias misterio]
+     tras el Gloria del 5.º misterio: silencio [oraciones finales] y termina. */
+const CUE_SENAL  = "Por la señal…";
+const CUE_PADRE  = "Padre Nuestro…";
+const CUE_GLORIA = "Gloria…";
 const SIL_BASE = [60,30,10,5,2,1];   // clips de silencio disponibles para componer
 
-const CFG_DEF = { senal:8, contricion:50, credo:45, intenciones:45, fatima:60,
-  espiritu:25, padrenuestro:30, avemaria:19, gloria:10, mariamadre:10,
-  seaamado:8, ohjesus:14, rosariomaria:9, divina:10, rate:1.0, auto:true };
+/* Tiempos configurables (segundos) + música de fondo. */
+const TIEMPOS = [
+  {k:"oracionesiniciales", label:"Oraciones iniciales", max:600,
+   nota:"Después de “Por la señal”: contrición, Credo, intenciones, Fátima, Espíritu Santo."},
+  {k:"padrenuestro", label:"Padre Nuestro", max:180, nota:""},
+  {k:"avemaria", label:"Ave María (cada jaculatoria)", max:180, nota:""},
+  {k:"jaculatoriasmisterio", label:"Jaculatorias del misterio", max:600,
+   nota:"Después del Gloria de cada misterio, solo música."},
+  {k:"oracionesfinales", label:"Oraciones finales", max:900,
+   nota:"Tras el Gloria del 5.º misterio: Salve, letanías… solo música hasta el final."}
+];
+const CFG_DEF = { oracionesiniciales:180, padrenuestro:30, avemaria:19,
+  jaculatoriasmisterio:70, oracionesfinales:180,
+  rate:1.0, auto:true, musica:null, musvol:0.35 };
 let cfg = Object.assign({}, CFG_DEF, JSON.parse(localStorage.getItem("rosarioCfg")||"{}"));
 function saveCfg(){ localStorage.setItem("rosarioCfg", JSON.stringify(cfg)); }
 
@@ -225,16 +243,20 @@ const $ = id => document.getElementById(id);
 function show(id){ document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active")); $(id).classList.add("active"); window.scrollTo(0,0); }
 
 /* ================== DATOS ================== */
-let SETS=null, TEMAS=null, CONTENIDO=null, MANIFIESTO=null, PRECACHE=null, VOZINFO="";
+let SETS=null, TEMAS=null, CONTENIDO=null, MANIFIESTO=null, PRECACHE=null,
+    MUSICA=null, VOZINFO="";
 async function cargarDatos(){
-  const [c, m, p] = await Promise.all([
+  const [c, m, p, mu] = await Promise.all([
     fetch("contenido.json").then(r=>r.json()),
     fetch("manifiesto.json").then(r=>r.json()),
-    fetch("precache.json").then(r=>r.json()).catch(()=>null)
+    fetch("precache.json").then(r=>r.json()).catch(()=>null),
+    fetch("musica.json").then(r=>r.json()).catch(()=>null)
   ]);
   SETS = c.sets; TEMAS = c.temas; CONTENIDO = c.contenido;
-  MANIFIESTO = m; PRECACHE = p;
+  MANIFIESTO = m; PRECACHE = p; MUSICA = mu;
   VOZINFO = (p && p.voz) ? p.voz : "voz del paquete";
+  // Si la pista guardada ya no existe en el paquete, volver a "sin música".
+  if(cfg.musica && !pistaSel()){ cfg.musica = null; saveCfg(); }
 }
 
 /* ================== INICIO ================== */
@@ -268,10 +290,32 @@ function pintarHome(){
     };
     ct.appendChild(b);
   }
+  pintarMusica();
   const listo = sel.set && sel.tema && CONTENIDO[sel.set] && CONTENIDO[sel.set][sel.tema];
   $("btn-rezar").disabled = !listo;
   $("btn-altar").disabled = !listo;
   localStorage.setItem("rosarioSel", JSON.stringify(sel));
+}
+
+/* Selector del canto de fondo: suena bajito de principio a fin, como cama.
+   Las pistas que aún no tienen archivo en el paquete salen deshabilitadas. */
+function pintarMusica(){
+  const cont = $("home-musica"); cont.innerHTML = "";
+  const pistas = (MUSICA && MUSICA.pistas) ? MUSICA.pistas : [];
+  const opciones = [{id:null, nombre:"Sin música", archivo:"x"}].concat(pistas);
+  let faltan = 0;
+  opciones.forEach(p=>{
+    const hay = !!p.archivo;
+    if(!hay) faltan++;
+    const b = document.createElement("button");
+    b.className = "opt" + (cfg.musica===p.id ? " sel":"") + (hay ? "" : " off");
+    b.innerHTML = p.nombre + (hay ? "<small>&nbsp;</small>" : "<small>· falta el archivo</small>");
+    b.onclick = ()=>{ cfg.musica = p.id; saveCfg(); pintarMusica(); };
+    cont.appendChild(b);
+  });
+  $("home-musica-nota").textContent = faltan
+    ? "Las pistas marcadas todavía no tienen el audio cargado en la app."
+    : "Suena bajito de principio a fin. El volumen se ajusta en ⚙️ Ajustes.";
 }
 
 /* ================== CLIPS Y SILENCIOS ================== */
@@ -308,29 +352,26 @@ function armarGuion(setId, temaId){
   const g = [];
   const dec = CONTENIDO[setId][temaId];
   const S = SETS[setId];
-  PIES_INI.forEach(p=> g.push({textos:[p.cue], micro:[], pausa:p.k, muestra:p.cue,
-    label:p.label, status:"Oraciones iniciales"}));
+  g.push({textos:[CUE_SENAL], pausa:"oracionesiniciales", muestra:CUE_SENAL,
+    label:"Oraciones iniciales", status:"Oraciones iniciales"});
   for(let m=0; m<5; m++){
     const st = `${ORDINAL[m]} Misterio ${S.adj}`;
     const anuncio = `${ORDINAL[m]} Misterio ${S.adj}: ${S.titulos[m]}.`;
     g.push({textos:[anuncio, "SIL1.2", dec[m].med], fija:2,
       muestra:`${anuncio} ${dec[m].med}`, label:"Meditación", status:st});
-    g.push({textos:["Padre Nuestro…"], pausa:"padrenuestro",
-      muestra:"Padre Nuestro…", label:"Padre Nuestro", status:st});
+    g.push({textos:[CUE_PADRE], pausa:"padrenuestro",
+      muestra:CUE_PADRE, label:"Padre Nuestro", status:st});
     for(let j=0; j<10; j++){
-      g.push({textos:[dec[m].jacs[j], "SIL0.8", "Dios te salve."], pausa:"avemaria",
-        muestra:`${dec[m].jacs[j]}  →  Dios te salve…`,
+      // Solo la jaculatoria: José reza el "Dios te salve María" en el silencio.
+      g.push({textos:[dec[m].jacs[j]], pausa:"avemaria",
+        muestra:dec[m].jacs[j],
         label:`Ave María ${j+1} de 10`, status:st});
     }
-    if(m<4){
-      PIES_GLORIA.forEach(p=> g.push({textos:[p.cue], pausa:p.k, muestra:p.cue,
-        label:p.label, status:st}));
-    } else {
-      // 5.º misterio: se reza el Gloria como señal audible de que el rosario
-      // terminó (José lo pidió para saber cuándo se acabó).
-      const gl = PIES_GLORIA[0];   // "Gloria…"
-      g.push({textos:[gl.cue], pausa:gl.k, muestra:gl.cue, label:gl.label, status:st});
-    }
+    // Tras el 10.º Ave: "Gloria…" y silencio para las jaculatorias del misterio.
+    // En el 5.º ese silencio es el de las oraciones finales y cierra el rosario.
+    g.push({textos:[CUE_GLORIA], pausa: m<4 ? "jaculatoriasmisterio" : "oracionesfinales",
+      muestra:CUE_GLORIA,
+      label: m<4 ? "Gloria y jaculatorias" : "Gloria y oraciones finales", status:st});
   }
   return g;
 }
@@ -349,6 +390,46 @@ const player = new Audio();
 player.preload = "auto";
 let guion=[], paso=0, estado="idle";   // idle | preparando | sonando | pausado | fin
 let blobUrl=null, uiTimer=null, pasoPintado=-1, durTotal=0;
+
+/* ---- Cama de canto gregoriano (2-ago-2026) ----
+   Segundo <audio> que suena bajito de principio a fin, en paralelo a la voz.
+   Igual que la voz, NO se encadena con JavaScript: la pista se repite
+   concatenando sus bytes hasta cubrir todo el rosario, así que es un solo
+   stream continuo que termina solo (si usáramos loop=true y Android congelara
+   el JS al final, la música se quedaría sonando para siempre en el carro).
+   Las pistas vienen en el mismo formato crudo que los clips (CBR sin
+   cabeceras), por eso concatenarlas es válido y la duración es bytes/bps. */
+const musica = new Audio();
+musica.preload = "auto";
+let musBlobUrl = null;
+const MUS_MAX_BYTES = 45e6;          // techo de memoria del blob de música
+
+function pistaSel(){
+  if(!MUSICA || !MUSICA.pistas || !cfg.musica) return null;
+  return MUSICA.pistas.find(p => p.id === cfg.musica && p.archivo) || null;
+}
+async function prepararMusica(segNecesarios){
+  if(musBlobUrl){ URL.revokeObjectURL(musBlobUrl); musBlobUrl = null; }
+  const p = pistaSel();
+  if(!p) return;
+  const r = await fetch(p.archivo);
+  if(!r.ok) throw new Error("No se pudo cargar la música " + p.archivo);
+  const buf = await r.arrayBuffer();
+  const dur = buf.byteLength / p.bps;
+  const nTope = Math.max(1, Math.floor(MUS_MAX_BYTES / buf.byteLength));
+  const n = Math.min(nTope, Math.max(1, Math.ceil(segNecesarios / dur)));
+  musBlobUrl = URL.createObjectURL(new Blob(new Array(n).fill(buf), {type:"audio/mpeg"}));
+}
+function musicaArrancar(){
+  if(!musBlobUrl) return;
+  musica.src = musBlobUrl;
+  musica.volume = cfg.musvol;
+  musica.play().catch(()=>{});
+}
+function musicaParar(){
+  try{ musica.pause(); musica.removeAttribute("src"); musica.load(); }catch(e){}
+  if(musBlobUrl){ URL.revokeObjectURL(musBlobUrl); musBlobUrl = null; }
+}
 
 async function prepararAudio(){
   const rutas = new Set();
@@ -441,7 +522,7 @@ function pintarCuentaLabel(t){ $("p-countlabel").textContent = t; }
 /* ---- Controles ---- */
 function pausar(){
   if(estado!=="sonando") return;
-  estado = "pausado"; player.pause();
+  estado = "pausado"; player.pause(); musica.pause();
   $("p-pause").textContent = "▶ Continuar";
   pintarCuentaLabel("⏸ en pausa");
   if("mediaSession" in navigator) navigator.mediaSession.playbackState = "paused";
@@ -451,6 +532,7 @@ function continuar(){
   estado = "sonando";
   $("p-pause").textContent = "⏸ Pausar";
   player.play().catch(()=>{});
+  if(musBlobUrl) musica.play().catch(()=>{});
   if("mediaSession" in navigator) navigator.mediaSession.playbackState = "playing";
 }
 function saltar(d){
@@ -460,19 +542,22 @@ function saltar(d){
   if(estado!=="sonando"){
     estado = "sonando"; $("p-pause").textContent = "⏸ Pausar";
     player.play().catch(()=>{});
+    if(musBlobUrl) musica.play().catch(()=>{});
     if("mediaSession" in navigator) navigator.mediaSession.playbackState = "playing";
   }
   sincronizar();
 }
 function terminarRezo(){
   estado = "fin";
+  musicaParar();
   $("p-status").textContent = "";
-  $("p-text").innerHTML = "<div class='fin'>🙏<br>Rosario completado.<br><br>Reza tú las oraciones finales<br>(Salve, letanías…).<br><br><b>Que la Virgen te bendiga.</b></div>";
+  $("p-text").innerHTML = "<div class='fin'>🙏<br>Rosario completado.<br><br><b>Que la Virgen te bendiga.</b></div>";
   borrarProgreso();
   $("p-count").textContent = ""; $("p-countlabel").textContent = "";
 }
 function salirRezo(){
   estado = "idle"; player.pause(); player.removeAttribute("src");
+  musicaParar();
   if(blobUrl){ URL.revokeObjectURL(blobUrl); blobUrl = null; }
   if(uiTimer){ clearInterval(uiTimer); uiTimer = null; }
   pasoPintado = -1;
@@ -526,6 +611,12 @@ async function iniciarRezo(pasoInicial){
     return;
   }
   if(estado !== "preparando") return;   // salió mientras se preparaba
+  // La música es opcional: si falla (sin internet, pista no descargada), el
+  // rosario arranca igual en silencio en vez de quedarse trabado.
+  try{
+    await prepararMusica(durTotal / (cfg.rate || 1) + 300);
+  }catch(e){ console.warn("Música no disponible", e); }
+  if(estado !== "preparando") return;
   player.src = blobUrl;
   player.playbackRate = cfg.rate;
   estado = "sonando";
@@ -539,8 +630,10 @@ async function iniciarRezo(pasoInicial){
   player.play().catch(e=>{
     console.warn("play() falló", e);
     estado = "pausado"; $("p-pause").textContent = "▶ Continuar";
+    musica.pause();
     pintarCuentaLabel("⚠ Toca ▶ para comenzar");
   });
+  musicaArrancar();
   if(uiTimer) clearInterval(uiTimer);
   uiTimer = setInterval(sincronizar, 500);
   sincronizar();
@@ -604,27 +697,27 @@ $("alt-next").onclick = ()=>{ if(altM<4){altM++; pintarAltar();} };
 $("alt-exit").onclick = ()=>{ soltarWakeLock(); show("scr-home"); };
 
 /* ================== AJUSTES ================== */
-const CFG_CAMPOS = {
-  "cfg-ini": PIES_INI.map(p=>({k:p.k, label:p.label})),
-  "cfg-cuerpo": [{k:"padrenuestro",label:"Padre Nuestro (todos)"},{k:"avemaria",label:"Ave María (todas)"}],
-  "cfg-fin": PIES_GLORIA.map(p=>({k:p.k, label:p.label}))
-};
+const MAX_SEG = {};   // tope por campo (se llena desde TIEMPOS)
+TIEMPOS.forEach(t => MAX_SEG[t.k] = t.max);
 function pintarConfig(){
-  for(const contId in CFG_CAMPOS){
-    const c = $(contId); c.innerHTML = "";
-    CFG_CAMPOS[contId].forEach(f=>{
-      const row = document.createElement("div"); row.className = "cfg-row";
-      row.innerHTML = `<label>${f.label}</label>
-        <div class="stepper">
-          <button data-k="${f.k}" data-d="-1">−</button>
-          <input id="v-${f.k}" data-k="${f.k}" type="number" inputmode="numeric"
-                 min="1" max="180" step="1" value="${cfg[f.k]}">
-          <button data-k="${f.k}" data-d="1">＋</button>
-        </div>`;
-      c.appendChild(row);
-    });
-  }
+  const c = $("cfg-tiempos"); c.innerHTML = "";
+  TIEMPOS.forEach(f=>{
+    const row = document.createElement("div"); row.className = "cfg-row";
+    row.innerHTML = `<label>${f.label}${f.nota ? `<br><span style="color:var(--dim);font-size:.8em">${f.nota}</span>` : ""}</label>
+      <div class="stepper">
+        <button data-k="${f.k}" data-d="-1">−</button>
+        <input id="v-${f.k}" data-k="${f.k}" type="number" inputmode="numeric"
+               min="1" max="${f.max}" step="1" value="${cfg[f.k]}">
+        <button data-k="${f.k}" data-d="1">＋</button>
+      </div>`;
+    c.appendChild(row);
+  });
   $("v-rate").textContent = "× " + cfg.rate.toFixed(2);
+  $("v-musvol").textContent = Math.round(cfg.musvol*100) + " %";
+  const pi = pistaSel();
+  $("cfg-musica-info").textContent = pi
+    ? `Pista elegida: ${pi.nombre}. Se cambia en la pantalla de inicio.`
+    : "Sin música de fondo. Elige un canto en la pantalla de inicio.";
   const bAuto = $("cfg-auto");
   const pintaAuto = ()=>{ bAuto.textContent = cfg.auto ? "Activado" : "Apagado";
     bAuto.classList.toggle("on", !!cfg.auto); };
@@ -635,7 +728,12 @@ function pintarConfig(){
     b.onclick = ()=>{
       const k = b.dataset.k, d = +b.dataset.d;
       if(k==="rate"){ cfg.rate = Math.min(1.3, Math.max(0.8, +(cfg.rate + d*0.05).toFixed(2))); $("v-rate").textContent = "× " + cfg.rate.toFixed(2); }
-      else { cfg[k] = Math.min(180, Math.max(1, cfg[k] + d)); $("v-"+k).value = cfg[k]; }
+      else if(k==="musvol"){
+        cfg.musvol = Math.min(1, Math.max(0, +(cfg.musvol + d*0.05).toFixed(2)));
+        $("v-musvol").textContent = Math.round(cfg.musvol*100) + " %";
+        musica.volume = cfg.musvol;
+      }
+      else { cfg[k] = Math.min(MAX_SEG[k]||180, Math.max(1, cfg[k] + d)); $("v-"+k).value = cfg[k]; }
       saveCfg();
     };
   });
@@ -645,7 +743,7 @@ function pintarConfig(){
       const k = inp.dataset.k;
       let v = parseInt(inp.value, 10);
       if(isNaN(v)) v = cfg[k];
-      v = Math.min(180, Math.max(1, v));
+      v = Math.min(MAX_SEG[k]||180, Math.max(1, v));
       cfg[k] = v; inp.value = v; saveCfg();
     };
     inp.addEventListener("change", fijar);
@@ -655,11 +753,26 @@ function pintarConfig(){
 }
 $("btn-config").onclick = ()=>{ show("scr-config"); pintarConfig(); };
 $("cfg-test").onclick = ()=>{
-  const c = clipDeTexto("Dios te salve.");
+  const c = clipDeTexto(CUE_GLORIA);
   if(c){ player.src = c; player.playbackRate = cfg.rate; player.play().catch(()=>{}); }
 };
+/* Probar la música: reproduce ~15 s de la pista elegida al volumen actual,
+   para calibrarlo con el estéreo del carro sin echar a andar el rosario. */
+let musTest = null;
+$("cfg-musica-test").onclick = ()=>{
+  const p = pistaSel();
+  if(!p){ $("cfg-musica-info").textContent = "Primero elige un canto en la pantalla de inicio."; return; }
+  if(musTest){ clearTimeout(musTest); musTest = null; }
+  musica.src = p.archivo; musica.volume = cfg.musvol;
+  musica.play().catch(()=>{ $("cfg-musica-info").textContent = "No se pudo reproducir la pista (¿falta descargar el audio?)."; });
+  musTest = setTimeout(()=>{ musica.pause(); musTest = null; }, 15000);
+};
 $("cfg-reset").onclick = ()=>{ cfg = Object.assign({}, CFG_DEF); saveCfg(); pintarConfig(); };
-$("cfg-ok").onclick = ()=>{ saveCfg(); show("scr-home"); pintarHome(); };
+$("cfg-ok").onclick = ()=>{
+  if(musTest){ clearTimeout(musTest); musTest = null; }
+  musica.pause(); player.pause();
+  saveCfg(); show("scr-home"); pintarHome();
+};
 
 /* ================== DESCARGA OFFLINE ================== */
 async function contarCacheados(){

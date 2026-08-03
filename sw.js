@@ -1,16 +1,25 @@
 /* Service worker — Rosario en el Auto.
    Dos cachés:
    - core-<VERSION>: index, jsons, ícono (se renueva con cada versión del paquete)
-   - clips-v1: clips MP3 (nombres con hash de contenido → nunca cambian; se
-     conserva entre versiones para no re-descargar 100+ MB) */
-const VERSION = "e72182dee4";
+   - clips-v1: clips MP3 de voz/silencio y pistas de música de fondo (nombres
+     con hash de contenido → nunca cambian; se conserva entre versiones para
+     no re-descargar 100+ MB) */
+const VERSION = "15db590b07";
 const CORE = "core-" + VERSION;
 const CLIPS = "clips-v1";
 const NUCLEO = ["./", "index.html", "manifest.webmanifest", "icono.svg",
                 "contenido.json", "manifiesto.json", "precache.json"];
+// musica.json puede no existir todavía (pistas aún no cargadas): se pide
+// aparte para que su ausencia no tumbe la instalación del service worker.
+const OPCIONAL = ["musica.json"];
 
 self.addEventListener("install", e => {
-  e.waitUntil(caches.open(CORE).then(c => c.addAll(NUCLEO)).then(() => self.skipWaiting()));
+  e.waitUntil((async () => {
+    const c = await caches.open(CORE);
+    await c.addAll(NUCLEO);
+    await Promise.all(OPCIONAL.map(u => c.add(u).catch(() => {})));
+    await self.skipWaiting();
+  })());
 });
 
 self.addEventListener("activate", e => {
@@ -25,7 +34,7 @@ self.addEventListener("activate", e => {
 self.addEventListener("fetch", e => {
   const url = new URL(e.request.url);
   if (e.request.method !== "GET" || url.origin !== location.origin) return;
-  const esClip = url.pathname.includes("/clips/");
+  const esClip = url.pathname.includes("/clips/") || url.pathname.includes("/musica/");
   e.respondWith((async () => {
     const cache = await caches.open(esClip ? CLIPS : CORE);
     const enCache = await cache.match(e.request, { ignoreSearch: true });

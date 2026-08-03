@@ -1,5 +1,5 @@
 {
- "version": "e72182dee4",
+ "version": "15db590b07",
  "voz": "es-MX-JorgeNeural",
  "clips": [
   "clips/v-001ca80bdc8b1569.mp3",
@@ -3571,6 +3571,10 @@
   "clips/sil2-1.2.mp3",
   "clips/silp-1.2.mp3",
   "clips/sil2-0.8.mp3",
-  "clips/silp-0.8.mp3"
+  "clips/silp-0.8.mp3",
+  "musica/anima-christi-06efaa6a.mp3",
+  "musica/ave-maria-4371bc4e.mp3",
+  "musica/crux-sacra-ef73bb9f.mp3",
+  "musica/gregorianos-varios-e4e0c994.mp3"
  ]
 }
