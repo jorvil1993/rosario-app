@@ -236,8 +236,10 @@ function saveCfg(){ localStorage.setItem("rosarioCfg", JSON.stringify(cfg)); }
 const MAX_EDAD_PROGRESO = 12*60*60*1000;   // 12 h: pasado ese tiempo, empezar de cero
 function guardarProgreso(){
   if((estado==="sonando" || estado==="pausado") && sel.set && sel.tema && paso>0){
+    // La semilla va con el progreso: sin ella, al retomar se sortearían
+    // otras jaculatorias y el paso guardado apuntaría a otra oración.
     localStorage.setItem("rosarioProgreso", JSON.stringify(
-      {set:sel.set, tema:sel.tema, paso, ts:Date.now()}));
+      {set:sel.set, tema:sel.tema, paso, semilla:semillaRezo, ts:Date.now()}));
   }
 }
 function borrarProgreso(){ localStorage.removeItem("rosarioProgreso"); }
@@ -356,8 +358,41 @@ function partesDePaso(st){
   return { voz, sil: cadenaSilencio(seg) };
 }
 
+/* ============ SELECCIÓN DE JACULATORIAS (regla 1-1-8) ============
+   Cada decena trae tres bolsas: misterio, maria y tema. En cada rezo se
+   toma 1 del misterio + 1 de María + 8 del tema y se barajan las 10
+   posiciones, para que no se memorice el patrón. En los 5 temas
+   destacados las bolsas son grandes (2·2·11 = 15 por decena), así que
+   cada rosario sale con una combinación distinta; en los demás son
+   1·1·8 y lo único que cambia es el orden.
+   El sorteo depende de una semilla que se fija al pulsar "Rezar" y se
+   guarda con el progreso: al retomar sale exactamente el mismo rosario.
+   Se acepta el formato viejo (jacs[10] planas) sin tocar nada. */
+function rnd32(s){
+  return function(){
+    s |= 0; s = s + 0x6D2B79F5 | 0;
+    let t = Math.imul(s ^ s >>> 15, 1 | s);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+}
+function barajar(a, r){
+  for(let i=a.length-1; i>0; i--){ const j = Math.floor(r()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+  return a;
+}
+function jacsDeDecena(d, semilla){
+  if(Array.isArray(d.jacs)) return d.jacs;          // formato anterior
+  const r = rnd32(semilla|0);
+  const diez = [
+    ...barajar((d.misterio||[]).slice(), r).slice(0,1),
+    ...barajar((d.maria   ||[]).slice(), r).slice(0,1),
+    ...barajar((d.tema    ||[]).slice(), r).slice(0,8),
+  ];
+  return barajar(diez, r);
+}
+
 /* ================== GUION ================== */
-function armarGuion(setId, temaId){
+function armarGuion(setId, temaId, semilla){
   const g = [];
   const dec = CONTENIDO[setId][temaId];
   const S = SETS[setId];
@@ -370,10 +405,14 @@ function armarGuion(setId, temaId){
       muestra:`${anuncio} ${dec[m].med}`, label:"Meditación", status:st});
     g.push({textos:[CUE_PADRE], pausa:"padrenuestro",
       muestra:CUE_PADRE, label:"Padre Nuestro", status:st});
+    // Las 10 Aves de esta decena: 1 del misterio + 1 de María + 8 del tema,
+    // sorteadas y barajadas con la semilla de este rosario (+ m para que las
+    // cinco decenas no salgan con el mismo patrón).
+    const jacs = jacsDeDecena(dec[m], (semilla|0) + m*7919);
     for(let j=0; j<10; j++){
       // Solo la jaculatoria: José reza el "Dios te salve María" en el silencio.
-      g.push({textos:[dec[m].jacs[j]], pausa:"avemaria",
-        muestra:dec[m].jacs[j],
+      g.push({textos:[jacs[j]], pausa:"avemaria",
+        muestra:jacs[j],
         label:`Ave María ${j+1} de 10`, status:st});
     }
     // Tras el 10.º Ave: "Gloria…" y silencio para las jaculatorias del misterio.
@@ -607,8 +646,10 @@ if("mediaSession" in navigator){
   navigator.mediaSession.setActionHandler("nexttrack", ()=>saltar(1));
 }
 
-async function iniciarRezo(pasoInicial){
-  guion = armarGuion(sel.set, sel.tema);
+let semillaRezo = 1;   // fija el sorteo de jaculatorias de ESTE rosario
+async function iniciarRezo(pasoInicial, semilla){
+  semillaRezo = (semilla == null) ? (Date.now() & 0x7fffffff) : (semilla|0);
+  guion = armarGuion(sel.set, sel.tema, semillaRezo);
   pasoInicial = Math.max(0, Math.min(guion.length-1, pasoInicial|0));
   paso = pasoInicial; pasoPintado = -1; estado = "preparando";
   show("scr-player");
@@ -672,14 +713,14 @@ function prepararReanudar(){
     && CONTENIDO[prog.set] && CONTENIDO[prog.set][prog.tema]
     && (Date.now() - (prog.ts||0)) <= MAX_EDAD_PROGRESO;
   if(!valido){ box.style.display = "none"; return; }
-  const g = armarGuion(prog.set, prog.tema);
+  const g = armarGuion(prog.set, prog.tema, prog.semilla|0);
   const st = g[Math.max(0, Math.min(g.length-1, prog.paso|0))];
   $("reanudar-info").textContent = `${SETS[prog.set].nombre} · ${TEMAS[prog.tema]} — ${st.status} · ${st.label}`;
   box.style.display = "block";
   $("btn-reanudar").onclick = ()=>{
     sel.set = prog.set; sel.tema = prog.tema;
     localStorage.setItem("rosarioSel", JSON.stringify(sel));
-    iniciarRezo(prog.paso);
+    iniciarRezo(prog.paso, prog.semilla|0);
   };
 }
 $("p-pause").onclick = ()=>{ estado==="pausado" ? continuar() : pausar(); };
@@ -696,6 +737,11 @@ function soltarWakeLock(){ try{ if(wakeLock){ wakeLock.release(); wakeLock=null;
 document.addEventListener("visibilitychange", ()=>{
   if(document.visibilityState==="visible" && $("scr-altar").classList.contains("active")) pedirWakeLock();
 });
+function semillaAltar(){
+  let h = 0; const s = `${sel.set}|${sel.tema}`;
+  for(let i=0;i<s.length;i++) h = (h*31 + s.charCodeAt(i)) | 0;
+  return h;
+}
 function pintarAltar(){
   const S = SETS[sel.set], dec = CONTENIDO[sel.set][sel.tema];
   $("alt-title").textContent = `${ORDINAL[altM]} Misterio ${S.adj}`;
@@ -704,7 +750,10 @@ function pintarAltar(){
   const med = document.createElement("p");
   med.className = "alt-med"; med.textContent = dec[altM].med;
   b.appendChild(med);
-  dec[altM].jacs.forEach((j,i)=>{
+  // Semilla estable por set+tema: el Modo altar muestra siempre la misma
+  // selección mientras no se cambie de misterio o de tema (si no, cada
+  // repintado cambiaría las jaculatorias en pantalla).
+  jacsDeDecena(dec[altM], semillaAltar() + altM*7919).forEach((j,i)=>{
     const d = document.createElement("div");
     d.className = "jac"; d.innerHTML = `<b>${i+1}.</b>${j}`;
     b.appendChild(d);
