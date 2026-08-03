@@ -30,6 +30,16 @@
   .opt small{display:block; color:var(--dim); font-size:.75em; margin-top:2px;}
   .opt.sel small{color:var(--gold);}
   .tema{margin-bottom:8px; text-align:left; padding:12px 14px;}
+  /* Desplegable con el resto de temas: los 5 destacados van en botones y los
+     otros 11 aquí, para que la pantalla de Inicio no sea una lista larguísima. */
+  select.opt{text-align:left; padding:13px 14px; margin-top:2px; cursor:pointer;
+    -webkit-appearance:none; appearance:none;
+    background-image:linear-gradient(45deg,transparent 50%,var(--dim) 50%),
+      linear-gradient(135deg,var(--dim) 50%,transparent 50%);
+    background-position:calc(100% - 20px) 50%, calc(100% - 14px) 50%;
+    background-size:6px 6px, 6px 6px; background-repeat:no-repeat;}
+  select.opt.sel{background-image:linear-gradient(45deg,transparent 50%,var(--gold) 50%),
+      linear-gradient(135deg,var(--gold) 50%,transparent 50%);}
   .big{display:block; width:100%; border-radius:16px; padding:17px; font-size:1.15em;
     font-weight:600; margin-top:12px;}
   .b-gold{background:var(--gold); color:#1a1200;}
@@ -282,18 +292,54 @@ function pintarHome(){
     b.onclick = ()=>{ sel.set=id; pintarHome(); };
     cont.appendChild(b);
   }
+  /* Los 5 temas que José marcó como destacados van en botones a la vista; los
+     otros 11, en un desplegable, para que Inicio no sea una lista larguísima.
+     "Destacado" se detecta por el tamaño de las bolsas (2-2-11 frente a 1-1-8),
+     así que si algún día cambian los pools esto se ajusta solo. */
   const ct = $("home-temas"); ct.innerHTML = "";
-  for(const tid in TEMAS){
-    const hay = !!(sel.set && CONTENIDO[sel.set] && CONTENIDO[sel.set][tid]);
+  const hayTema = tid => !!(sel.set && CONTENIDO[sel.set] && CONTENIDO[sel.set][tid]);
+  const esDestacado = tid => {
+    for(const s in CONTENIDO){
+      const c = CONTENIDO[s][tid];
+      if(c && c[0]) return (c[0].misterio || []).length > 1;
+    }
+    return false;
+  };
+  const ids = Object.keys(TEMAS);
+  let top = ids.filter(esDestacado);
+  if(!top.length) top = ids.slice(0, 5);          // formato viejo: los 5 primeros
+  const resto = ids.filter(t => !top.includes(t));
+
+  const elegir = tid => {
+    sel.tema = tid; pintarHome();
+    // llevar directo a los botones de acción, sin scroll manual
+    $("btn-rezar").scrollIntoView({behavior:"smooth", block:"center"});
+  };
+  for(const tid of top){
+    const hay = hayTema(tid);
     const b = document.createElement("button");
     b.className = "opt tema" + (sel.tema===tid ? " sel":"") + (sel.set && !hay ? " off":"");
     b.innerHTML = TEMAS[tid] + (sel.set && !hay ? " <small>· próximamente</small>":"");
-    b.onclick = ()=>{
-      sel.tema = tid; pintarHome();
-      // llevar directo a los botones de acción, sin scroll manual
-      $("btn-rezar").scrollIntoView({behavior:"smooth", block:"center"});
-    };
+    b.onclick = ()=> elegir(tid);
     ct.appendChild(b);
+  }
+  if(resto.length){
+    const enResto = resto.includes(sel.tema);
+    const sl = document.createElement("select");
+    sl.className = "opt tema" + (enResto ? " sel":"");
+    sl.setAttribute("aria-label", "Más situaciones");
+    const ph = document.createElement("option");
+    ph.value = ""; ph.textContent = enResto ? TEMAS[sel.tema] : "Otra situación…";
+    sl.appendChild(ph);
+    for(const tid of resto){
+      const hay = hayTema(tid);
+      const o = document.createElement("option");
+      o.value = tid; o.disabled = !hay;
+      o.textContent = TEMAS[tid] + (sel.set && !hay ? " · próximamente" : "");
+      sl.appendChild(o);
+    }
+    sl.onchange = ()=>{ if(sl.value) elegir(sl.value); };
+    ct.appendChild(sl);
   }
   pintarMusica();
   const listo = sel.set && sel.tema && CONTENIDO[sel.set] && CONTENIDO[sel.set][sel.tema];

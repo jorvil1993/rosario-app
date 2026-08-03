@@ -4,7 +4,7 @@
    - clips-v1: clips MP3 de voz/silencio y pistas de música de fondo (nombres
      con hash de contenido → nunca cambian; se conserva entre versiones para
      no re-descargar 100+ MB) */
-const VERSION = "297a4acf04";
+const VERSION = "aedd472bfe";
 const CORE = "core-" + VERSION;
 const CLIPS = "clips-v1";
 const NUCLEO = ["./", "index.html", "manifest.webmanifest", "icono.svg",
