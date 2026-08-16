@@ -61,6 +61,9 @@
     }
   },
   "temas": {
+    "lam1": "LAM 1 · Fuego de conversión",
+    "lam2": "LAM 2 · Todo tuyo, María",
+    "lam3": "LAM 3 · Cruz y misión",
     "estres": "Cuando estoy estresado",
     "frustrado": "Cuando estoy frustrado",
     "enojado": "Cuando estoy enojado",
@@ -565,6 +568,372 @@
             "Jesús, tuviste sed de mí, y yo tengo sed de todo menos de ti.",
             "Corazón de Jesús, en Vos confío hasta que se cumpla todo.",
             "Señor, ofrezco la jornada de hoy por la conversión de mi familia."
+          ]
+        }
+      ],
+      "lam1": [
+        {
+          "med": "En Getsemaní, Jesús cayó rostro en tierra y sudó gotas de sangre. No fue solo el miedo físico: fue el peso aplastante de todos nuestros pecados lo que cayó sobre Él. Y sus amigos dormían. Jesús les dijo: ¿ni una hora han podido velar conmigo? Esa pregunta no era solo para Pedro: es para ti y para mí cuando preferimos las pantallas o la pereza antes que quince minutos de intimidad con Él.",
+          "misterio": [
+            "Jesús, en el Huerto caíste rostro en tierra cargando con mi culpa.",
+            "Señor, sudaste sangre por amor a mí. ¡Nadie como Dios!"
+          ],
+          "maria": [
+            "Madre, en la noche del Huerto tu corazón velaba con tu Hijo.",
+            "María, acompáñame en mis noches oscuras para no huir de la oración."
+          ],
+          "tema": [
+            "Jesús, ¿ni una hora puedo velar contigo? Perdona mi pereza.",
+            "Señor, en Getsemaní te pesó mi tibieza. Hoy quiero consolarte.",
+            "Padre, que no me duerma cuando tú me pides vigilar y orar.",
+            "Jesús, dame vencer el sueño y buscarte de rodillas en la noche.",
+            "Señor, no se haga mi voluntad, sino la tuya. Dame esa docilidad.",
+            "Jesús, el cáliz era amargo pero lo bebiste por salvarme a mí.",
+            "Padre, quita de mi vida las distracciones que me duermen el alma.",
+            "Señor, cuando me cueste orar, recuérdame tu agonía en el Huerto.",
+            "Jesús, tú oraste con más insistencia en la angustia. Enséñame.",
+            "Padre, perdona las veces que dejé a Jesús solo por mirar el celular.",
+            "Inmaculado Corazón de María, alcánzame perseverancia en la oración."
+          ]
+        },
+        {
+          "med": "Ataron a Jesús a la columna y lo azotaron sin piedad. El pecado no es gratis: tiene su paga, y la pagó el Inocente. Cada golpe en su espalda pagó nuestras impurezas, nuestras vanidades, nuestros gustos desordenados. Como enseñó Wilson Tamayo: el pecado no es un simple tropiezo, es romperle el Corazón a Dios. Pero bastaba una sola gota de su sangre para salvarnos, y quiso derramarla toda por amor.",
+          "misterio": [
+            "Jesús, atado a la columna recibiste los azotes que merecía yo.",
+            "Por tus llagas fuimos sanados. ¡Alabado sea tu santo nombre!"
+          ],
+          "maria": [
+            "Madre, cada golpe en el cuerpo de Jesús traspasó tu alma pura.",
+            "María, que al ver a tu Hijo azotado me dé horror volver a pecar."
+          ],
+          "tema": [
+            "Señor, el pecado no es gratis: tú pagaste mi deuda con tu sangre.",
+            "Jesús, por las heridas de tu cuerpo sana la impureza de mi carne.",
+            "Padre, dame una conciencia sensible que sufra cada vez que te ofendo.",
+            "Señor, no permitas que relativice el pecado diciendo que todos lo hacen.",
+            "Jesús, el pecado es veneno que mata el alma gota a gota. Líbrame.",
+            "Padre, una sola gota bastaba y quisiste derramarla toda por mí.",
+            "Señor, si caigo, no me dejes en el suelo: llévame a la confesión.",
+            "Jesús, rompe las cadenas del vicio que me tienen atado y ciego.",
+            "Padre, dame la gracia de mortificar mis sentidos por amor a ti.",
+            "Señor, que no busque excusas para justificar lo que te ofende.",
+            "Inmaculado Corazón de María, sé mi refugio contra las tentaciones."
+          ]
+        },
+        {
+          "med": "Le pusieron una corona de espinas, una caña en la mano y un manto viejo para burlarse de Él. El Rey de reyes humillado. En cada corazón hay un trono: o reina Dios en humildad o reina el yo con su orgullo y soberbia. José nos recordaba la frase de San Francisco de Asís: cuanto más grande eres, más humilde debes ser. Jesús soportó las burlas en silencio para sanar nuestra soberbia y nuestro afán de quedar bien.",
+          "misterio": [
+            "Jesús, te coronaron de espinas y te vestiste de burla por mí.",
+            "Rey de reyes, coronado de espinas. ¡Nadie como tú, Señor!"
+          ],
+          "maria": [
+            "Madre, consolaste en silencio al Rey coronado de espinas.",
+            "María, enséñame a callar y sufrir con paciencia como tú y tu Hijo."
+          ],
+          "tema": [
+            "Señor, saca al yo del trono de mi vida y reina tú con tu corona.",
+            "Jesús, sana mis pensamientos de orgullo, juicio y vanidad.",
+            "Padre, dame aceptar una corrección y una humillación sin quejarme.",
+            "Señor, líbrame del respeto humano y del miedo al qué dirán.",
+            "Jesús, que busque agradarte a ti antes que el aplauso de los hombres.",
+            "Padre, destruye mi soberbia y haz en mí un monumento a tu gloria.",
+            "Señor, dame callar una respuesta hiriente y responder con mansedumbre.",
+            "Jesús, tu corona me enseña que el camino al cielo pasa por la humildad.",
+            "Padre, perdona mis juicios temerarios contra mis hermanos.",
+            "Señor, ¿de qué me sirve ganar el mundo entero si pierdo mi alma?",
+            "Madre humilde, alcánzame un corazón manso y desprendido de todo."
+          ]
+        },
+        {
+          "med": "Jesús cargó con el madero y cayó bajo su peso tres veces, pero tres veces se levantó. Y en el camino apareció Simón de Cirene para ayudarlo. En las prédicas de Lazos se repite siempre: la cruz no vino a aplastarte ni a estorbar tu vida, vino a salvarte. No hay caída de la que uno no se pueda levantar en la misericordia de Dios. Si sigues a Jesús sin la cruz, terminarás cargando la cruz sin Jesús.",
+          "misterio": [
+            "Jesús, caíste bajo el peso de la cruz y te levantaste por amor.",
+            "Señor, abrazaste el madero para redimir al mundo. ¡Gloria a ti!"
+          ],
+          "maria": [
+            "Madre, en la calle de la amargura tus ojos se cruzaron con Jesús.",
+            "María, cuando caiga en el camino, tómame de la mano y levántame."
+          ],
+          "tema": [
+            "Señor, no hay caída de la que tu gracia no me pueda levantar.",
+            "Jesús, la cruz no vino a aplastarme: vino a salvarme y purificarme.",
+            "Padre, dame ser cireneo para mis hermanos y no serles tropiezo.",
+            "Señor, si sigo a Jesús sin cruz, cargaré la cruz sin Jesús. La abrazo.",
+            "Jesús, no quiero arrastrar mi cruz con quejas, la tomo en tu nombre.",
+            "Padre, cuando sienta que no puedo más, dame tu fuerza para seguir.",
+            "Señor, hazme dócil para dejarme ayudar en la dirección espiritual.",
+            "Jesús, cada contrariedad de hoy la ofrezco por la salvación de almas.",
+            "Padre, dame la paciencia de Jesús que caminó sin maldecir a nadie.",
+            "Señor, que el cansancio diario no me robe la paz ni la caridad.",
+            "Inmaculado Corazón de María, acompáñame en cada paso hacia el cielo."
+          ]
+        },
+        {
+          "med": "En la cruz, traspasado de pies y manos, Jesús miró al buen ladrón y le dijo: hoy estarás conmigo en el Paraíso. Un criminal arrepentido al último instante se ganó el cielo porque reconoció su culpa y creyó. Como enseñó Rodrigo Jaramillo: sanarse es cambiar el desamor por el amor de Aquel que nos amó primero. Jesús dio hasta la última gota de su Sangre y de su Agua, y nos entregó a su propia Madre.",
+          "misterio": [
+            "Jesús, en la cruz perdonaste a tus verdugos y diste tu vida por mí.",
+            "Cristo clavado en la cruz, sumo y eterno sacerdote. ¡Quién como Dios!"
+          ],
+          "maria": [
+            "Madre, de pie junto a la cruz nos recibiste como hijos tuyos.",
+            "María, en la hora de mi muerte alcánzame el abrazo de tu Hijo."
+          ],
+          "tema": [
+            "Señor, acuérdate de mí cuando estés en tu Reino, como al buen ladrón.",
+            "Jesús, hoy estarás conmigo en el Paraíso: dame esa esperanza viva.",
+            "Padre, todo pecador tiene un futuro si vuelve a ti de corazón.",
+            "Señor, la confesión es la ternura de un Dios enamorado que me abraza.",
+            "Jesús, me amaste hasta el extremo de morir crucificado por mí.",
+            "Padre, perdóname, porque tantas veces no sé lo que hago al pecar.",
+            "Señor, brotó sangre y agua de tu costado abierto para lavarme.",
+            "Jesús, tengo sed, dijiste en la cruz: dame sed de almas como la tuya.",
+            "Padre, en tus manos encomiendo mi espíritu, mi familia y mi vida.",
+            "Señor, un alma vale más que todo el oro del mundo. Salva la mía.",
+            "Inmaculado Corazón de María, sé la salvación del alma mía."
+          ]
+        }
+      ],
+      "lam2": [
+        {
+          "med": "Mientras los apóstoles dormían en Getsemaní, el Corazón Inmaculado de María velaba en oración y agonizaba en unión mística con su Hijo. María nos enseña a permanecer vigilantes en las noches de prueba, cuando arrecia la tentación o la aridez espiritual. Consagrarse a Ella es pedirle la gracia de no huir de la oración cuando más cuesta y velar al pie del Sagrario en compañía de la Madre.",
+          "misterio": [
+            "Jesús agonizó en Getsemaní mientras sus amigos dormían. ¡Ten piedad!",
+            "Padre, no se haga mi voluntad sino la tuya. ¡Alabado sea el Señor!"
+          ],
+          "maria": [
+            "Madre dolorosa, tu corazón velaba unido al cáliz de Jesús.",
+            "María, acompáñame a velar en oración para no caer en tentación."
+          ],
+          "tema": [
+            "Madre, no me dejes dormir en la tibieza cuando Jesús me llama a velar.",
+            "Jesús, que aprenda de tu Madre a ser fiel en las noches oscuras del alma.",
+            "María, enséñame a abrazar el silencio y la penitencia en la prueba.",
+            "Señor, por las lágrimas de María, dame constancia en mi oración diaria.",
+            "Inmaculada, toma mi cansancio y conviértelo en ofrenda agradable a Dios.",
+            "Jesús, perdona las veces que busqué comodidades antes que tu consuelo.",
+            "Madre, alcánzame la gracia de velar ante el Santísimo con devoción.",
+            "María, cúbreme con tu manto cuando las dudas intenten derribarme.",
+            "Padre, que aprenda a decir con Jesús y María: hágase tu santa voluntad.",
+            "Señor, dame la fidelidad de la Virgen en los momentos de mayor aridez.",
+            "Inmaculado Corazón de María, refugio de los pecadores, ruega por mí."
+          ]
+        },
+        {
+          "med": "En la flagelación, cada azote descargado sobre el cuerpo inocente de Cristo resonó con dolor indecible en el alma de María. Ella recogió espiritualmente cada gota de esa Sangre redentora para presentarla al Padre. La consagración montfortiana nos llama a reparar: a no ser indiferentes ante las ofensas que sufre el Señor, y a ofrecer pequeños actos de amor y pureza para consolar los dos Corazones.",
+          "misterio": [
+            "Jesús fue azotado cruelmente por la salvación de nuestras almas.",
+            "Fue traspasado por nuestras rebeliones y sanó nuestras heridas. ¡Gloria a Dios!"
+          ],
+          "maria": [
+            "Madre amantísima, tu corazón sufrió cada golpe descargado en tu Hijo.",
+            "María, enséñame a reparar con amor puro las ofensas hechas a Jesús."
+          ],
+          "tema": [
+            "Madre, uno mis pequeños sacrificios a las llagas de tu divino Hijo.",
+            "Jesús, por las lágrimas de tu Madre, perdona mis pecados de la carne.",
+            "María, enséñame a desagraviar el Corazón de Jesús con actos de caridad.",
+            "Señor, que no sea indiferente ante el sufrimiento de los inocentes.",
+            "Inmaculada, purifica mis sentidos y líbrame de toda concupiscencia.",
+            "Madre, toma mi dolor físico o cansancio y ofrécelo por las almas.",
+            "Jesús, sálvame por los méritos infinitos de tu Pasión redentora.",
+            "María, que al contemplar a Jesús azotado deteste todo pecado mortal.",
+            "Padre, acoge la ofrenda de mi jornada en reparación por el mundo.",
+            "Madre dolorosa, sé mi fortaleza cuando me toque sufrir por la fe.",
+            "Inmaculado Corazón de María, traspasado de dolor, sé mi salvación."
+          ]
+        },
+        {
+          "med": "Los soldados se burlaron de Jesús y le clavaron la corona de espinas. En medio de los insultos del mundo, María adoraba en su interior la realeza divina de su Hijo. Cuando el mundo se burle de nuestra fe o sintamos el peso de la soberbia herida, acudamos al corazón humilde de María. Ella nos enseña a no responder con venganza ni rabia, sino con mansedumbre, callando y bendiciendo a quienes nos ofenden.",
+          "misterio": [
+            "Jesús fue coronado de espinas y burlado como falso rey. ¡Piedad, Señor!",
+            "Salve, Rey de los judíos: Cristo soportó el escarnio por amor a nosotros."
+          ],
+          "maria": [
+            "Madre, en silencio adoraste al Rey eterno humillado por los hombres.",
+            "María, enséñame a consolar la cabeza dolorida de Jesús con mi humildad."
+          ],
+          "tema": [
+            "Madre, arranca de mi corazón la soberbia y el deseo de venganza.",
+            "Jesús, que aprenda de María a callar cuando me toque ser corregido.",
+            "Inmaculada, reina en mis pensamientos para que sean puros y santos.",
+            "Señor, por intercesión de tu Madre, líbrame de la vanagloria.",
+            "Madre, dame mansedumbre para no devolver agravios en el tráfico ni en casa.",
+            "Jesús, que busque agradarte en lo oculto y no ante la mirada ajena.",
+            "María, enséñame a recibir las humillaciones con paciencia y paz.",
+            "Padre, destruye mi orgullo y hazme dócil como la Virgen en Nazaret.",
+            "Madre, cuando sienta rabia, pon tu mano sobre mi boca y mi mente.",
+            "Señor, corona mi vida con la gracia de la perseverancia en el bien.",
+            "Inmaculado Corazón de María, trono de humildad, ruega por mí."
+          ]
+        },
+        {
+          "med": "En el camino al Calvario se produjo el encuentro más conmovedor: los ojos ensangrentados de Jesús se cruzaron con los ojos llorosos de su Madre. No hicieron falta palabras: la mirada de María le dio fuerzas para seguir. En el icono del Perpetuo Socorro, el Niño Jesús corre a los brazos de su Madre cuando ve la cruz. Cuando la vida pese y las pruebas te sobrepasen, corre a María: dile 'quiero a mi mamá'.",
+          "misterio": [
+            "Jesús cargó con su cruz y se encontró con su Madre en la calle amarga.",
+            "El Cireneo ayudó a llevar el madero de la salvación. ¡Alabado sea Dios!"
+          ],
+          "maria": [
+            "Madre, tu mirada de amor sostuvo a Jesús en el camino del Calvario.",
+            "María, encuéntrame en mis caminos difíciles y no me dejes desfallecer."
+          ],
+          "tema": [
+            "Madre mía, en mis angustias y caídas acudo a ti: quiero a mi mamá.",
+            "Jesús, que la mirada de tu Madre me dé fuerzas para no abandonar la cruz.",
+            "María, Madre del Perpetuo Socorro, acógeme en tu regazo protector.",
+            "Señor, hazme cireneo generoso para ayudar a llevar la cruz a mis hermanos.",
+            "Inmaculada, cuando caiga en el pecado, levántame pronto con tu ternura.",
+            "Madre, que no me queje del peso del día: lo ofrezco todo a Jesús.",
+            "Jesús, dame la fortaleza de María para no huir ante las dificultades.",
+            "María, enséñame a consolar a los que sufren en mi familia y comunidad.",
+            "Padre, no permitas que la desesperanza me aleje de tu misericordia.",
+            "Madre del Calvario, camina a mi lado en cada paso de esta jornada.",
+            "Inmaculado Corazón de María, auxilio de los cristianos, ruega por mí."
+          ]
+        },
+        {
+          "med": "Al pie de la cruz, viendo morir a su Hijo, María permaneció de pie. Y Jesús, antes de expirar, nos la entregó a todos en San Juan: 'Hijo, ahí tienes a tu madre'. Y el discípulo la recibió en su casa. Consagrarse a María es eso: recibirla en tu casa, en tu carro, en tu matrimonio, en tus negocios y en tu alma. Como decía San Maximiliano Kolbe: quien tiene a María como Madre, lo tiene absolutamente todo.",
+          "misterio": [
+            "Jesús murió en la cruz y nos entregó a María como Madre nuestra.",
+            "Todo está cumplido: Cristo redimió al mundo con su sangre. ¡Quién como Dios!"
+          ],
+          "maria": [
+            "Madre, al pie de la cruz nos acogiste como hijos en el corazón de Juan.",
+            "María, quiero recibirte en mi casa y en mi vida como el discípulo amado."
+          ],
+          "tema": [
+            "Madre, hoy te recibo solemnemente en mi casa, en mi familia y en mi alma.",
+            "Jesús, gracias por el regalo infinito de tu Madre en la cruz.",
+            "María, sé la Reina de mi hogar y custodia la salvación de los míos.",
+            "Señor, que viva mi consagración mariana con fidelidad hasta la muerte.",
+            "Inmaculada, acompáñame en la hora final y preséntame ante el tribunal de Dios.",
+            "Madre, no permitas que ninguno de mis seres queridos se pierda para siempre.",
+            "Jesús, en tus manos encomiendo mi vida por intercesión de María.",
+            "María, que bajo tu amparo encuentre siempre la paz y el perdón.",
+            "Padre, que el sacrificio de tu Hijo y el dolor de María no sean en vano en mí.",
+            "Madre corredentora, enséñame a permanecer fiel al pie de la cruz.",
+            "Inmaculado Corazón de María, sé la salvación del alma mía en la hora final."
+          ]
+        }
+      ],
+      "lam3": [
+        {
+          "med": "En Getsemaní, Jesús experimentó el pavor, la tristeza y el abandono humano. Pero no huyó del cáliz: se arrodilló y oró: 'Padre, si es posible pasa de mí este cáliz, pero no se haga mi voluntad sino la tuya'. En las pruebas del apostolado y en los combates espirituales, la victoria no se logra con rabia ni con fuerzas humanas, sino de rodillas, sometiendo la propia voluntad a la voluntad del Padre.",
+          "misterio": [
+            "Jesús oró en Getsemaní y aceptó el cáliz amargo por nuestra redención.",
+            "Hágase tu voluntad y no la mía: la oración que venció al pecado. ¡Gloria a ti!"
+          ],
+          "maria": [
+            "Madre, en la noche del huerto tu corazón oraba en perfecta unión con Jesús.",
+            "María, enséñame a no huir de la cruz cuando la voluntad de Dios sea exigente."
+          ],
+          "tema": [
+            "Señor, no se haga lo que yo quiero, sino lo que tú dispongas hoy.",
+            "Jesús, dame fortaleza en Getsemaní para vencer la tentación de huir.",
+            "Padre, que aprenda a combatir de rodillas antes de actuar humanamente.",
+            "Señor, que el miedo al sufrimiento no me haga retroceder en la misión.",
+            "Jesús, que busque mi consuelo en tu Corazón y no en las criaturas.",
+            "Madre, sostén mi mano cuando sienta que la copa de hoy es amarga.",
+            "Señor, toma mis angustias y temores y transfórmalos en santa entrega.",
+            "Jesús, hazme fiel en la hora de la prueba y del combate interior.",
+            "Padre, que no busque mi gloria personal sino el triunfo de tu Reino.",
+            "Señor, dame perseverar en la oración prolongada cuando llegue la noche.",
+            "Inmaculado Corazón de María, refugio en la agonía, ruega por mí."
+          ]
+        },
+        {
+          "med": "Jesús soportó los azotes atado a la columna sin pronunciar una sola palabra de odio ni queja. Ofreció cada golpe en silencio por nuestra salvación. En la espiritualidad de Lazos aprendemos el valor de la reparación y el ofrecimiento: cuando te duela la cabeza, cuando tengas un malestar físico o una fatiga pesada, no te quejes. Ofrécelo en silencio a Dios por la conversión de alguien de tu familia.",
+          "misterio": [
+            "Jesús sufrió los crueles azotes en silencio y por amor a los pecadores.",
+            "Por sus llagas fuimos sanados y reconciliados con Dios. ¡Alabado sea!"
+          ],
+          "maria": [
+            "Madre dolorosa, uniste tu silencio al dolor redentor de tu Hijo.",
+            "María, enséñame a no quejarme del dolor y a ofrecerlo por amor."
+          ],
+          "tema": [
+            "Señor, te ofrezco este dolor físico y este cansancio por las almas.",
+            "Jesús, que aprenda a callar mis molestias sin buscar que me tengan lástima.",
+            "Padre, que cada sacrificio oculto sea semilla de conversión para mi hogar.",
+            "Señor, une mis pequeños padecimientos al valor infinito de tus llagas.",
+            "Jesús, dame paciencia en la enfermedad y en los días de fatiga pesada.",
+            "Madre, enséñame a sonreír y servir aunque por dentro me duela el cuerpo.",
+            "Señor, líbrame de la autocompasión que arruina el mérito del sacrificio.",
+            "Jesús, ofrezco la renuncia de hoy por los sacerdotes y misioneros.",
+            "Padre, que el dolor aceptado con amor purifique las manchas de mi alma.",
+            "Madre amantísima, pon mis pequeñas cruces en el cáliz del sacrificio de Jesús.",
+            "Inmaculado Corazón de María, salud de los enfermos, ruega por nosotros."
+          ]
+        },
+        {
+          "med": "Los soldados se burlaron de Cristo, le escupieron el rostro y lo coronaron de espinas. Jesús calló y perdonó. En el combate diario, la tentación más sutil es la soberbia herida: devolver el insulto en la calle, gritar ante una ofensa o guardar rencor. El misionero de Lazos responde a la agresión con mansedumbre, castiga al enemigo con el desprecio y vence el mal a fuerza de hacer el bien.",
+          "misterio": [
+            "Cristo soportó las burlas y espinas para darnos la corona de gloria.",
+            "Jesús calló ante los insultos y perdonó a sus verdugos. ¡Quién como Dios!"
+          ],
+          "maria": [
+            "Madre, tu corazón herido perdonó con Jesús a los que lo ultrajaban.",
+            "María, enséñame a no guardar rencor y a responder con bendiciones."
+          ],
+          "tema": [
+            "Señor, dame la gracia de tragarme una respuesta hiriente y callar.",
+            "Jesús, que no devuelva insultos ni agresiones en el tráfico ni en casa.",
+            "Padre, limpia mi corazón de todo resentimiento, amargura y rencor.",
+            "Señor, al demonio y a sus provocaciones los castigo con mi desprecio.",
+            "Jesús, dame la mansedumbre de los santos para vencer el orgullo.",
+            "Madre, cuando me sienta humillado, recuérdame a Jesús coronado de espinas.",
+            "Señor, que aprenda a pedir perdón de inmediato cuando haya ofendido.",
+            "Jesús, que el perdón sincero sea el sello distintivo de mi vida cristiana.",
+            "Padre, bendice a quienes me critican, me juzgan o me hacen daño.",
+            "Madre, alcánzame un corazón blando para amar a los que me cuesta soportar.",
+            "Inmaculado Corazón de María, modelo de mansedumbre, ruega por mí."
+          ]
+        },
+        {
+          "med": "Jesús cargó con la cruz camino del Calvario. Cada paso era una victoria de la paciencia y de la perseverancia, lo que la teología llama la hypomoné: soportar el peso de hoy sin adelantarse a la angustia del mañana. En las prédicas de Lazos se repite con insistencia: no cargues hoy los problemas de toda la semana. Carga tu cruz de hoy con amor, sostenido por la gracia, y Dios proveerá para mañana.",
+          "misterio": [
+            "Jesús abrazó el madero de la cruz y caminó hacia el monte Calvario.",
+            "El Señor cayó y se levantó para enseñarnos a perseverar. ¡Gloria a Dios!"
+          ],
+          "maria": [
+            "Madre corredentora, caminaste junto a Jesús compartiendo su martirio.",
+            "María, acompáñame en mi camino diario para no soltar la cruz de Cristo."
+          ],
+          "tema": [
+            "Señor, dame la gracia de cargar la cruz de hoy sin quejarme por mañana.",
+            "Jesús, la cruz no vino a estorbar mi vida, vino a salvarme: la abrazo.",
+            "Padre, concédeme la hypomoné: la santa paciencia en las dificultades.",
+            "Señor, si caigo en el camino, dame la humildad de confesarme y seguir.",
+            "Jesús, hazme cireneo para aliviar la carga de mi cónyuge y de mis hijos.",
+            "Madre, que no huya del sacrificio que santifica mi deber de estado.",
+            "Señor, no te pido que me quites la cruz, te pido fuerzas para llevarla.",
+            "Jesús, que cada paso difícil me acerque más a la patria celestial.",
+            "Padre, confío en que tu gracia me basta para vencer en cada combate.",
+            "Madre del camino, sé mi bastón y mi amparo cuando me falten fuerzas.",
+            "Inmaculado Corazón de María, consuelo de los afligidos, sálvame."
+          ]
+        },
+        {
+          "med": "En la cruz, Jesús entregó su vida en rescate por todos nosotros. San Francisco Javier exclamaba con fuego misionero: ¡un alma vale más que todo el oro del mundo! Por una sola alma Jesús habría muerto en la cruz. Ese es el motor que mueve a Lazos de Amor Mariano: salir a salvar almas del infierno y llevarlas a los brazos de Jesús y de María. No hay mayor gloria en esta vida que gastar la vida por Cristo.",
+          "misterio": [
+            "Cristo murió en la cruz consumando la obra de nuestra eterna redención.",
+            "Nadie tiene mayor amor que el que da la vida por sus amigos. ¡Quién como Dios!"
+          ],
+          "maria": [
+            "Madre, al pie de la cruz ofreciste a tu Hijo por la salvación del mundo.",
+            "María, reina de los mártires, infunde en mí el celo ardiente por las almas."
+          ],
+          "tema": [
+            "Señor, un alma vale más que todo el oro del mundo: envíame a salvarlas.",
+            "Jesús, que no viva para mis comodidades sino para extender tu Reino.",
+            "Padre, hazme un instrumento incansable de salvación y misericordia.",
+            "Señor, que no me dé miedo desgastar mi vida y mi tiempo en el apostolado.",
+            "Jesús, por tu preciosa Sangre libra a los jóvenes de las garras del vicio.",
+            "Madre, suscita miles de vocaciones santas y misioneros entregados.",
+            "Señor, que mi meta sea presentarme ante ti con las manos llenas de almas.",
+            "Jesús, hazme valiente como San José Sánchez del Río: ¡Viva Cristo Rey!",
+            "Padre, que ningún ser humano muera hoy sin conocer tu amor y tu perdón.",
+            "Madre de la cruz, enséñame a permanecer fiel a Jesús hasta el último suspiro.",
+            "Inmaculado Corazón de María, sé la salvación del alma mía y del mundo entero."
           ]
         }
       ],
@@ -2247,6 +2616,372 @@
           ]
         }
       ],
+      "lam1": [
+        {
+          "med": "Cristo resucitó de entre los muertos y venció para siempre el pecado y la tumba. En Lazos repetimos siempre esta verdad que consuela: todo santo tuvo un pasado, todo pecador tiene un futuro. No importa cuán hondo hayas caído ni cuántos años hayas vivido lejos de Dios: con Cristo siempre se puede volver a empezar. Donde abundó el pecado, sobreabundó la gracia.",
+          "misterio": [
+            "Cristo resucitó y la muerte fue vencida. ¡Quién como Dios!",
+            "Jesús, saliste victorioso del sepulcro para darnos vida eterna."
+          ],
+          "maria": [
+            "Madre, en el gozo del Resucitado tu corazón encontró la paz.",
+            "María, que tu fe me enseñe a esperar contra toda desesperanza."
+          ],
+          "tema": [
+            "Señor, todo santo tuvo un pasado y todo pecador tiene un futuro.",
+            "Jesús, resucita mi alma de la muerte del pecado y la tibieza.",
+            "Padre, donde abundó mi pecado sobreabundó tu infinita gracia.",
+            "Señor, dame la gracia de levantarme siempre y volver a empezar.",
+            "Jesús, hazme testigo vivo de tu victoria sobre mis debilidades.",
+            "Padre, que no me acostumbre al sepulcro de mis vicios. Sácame.",
+            "Señor, tu resurrección me da la certeza de que el bien vencerá.",
+            "Jesús, renueva mi primer amor y enciende mi fe con tu presencia.",
+            "Padre, perdona mi falta de esperanza cuando veo mis miserias.",
+            "Señor, tú haces nuevas todas las cosas: haz nuevo mi corazón hoy.",
+            "Inmaculado Corazón de María, acompáñame en mi camino de santidad."
+          ]
+        },
+        {
+          "med": "Jesús subió a los cielos y prometió: estaré con ustedes todos los días hasta el fin del mundo. ¿De qué le sirve al hombre ganar el mundo entero si pierde su alma? En el grupo de oración José nos exhortaba a tener la mirada en el cielo: vivimos en tiempos de distracción y redes, pero el Señor vuelve. No podemos vivir como si esta tierra fuera nuestro destino final. Fuimos creados para la eternidad.",
+          "misterio": [
+            "Jesús, ascendiste al cielo a prepararnos una morada eterna.",
+            "Señor, estás a la derecha del Padre intercediendo por nosotros."
+          ],
+          "maria": [
+            "Madre, con los ojos fijos en el cielo esperaste la promesa del Hijo.",
+            "María, enséñame a vivir con el corazón anclado en la eternidad."
+          ],
+          "tema": [
+            "Señor, ¿de qué me sirve ganar el mundo si pierdo lo eterno?",
+            "Jesús, que las preocupaciones pasajeras no me roben la salvación.",
+            "Padre, despierta mi alma para no vivir como si nunca fuera a morir.",
+            "Señor, que mi tesoro esté en el cielo y no en las cosas terrenas.",
+            "Jesús, acuérdate de mí cuando vuelvas con gloria y majestad.",
+            "Padre, dame desprendimiento de lo material para volar hacia ti.",
+            "Señor, hazme vivir hoy como si fuera el último día de mi vida.",
+            "Jesús, un alma vale más que todo el oro del mundo. Cuida la mía.",
+            "Padre, no permitas que la comodidad me adormezca la conciencia.",
+            "Señor, que mi trabajo y mi familia sean camino hacia tu gloria.",
+            "Madre del cielo, guíame con tu mano para no perder el rumbo."
+          ]
+        },
+        {
+          "med": "El Espíritu Santo descendió en lenguas de fuego sobre María y los apóstoles encerrados por miedo. El fuego de Dios no vino a dejarlos tranquilos: vino a soltarles la lengua y enviarlos al mundo. Como predicaba Walter Arias: no hay manera de salir de la mediocridad sin una vida de oración fuerte. Si el bombardeo del mundo es diario, nuestra oración debe ser diaria y llena del Espíritu Santo.",
+          "misterio": [
+            "Ven, Espíritu Santo, fuego abrasador que transforma los corazones.",
+            "El Espíritu de Dios llenó la casa y expulsó todo temor. ¡Gloria a Dios!"
+          ],
+          "maria": [
+            "Madre, en el Cenáculo orabas con la Iglesia naciente. Ruega por mí.",
+            "María, esposa del Espíritu Santo, alcánzame sus siete dones santos."
+          ],
+          "tema": [
+            "Ven, Espíritu Santo, con tu fuego y quema mi tibieza espiritual.",
+            "Señor, suelta mi lengua para dar testimonio sin respetos humanos.",
+            "Padre, sácame del encierro del miedo y dame celo por las almas.",
+            "Jesús, envía tu Santo Espíritu para no ser mediocre en mi fe.",
+            "Padre, si el ataque del enemigo es diario, haz mi oración constante.",
+            "Señor, no me dejes apagar la llama que encendiste en mi conversión.",
+            "Jesús, hazme dócil a las inspiraciones de tu Espíritu de verdad.",
+            "Padre, que no busque agradar a los hombres antes que a ti.",
+            "Señor, dame la valentía de los apóstoles para proclamar tu Evangelio.",
+            "Jesús, limpia mi corazón de rencores para ser templo de tu Espíritu.",
+            "Inmaculado Corazón de María, enséñame a orar con fervor y constancia."
+          ]
+        },
+        {
+          "med": "María fue asunta en cuerpo y alma a la gloria celestial. Su cuerpo purísimo, que llevó al Verbo encarnado, no conoció la corrupción. Nuestro cuerpo también es templo del Espíritu Santo y está llamado a la resurrección. San José y la Santísima Virgen nos enseñan la belleza de la pureza y la castidad en los ojos, en los pensamientos y en las obras. Quien guarda su pureza por amor a Dios, brilla para siempre.",
+          "misterio": [
+            "María fue llevada al cielo en cuerpo y alma. ¡Nadie como Dios!",
+            "La Hija del Padre entra victoriosa en la gloria. ¡Alabado sea el Señor!"
+          ],
+          "maria": [
+            "Madre purísima, enséñame a custodiar la pureza de mi cuerpo y alma.",
+            "María, lirio de castidad, cúbreme con tu manto ante la tentación."
+          ],
+          "tema": [
+            "Señor, mi cuerpo es templo de tu Espíritu: líbrame de la impureza.",
+            "Jesús, dame ojos limpios y pensamientos santos para agradarte siempre.",
+            "Padre, ayúdame a cortar de raíz toda ocasión de pecado en las redes.",
+            "Señor, la pureza es fortaleza del alma: regálame la gracia de vivirla.",
+            "Jesús, por la Asunción de tu Madre, sana mis afectos desordenados.",
+            "Padre, dame la castidad en mi matrimonio y en mi vida diaria.",
+            "Señor, que no manche con el pecado el alma que tú lavaste en la cruz.",
+            "Jesús, hazme valorar la dignidad de cada persona como hija de Dios.",
+            "Padre, dame huir de las malas conversaciones y de la vanidad.",
+            "Señor, que el anhelo del cielo me dé fuerza para vencer la carne.",
+            "Inmaculado Corazón de María, sé mi escudo y defensa en el combate."
+          ]
+        },
+        {
+          "med": "Dios coronó a María como Reina de todo lo creado. La que fue la esclava humilde en Nazaret es ensalzada sobre los coros angélicos. Porque quien se humilla será enaltecido. Y a nosotros nos espera esa misma corona si perseveramos en la batalla diaria. ¿Para dónde vamos? ¡Seremos santos! Esa es la meta de Lazos de Amor Mariano. No nos conformemos con menos: la corona es para los que aman hasta el fin.",
+          "misterio": [
+            "María es coronada Reina de cielos y tierra. ¡Quién como Dios!",
+            "El Señor enaltece a los humildes y los corona de gloria. ¡Alabado sea!"
+          ],
+          "maria": [
+            "Reina y Madre mía, a ti consagro mi vida, mi familia y mi eternidad.",
+            "Madre, intercede para que yo no desmaye antes de alcanzar la corona."
+          ],
+          "tema": [
+            "Señor, ¿para dónde vamos? ¡A ser santos por tu infinita gracia!",
+            "Jesús, dame la perseverancia final para no perder la salvación.",
+            "Padre, que ninguna prueba ni cansancio me aparte de tu camino.",
+            "Señor, no quiero una corona corruptible: quiero la vida eterna contigo.",
+            "Jesús, hazme fiel en lo poco para que me confíes lo mucho en tu Reino.",
+            "Padre, que al final de mi vida pueda decir: he combatido el buen combate.",
+            "Señor, dame la gracia de reparar las ofensas a tu Sagrado Corazón.",
+            "Jesús, la santidad es exigente pero vale la pena: dame tu fuerza.",
+            "Padre, que mi hogar sea una pequeña escuela de santidad y amor.",
+            "Señor, hazme siervo bueno y fiel para entrar en el gozo de mi Señor.",
+            "Inmaculado Corazón de María, sé la salvación del alma mía."
+          ]
+        }
+      ],
+      "lam2": [
+        {
+          "med": "En el silencio del Sábado Santo, cuando los apóstoles estaban deshechos y escondidos por el miedo, la única llama de fe encendida en toda la tierra era el Corazón de María. Ella sabía que su Hijo resucitaría. En los momentos de mayor oscuridad o cuando todo parezca perdido en la Iglesia, en la familia o en tu alma, apóyate en la fe de María. Ella sostiene tu esperanza cuando a ti se te acaban las fuerzas.",
+          "misterio": [
+            "Cristo resucitó victorioso y se apareció a su Madre santísima.",
+            "La muerte ha sido vencida por la gloria del Resucitado. ¡Quién como Dios!"
+          ],
+          "maria": [
+            "Madre de la esperanza, tu fe inquebrantable sostuvo al mundo en el dolor.",
+            "María, que tu certeza en la resurrección me dé paz en mis tribulaciones."
+          ],
+          "tema": [
+            "Madre, cuando mi fe flaquee, préstame tu fe para no dudar de Dios.",
+            "Jesús, que la alegría de tu resurrección inunde mi hogar y mi vida.",
+            "María, enséñame a esperar la victoria de Dios en medio del silencio.",
+            "Señor, por intercesión de la Virgen, resucita mi fervor misionero.",
+            "Inmaculada, guárdame de la desesperanza y del desánimo interior.",
+            "Madre, acompáñame a velar con fe en las horas más difíciles.",
+            "Jesús, gracias por consolarnos con la presencia maternal de María.",
+            "María, líbrame de la tristeza estéril y dame el gozo del Resucitado.",
+            "Padre, que aprenda a confiar en tus promesas como confió la Virgen.",
+            "Señor, hazme testigo alegre de tu triunfo sobre el pecado.",
+            "Inmaculado Corazón de María, causa de nuestra alegría, ruega por mí."
+          ]
+        },
+        {
+          "med": "Al subir Jesús al cielo, los apóstoles quedaron mirando a lo alto. Pero volvieron a Jerusalén y se reunieron en torno a María para esperar la venida del Espíritu Santo. La Virgen es el punto de encuentro de la Iglesia: Ella reúne a los que están dispersos y calma las ansiedades. En los tiempos de espera y cuando no sabemos qué camino tomar, refugiarnos junto a María nos asegura no perder el rumbo.",
+          "misterio": [
+            "Jesús ascendió a los cielos y nos dejó a su Madre como refugio y guía.",
+            "El Señor reina a la derecha del Padre en gloria eterna. ¡Alabado sea!"
+          ],
+          "maria": [
+            "Madre de la Iglesia, congregaste a los apóstoles en la santa espera.",
+            "María, enséñame a perseverar en la oración unida a mis hermanos."
+          ],
+          "tema": [
+            "Madre, enséñame a esperar los tiempos de Dios con paciencia y paz.",
+            "Jesús, que mi mirada esté puesta en el cielo y mis manos en el servicio.",
+            "María, mantén a mi familia unida en la fe y en la caridad sincera.",
+            "Señor, hazme dócil a la guía maternal de la Inmaculada.",
+            "Inmaculada, aleja de nuestra comunidad toda división y discordia.",
+            "Madre, condúceme por el camino seguro que lleva a la patria eterna.",
+            "Jesús, por las súplicas de tu Madre, bendice a nuestros sacerdotes.",
+            "María, no me dejes apegarme a las cosas pasajeras de esta tierra.",
+            "Padre, que aprenda a vivir con el corazón anclado en tus promesas.",
+            "Señor, hazme apóstol fiel que anuncie tu Reino hasta los confines del mundo.",
+            "Inmaculado Corazón de María, guía y consuelo de la Iglesia, sálvame."
+          ]
+        },
+        {
+          "med": "En Pentecostés, el Espíritu Santo descendió con poder sobre el Cenáculo porque allí estaba María, su amadísima Esposa. San Luis María de Montfort enseñaba: cuando el Espíritu Santo encuentra a María en un alma, vuela hacia ella y la llena con la abundancia de sus dones. Si quieres ser un misionero encendido con fuego de Dios, entra en el Cenáculo del Inmaculado Corazón y déjate formar por Ella.",
+          "misterio": [
+            "El Espíritu Santo descendió en fuego sobre María y los apóstoles.",
+            "Fueron llenos del Espíritu y proclamaron las maravillas de Dios. ¡Gloria a ti!"
+          ],
+          "maria": [
+            "María, templo y esposa del Espíritu Santo, ruega por nosotros.",
+            "Madre, enciende en mi alma el fuego ardiente del amor divino."
+          ],
+          "tema": [
+            "Ven, Espíritu Santo, por la intercesión de María, tu amadísima Esposa.",
+            "Madre, alcánzame un corazón dócil a los santos dones del Espíritu.",
+            "Jesús, transfórmame en un misionero de fuego por amor a las almas.",
+            "Inmaculada, quita de mi corazón el miedo al qué dirán y la cobardía.",
+            "Señor, suelta mi lengua para alabar a Dios y evangelizar sin temor.",
+            "Madre, enséñame a orar en comunidad con fervor y caridad sincera.",
+            "Espíritu Santo, renueva la faz de la tierra empezando por mi propio hogar.",
+            "María, que tu presencia en mi vida atraiga la gracia y la santidad.",
+            "Padre, no me dejes apagar los carismas que me diste para tu servicio.",
+            "Señor, hazme fiel instrumento en las manos de la Virgen María.",
+            "Inmaculado Corazón de María, enciende en mí el fuego de Pentecostés."
+          ]
+        },
+        {
+          "med": "María fue elevada al cielo en cuerpo y alma para estar para siempre junto a su Hijo. San Luis María de Montfort llamaba a la consagración mariana 'el camino fácil, corto, perfecto y seguro' para llegar a la santidad. Adónde va la Madre, van sus hijos. Consagrarle la vida a la Inmaculada es subirnos en sus brazos maternales para que Ella misma nos lleve al cielo sin perdernos en los atajos del mundo.",
+          "misterio": [
+            "La Virgen María fue asunta a los cielos en cuerpo y alma. ¡Nadie como Dios!",
+            "La Hija predilecta del Padre entra triunfante en el Paraíso celestial."
+          ],
+          "maria": [
+            "Madre asunta al cielo, puerta del Paraíso, condúceme a la gloria eterna.",
+            "María, que el anhelo del cielo me dé fuerzas para vencer el pecado."
+          ],
+          "tema": [
+            "Madre, llévame por el camino corto y seguro de tu santa consagración.",
+            "Jesús, que la gloria de tu Madre me recuerde el valor infinito de mi alma.",
+            "Inmaculada, custodia mi pureza para ser digno de contemplar a Dios.",
+            "Señor, que no me distraiga con los bienes falsos de este mundo.",
+            "Madre, toma mi mano y no me sueltes en las tentaciones del camino.",
+            "María, que viva en santidad para reunirme contigo y con Jesús en el cielo.",
+            "Jesús, por la Asunción de tu Madre, bendice y protege a mi familia.",
+            "Madre mía, sé la estrella que guíe mi barca en medio de las tormentas.",
+            "Padre, que la esperanza de la vida eterna sea mi mayor consuelo diario.",
+            "Señor, que la belleza de María me inspire a amar solo lo verdadero y puro.",
+            "Inmaculado Corazón de María, puerta del cielo, ruega por nosotros."
+          ]
+        },
+        {
+          "med": "La Santísima Trinidad coronó a María como Reina universal de todo lo creado. San Maximiliano Kolbe lo resumía en esta fórmula santa: 'Todo por la Inmaculada, nada sin Ella'. María es Reina porque es la sierva más humilde, y ejerce su realeza distribuyendo todas las gracias del Corazón de Jesús. Vivir consagrado es dejar que la Virgen reine absolutamente en nuestra casa, en nuestras obras y en nuestro corazón.",
+          "misterio": [
+            "María fue coronada por la Trinidad como Reina del universo. ¡Quién como Dios!",
+            "Dios ensalzó a la humilde esclava y la hizo Reina de cielos y tierra."
+          ],
+          "maria": [
+            "Reina y Señora mía, a ti entrego el cetro de mi corazón y de mi hogar.",
+            "María, Reina de los apóstoles, enséñame a servir a Cristo hasta el final."
+          ],
+          "tema": [
+            "Madre y Reina mía, todo por la Inmaculada y nada sin Ella.",
+            "Jesús, rey de mi vida: que tu Madre reine conmigo para llevarme a ti.",
+            "María, consagro a tu Corazón Inmaculado a mis hijos, mi esposa y mi trabajo.",
+            "Señor, concédeme perseverar en el rezo del Santo Rosario todos los días.",
+            "Inmaculada, sé la soberana de mis pensamientos, deseos y proyectos.",
+            "Madre, alcánzame la corona de la santidad viviendo en gracia de Dios.",
+            "Jesús, hazme fiel esclavo de amor de tu Madre santísima hasta la muerte.",
+            "María, que bajo tu manto protector venza las asechanzas del enemigo.",
+            "Padre, que viva para glorificarte a ejemplo de la Reina del cielo.",
+            "Señor, ¿y después de Dios? ¡Nadie como María!",
+            "Inmaculado Corazón de María, sé la salvación de mi alma para siempre."
+          ]
+        }
+      ],
+      "lam3": [
+        {
+          "med": "Cristo resucitó victorioso de la muerte, pero conservó en su cuerpo glorioso las llagas de la Pasión. La victoria de Dios no esquivó la cruz, pasó a través de ella. En las prédicas de Lazos se nos recuerda: quien huye de la cruz huye de la resurrección. Cada batalla espiritual ganada, cada renuncia dolorosa y cada sufrimiento ofrecido por amor florecerán un día en gloria y gozo eterno.",
+          "misterio": [
+            "Cristo resucitó con las llagas de su Pasión convertidas en luz.",
+            "La muerte fue devorada por la victoria del Resucitado. ¡Quién como Dios!"
+          ],
+          "maria": [
+            "Madre, compartiste el dolor de la cruz y ahora compartes el gozo de la Pascua.",
+            "María, enséñame a no huir del sacrificio para alcanzar la gloria con Cristo."
+          ],
+          "tema": [
+            "Señor, que recuerde que no hay domingo de Pascua sin viernes de cruz.",
+            "Jesús, que mis heridas y cansancios se transformen en ofrendas de luz.",
+            "Padre, dame la certeza de que ningún dolor ofrecido por ti es en vano.",
+            "Señor, que la victoria de Cristo me dé ánimo en medio del combate diario.",
+            "Jesús, resucita mi entusiasmo misionero cuando me sienta agotado.",
+            "Madre, acompáñame en las pruebas con la esperanza de la resurrección.",
+            "Señor, no permitas que busque una vida cómoda sin cruz y sin mérito.",
+            "Jesús, por el poder de tu Pascua vence las ataduras de mi pecado.",
+            "Padre, hazme testigo valiente de tu triunfo sobre la muerte y el mal.",
+            "Madre del Resucitado, llena mi corazón del gozo pascual que no se apaga.",
+            "Inmaculado Corazón de María, reina de la victoria, ruega por mí."
+          ]
+        },
+        {
+          "med": "Antes de subir al cielo, Jesús dio a sus discípulos el gran mandato misionero: 'Vayan por todo el mundo y proclamen el Evangelio a toda la creación'. El Señor no los mandó a quedarse cómodos contemplando: los envió a la batalla. El llamado a la santidad y a la misión no es solo para curas o monjas: es para ti, laico consagrado, en tu empresa, con tu familia y en la calle de cada día.",
+          "misterio": [
+            "Jesús ascendió al cielo y envió a sus apóstoles a evangelizar a las naciones.",
+            "Estaré con ustedes todos los días hasta el fin del mundo. ¡Gloria al Señor!"
+          ],
+          "maria": [
+            "Madre, fuiste la primera misionera llevando a Jesús en tu seno.",
+            "María, reina de las misiones, bendice y protege a todos los evangelizadores."
+          ],
+          "tema": [
+            "Señor, aquí estoy: cuenta conmigo para extender tu Reino en mi entorno.",
+            "Jesús, que no me guarde la fe para mí solo, dame celo por compartirla.",
+            "Padre, hazme un laico comprometido y valiente en medio del mundo.",
+            "Señor, que mi testimonio de vida arrastre a otros hacia tu Iglesia.",
+            "Jesús, bendice las misiones, los retiros y los cenáculos de Lazos de Amor.",
+            "Madre, enséñame a hablar de Dios con caridad, convicción y prudencia.",
+            "Señor, que no me acobarde ante la indiferencia o el rechazo de la gente.",
+            "Jesús, dame creatividad y generosidad para servir en el apostolado.",
+            "Padre, que ningún día pase sin hacer algo concreto por la salvación de un alma.",
+            "Madre, cuida a los misioneros que entregan su vida en tierras lejanas.",
+            "Inmaculado Corazón de María, estrella de la evangelización, guíanos."
+          ]
+        },
+        {
+          "med": "En Pentecostés, el fuego del Espíritu Santo transformó a unos hombres asustados y encerrados en apóstoles intrépidos dispuestos a morir por Cristo. En las prédicas de Walter Arias y de los misioneros se repite: si el bombardeo del mundo es fuerte, nuestra oración y nuestra valentía deben serlo más. Sal del cuarto cerrado de la comodidad y de los respetos humanos: el mundo necesita testigos de fuego.",
+          "misterio": [
+            "El Espíritu Santo descendió en lenguas de fuego sobre el Cenáculo.",
+            "Salieron valientes a proclamar las grandezas de Dios. ¡Quién como Dios!"
+          ],
+          "maria": [
+            "Madre, en el Cenáculo formaste a los apóstoles con tu oración ardiente.",
+            "María, alcánzame la valentía de los mártires para no callar mi fe jamás."
+          ],
+          "tema": [
+            "Ven, Espíritu Santo, y sácame del encierro de mis miedos y respetos humanos.",
+            "Señor, enciende en mi pecho el fuego misionero que no sabe retroceder.",
+            "Padre, dame el valor de defender la fe católica y la verdad sin titubear.",
+            "Jesús, que prefiera morir antes que avergonzarme de tu santo nombre.",
+            "Espíritu Santo, renueva a la Iglesia y suscita santos en nuestro tiempo.",
+            "Madre, intercede para que la comunidad de Lazos permanezca unida y fervorosa.",
+            "Señor, hazme dócil para hablar cuando deba hablar y callar cuando deba callar.",
+            "Jesús, destruye la tibieza espiritual y dame una fe combativa y viva.",
+            "Padre, purifica mis intenciones para buscar solo tu gloria y no la mía.",
+            "Madre del Cenáculo, enséñame a orar con perseverancia y en comunidad.",
+            "Inmaculado Corazón de María, templo del Espíritu Santo, enciéndenos."
+          ]
+        },
+        {
+          "med": "María fue elevada al cielo en cuerpo y alma, mostrándonos el destino glorioso que nos espera. En medio de los sacrificios de la misión, del cansancio del trabajo y de las cruces cotidianas, el cristiano no se desanima porque sabe para dónde va: ¡el cielo! Santa Teresa de Jesús decía: 'Tan alta vida espero, que muero porque no muero'. El cansancio de hoy no es nada comparado con el gozo eterno.",
+          "misterio": [
+            "María fue asunta al cielo y contempla a Dios cara a cara para siempre.",
+            "Dichosos los limpios de corazón, porque ellos verán a Dios. ¡Alabado sea!"
+          ],
+          "maria": [
+            "Madre gloriosa, tu Asunción es prenda segura de nuestra propia resurrección.",
+            "María, mantén mis ojos fijos en el cielo para no cansarme de luchar aquí."
+          ],
+          "tema": [
+            "Señor, que el anhelo del cielo sostenga mis fuerzas en los días difíciles.",
+            "Jesús, que nunca olvide que fui creado para la eternidad y no para esta tierra.",
+            "Padre, que el cansancio apostólico sea semilla de gloria en tu presencia.",
+            "Señor, líbrame de la mundanidad y de buscar recompensas en este mundo.",
+            "Jesús, por intercesión de tu Madre, protege a mi familia en el camino al cielo.",
+            "Madre, sé mi consuelo cuando sienta el peso de la soledad o el agotamiento.",
+            "Señor, que viva cada día con la mirada puesta en el abrazo de la eternidad.",
+            "Jesús, hazme perseverante en la gracia para no perder el premio prometido.",
+            "Padre, gracias por la esperanza viva de reunirnos todos en tu Reino.",
+            "Madre asunta al cielo, acompáñame en cada paso hasta llegar a la meta.",
+            "Inmaculado Corazón de María, causa de nuestra alegría, sálvame."
+          ]
+        },
+        {
+          "med": "María es coronada como Reina y Señora de todo lo creado. El combate termina en fiesta y la cruz culmina en corona. Como enseñaba San Pablo: he combatido el buen combate, he terminado mi carrera, he guardado la fe; por lo demás, me está reservada la corona de justicia. Vale la pena sufrir, amar y desgastarse por Cristo. ¿Para dónde vamos? ¡Seremos santos! El cielo es para los que perseveran.",
+          "misterio": [
+            "María fue coronada Reina de los cielos y de la tierra. ¡Quién como Dios!",
+            "El que persevere hasta el fin, ese se salvará. ¡Alabado sea el Señor!"
+          ],
+          "maria": [
+            "Reina y Madre mía, a tus pies pongo el combate y la victoria de mi vida.",
+            "María, reina de todos los santos, condúceme a la corona de la vida eterna."
+          ],
+          "tema": [
+            "Señor, ¿para dónde vamos? ¡A ser santos y ganar la corona del cielo!",
+            "Jesús, dame la gracia de la perseverancia final en la fe y en la caridad.",
+            "Padre, que al final de mi vida pueda decir: he combatido el buen combate.",
+            "Señor, que ningún sufrimiento me parezca demasiado por ganar a Cristo.",
+            "Jesús, gracias por la vocación misionera que me regalaste en tu Iglesia.",
+            "Madre, custodia mi corona de gloria para que el enemigo no me la arrebate.",
+            "Señor, hazme fiel hasta la muerte para recibir la recompensa prometida.",
+            "Jesús, corona de todos los santos, sé mi premio y mi alegría eterna.",
+            "Padre, que toda mi familia esté reunida alabándote por los siglos.",
+            "Madre y Reina, a ti consagro mi último aliento y mi destino eterno.",
+            "Inmaculado Corazón de María, sé la salvación del alma mía por siempre."
+          ]
+        }
+      ],
       "soberbia": [
         {
           "med": "Mira quién estaba presente el domingo de Pascua: nadie. Los apóstoles escondidos, Pedro llorando su negación, y la piedra la corrió Dios sin ayuda de nadie. La obra más grande de la historia se hizo sin nosotros. Eso te tiene que servir hoy: lo que se salva en tu vida lo salva Él. Trabaja como si dependiera de ti, pero no te creas dueño del resultado.",
@@ -3926,6 +4661,372 @@
           ]
         }
       ],
+      "lam1": [
+        {
+          "med": "El ángel entró, anunció, y esperó. Dios esperó un sí. Eso es la conversión: no es cambiar de comportamiento primero para amar a Dios después. Es encontrarte con Él y enamorarte. No de una norma, de una Persona. Como dijo Wilson Tamayo: cuando te encuentras con Cristo y lo encuentras a Él, no te enamoras de un reglamento, te enamoras de una Persona. Y ese encuentro lo cambia todo.",
+          "misterio": [
+            "El Verbo se hizo carne para que yo pudiera conocer al amor en persona.",
+            "Jesús, diste el primer paso tú, antes de que yo hiciera nada. ¡Quién como Dios!"
+          ],
+          "maria": [
+            "Madre, dijiste sí antes de entender el cómo. Pide para mí esa fe.",
+            "María, hágase en mí según tu palabra, aunque no vea el camino."
+          ],
+          "tema": [
+            "Señor, me prometiste que el que te busca te encuentra. Aquí estoy.",
+            "Jesús, la conversión no es cambiar de vida: es encontrarte a ti.",
+            "Señor, ¿quién es el número uno en mi vida? Quiero que seas tú.",
+            "Jesús, lo más grande que me puede pasar es encontrarme contigo.",
+            "Padre, el mundo prometió amor y no cumplió. Tú cumpliste.",
+            "Sagrado Corazón de Jesús, en Vos confío con todo lo que soy.",
+            "Señor, me amas antes de que yo haga nada por ti. ¿Cómo volverte a ofender?",
+            "Jesús, dame enamorarme de ti como el que encuentra el tesoro que lo vende todo.",
+            "Padre, vendo mi soberbia, mis distracciones, mi pereza para poseerte a ti.",
+            "Señor, dame buscar tu rostro sin cansarme, como quien busca lo que más ama.",
+            "Inmaculado Corazón de María, alcánzame las ganas de convertirme de verdad."
+          ]
+        },
+        {
+          "med": "María fue de prisa a servir a Elisabet. El Hijo de Dios no había nacido todavía y ya estaba salvando una casa. La gracia transfigura: tú ves a María y ves a Jesús en María. El pecado hace lo contrario. Wilson Tamayo contó la historia de Da Vinci: el mismo hombre que posó para el rostro de Cristo terminó posando para el rostro de Judas. Unos años de pecado lo habían desfigurado por dentro. La gracia transfigura. El pecado desfigura.",
+          "misterio": [
+            "Jesús, en el vientre de María ya llenabas de alegría la casa de Elisabet.",
+            "La gracia transfigura. El pecado desfigura. Señor, transfigúrame tú."
+          ],
+          "maria": [
+            "Madre, llevabas a Dios adentro y saliste de prisa a servir. Enséñame.",
+            "María, en ti se veía a Jesús. Pide que yo también lo refleje."
+          ],
+          "tema": [
+            "Señor, que se vea en mi rostro lo mismo que se veía en el de María.",
+            "Jesús, el pecado me va desfigurando por dentro. Tu gracia me restaura.",
+            "Padre, orar es al alma lo que respirar es al cuerpo. No me asfixies.",
+            "Señor, sin oración el alma se asfixia. Que la mía no muera por no respirar.",
+            "Jesús, dame querer servirte como María: de prisa, sin esperar a que sobre tiempo.",
+            "Padre, si no vivo el amor, de qué sirven los ritos y las oraciones.",
+            "Señor, el alma muerta es la separada de ti. Mantenme vivo en tu gracia.",
+            "Jesús, el Magnificat no es un canto de concierto: es el arranque de un misionero.",
+            "Padre, Juan saltó de gozo antes de nacer. Dame ese gozo hoy a mí también.",
+            "Señor, me cuesta salir de mí mismo. Dame la prisa de María para servir.",
+            "Jesús, que la gracia que tú depositas en mí no la desperdicie en el pecado."
+          ]
+        },
+        {
+          "med": "En Belén no había sitio porque la posada estaba llena de gente. El Evangelio según María Valtorta recoge esto de Jesús: quien cierra su corazón al hermano, se lo cierra a Dios, y Dios a él. Mi corazón puede estar exactamente así: repleto de preocupaciones, redes, afanes, apegos. ¿Quién es el número uno en tu vida? Si es Dios, se tiene que notar en el orden del día. No en los labios: en los hechos.",
+          "misterio": [
+            "El dueño de todo nació donde nadie le hizo sitio. ¡Quién como Dios!",
+            "Jesús, viniste a los tuyos y no te abrieron la puerta. Entra en mí."
+          ],
+          "maria": [
+            "Madre, cuando nadie tenía sitio para Él, tú lo tuviste. Enséñame.",
+            "María, no había cuna, pero tenías al Señor. Yo tengo todo y me falta Él."
+          ],
+          "tema": [
+            "Señor, si cierro mi corazón al hermano, te lo cierro a ti. Perdón.",
+            "Jesús, lo primero de mi día debe ser Dios, no las sobras del día.",
+            "Padre, al tercer lugar le doy diez horas y al primero casi nada. Perdón.",
+            "Señor, la oración no es una opción bonita: es una necesidad. No la dejo.",
+            "Jesús, orar no es cumplir como sea: es respirar. Dame el hambre de hacerlo.",
+            "Señor, nace en mi desorden, que una posada limpia no tengo para ti.",
+            "Padre, el pecado es como un veneno que gota a gota oscurece el alma. Líbrame.",
+            "Jesús, el ruido del mundo me ensordece a tu voz. Crea silencio en mí.",
+            "Señor, dame vender mi soberbia y mis distracciones para abrirte sitio.",
+            "Madre, ponme en el camino del que recoge al que está en la cuneta.",
+            "Jesús, al primero le doy las sobras. Hoy quiero darte lo primero."
+          ]
+        },
+        {
+          "med": "María y José presentan al Niño en el templo y ofrecen dos palomas: la ofrenda del que no tiene más. Dios mío, nada soy; pero lo que soy es todo tuyo. No te pide que vengas resuelto y santo: te pide que vengas. El alma muerta es la que está separada de Dios. El alma que se entrega, aunque sea poca cosa, empieza a vivir.",
+          "misterio": [
+            "Jesús, te dejaste cargar en brazos. Tú que cargas con el universo entero.",
+            "Dios se presenta ante Dios en el templo. ¡Nadie como tú, Señor!"
+          ],
+          "maria": [
+            "Madre, ofreciste dos palomas porque no tenías más. Y fue suficiente.",
+            "María, entregaste en el templo lo que más amabas. Dame tu valentía."
+          ],
+          "tema": [
+            "Dios mío, nada soy; pero lo que soy es todo tuyo. Toma este día mío.",
+            "Señor, soy todo tuyo, María, y todo lo que tengo es tuyo. Tómalo.",
+            "Jesús, el alma separada de ti está muerta. Que no muera la mía.",
+            "Padre, consagro a mi familia con lo poco que tengo. Pon tú el resto.",
+            "Señor, no me pides que llegue resuelto: solo me pides que llegue. Aquí estoy.",
+            "Jesús, Simeón esperó toda la vida y llegaste el día exacto. Confío.",
+            "Padre, orar sin caridad es inútil. Dame primero las obras y luego los ritos.",
+            "Señor, dame vaciarme de algo hoy para hacerte un poco de sitio de verdad.",
+            "Jesús, lo que más vale no se ve por fuera. Que lo mío valga por dentro.",
+            "Sagrado Corazón de Jesús, recibe hoy este pobre ofrecimiento que te traigo.",
+            "Madre, si Simeón te anunció la espada, que esa espada me limpie a mí también."
+          ]
+        },
+        {
+          "med": "María y José buscaron al Niño tres días. Lo encontraron en el templo. El hijo pródigo buscó durante años su libertad y la encontró en el fondo de una pocilga, cuando por fin dijo: he pecado contra el cielo y contra ti. El padre salió corriendo a recibirlo. No hay caída de la que uno no se pueda levantar. El rosario no es una cadena que te ata: es una cuerda que te saca del pozo.",
+          "misterio": [
+            "A los tres días lo encontraron donde siempre había estado. ¡Quién como Dios!",
+            "Jesús, te dejaste encontrar por los que te buscaron sin rendirse."
+          ],
+          "maria": [
+            "Madre, lo buscaste sin parar tres días. Enséñame a buscar la confesión así.",
+            "María, cuando lo encontraste en el templo, algo en ti volvió a vivir. Eso quiero."
+          ],
+          "tema": [
+            "Señor, he pecado contra el cielo y contra ti. Ya no busco excusas.",
+            "Jesús, no hay caída de la que uno no se pueda levantar. Levántame.",
+            "Padre, sal corriendo a recibirme como al hijo que regresa arrepentido.",
+            "Señor, el rosario no es una cadena que me ata: es la cuerda que me saca del pozo.",
+            "Jesús, el demonio me acusa después de haberme tentado. No le creo.",
+            "Padre, la confesión es toda tu ternura de Dios que quiere abrazarme.",
+            "Señor, dame más miedo de ofenderte que de que me vean confesando.",
+            "Jesús, haced lo que Él os diga. Hoy hago lo que tú me dices: voy.",
+            "María, no vienes a reclamarme lo que no hice: vienes a levantarme. Gracias.",
+            "Madre, llévame de la mano al confesionario esta misma semana.",
+            "Inmaculado Corazón de María, sé la salvación del alma mía."
+          ]
+        }
+      ],
+      "lam2": [
+        {
+          "med": "En la Anunciación, María no pidió explicaciones ni puso condiciones: dijo 'hágase en mí según tu palabra'. San Luis María Grignion de Montfort nos enseñó que la consagración total es hacer de ese 'sí' la norma de toda la vida: entregarse como esclavo de amor a Jesús por María. No es una devoción más de domingo: es despojar al 'yo' de su soberbia y dejar que la Inmaculada gobierne nuestros pensamientos y decisiones.",
+          "misterio": [
+            "El Verbo se hizo carne en el seno purísimo de María. ¡Quién como Dios!",
+            "Dios esperó el sí de una doncella para salvar al mundo. ¡Alabado sea!"
+          ],
+          "maria": [
+            "Madre, tu fiat cambió la historia: enséñame a decir sí sin condiciones.",
+            "María, esclava del Señor, hazme dócil a la voluntad del Padre."
+          ],
+          "tema": [
+            "Soy todo tuyo, Jesús, y todo lo que tengo es tuyo por María.",
+            "Madre, toma mi libertad, mi voluntad y mis planes en tus manos.",
+            "Señor, no se haga mi voluntad, sino la tuya, como dijo María.",
+            "Inmaculada, reina en mi mente, en mis ojos y en mi corazón.",
+            "Jesús, por las manos puras de tu Madre te entrego todo mi ser.",
+            "Madre, cuando me cueste obedecer, recuérdame tu sí en Nazaret.",
+            "Señor, líbrame del orgullo de querer tener siempre el control.",
+            "María, enséñame a vivir consagrado en mi trabajo y en mi hogar.",
+            "Jesús, hazme pequeño y humilde para que tu gracia habite en mí.",
+            "Madre, condúceme con dulzura por el camino seguro hacia tu Hijo.",
+            "Inmaculado Corazón de María, sé la salvación del alma mía."
+          ]
+        },
+        {
+          "med": "Apenas el ángel se fue, María partió sin demora a la montaña a servir a su prima Isabel. La verdadera devoción a la Virgen no se queda en sentimientos bonitos ni en rezos cómodos: se convierte en servicio concreto y generoso. Como enseñaba San Maximiliano Kolbe: déjate conducir por la Inmaculada y Ella te llevará donde haya un hermano que consolar y un alma que acercar a Dios.",
+          "misterio": [
+            "María llevó a Jesús en su seno y llenó de gozo la casa de Isabel.",
+            "Apenas llegó tu voz, el niño saltó de alegría en el vientre. ¡Gloria a Dios!"
+          ],
+          "maria": [
+            "Madre misionera, saliste de prisa a servir. Enséñame tu caridad activa.",
+            "María, arca de la alianza, llevas la presencia de Dios a donde vas."
+          ],
+          "tema": [
+            "Madre, que mi consagración no se quede en palabras sino en servicio.",
+            "Jesús, dame salir de mi comodidad para atender al que me necesita.",
+            "María, enséñame a servir en mi familia con alegría y sin quejas.",
+            "Señor, que al verme a mí puedan ver el reflejo de tu amor y paz.",
+            "Madre, llévame de tu mano al hermano que está solo o desanimado.",
+            "Jesús, por intercesión de María, limpia mi corazón de egoísmo.",
+            "Inmaculada, hazme instrumento dócil de tu amor en el apostolado.",
+            "Madre, enséñame a cantar mi propio Magníficat agradeciendo a Dios.",
+            "Señor, que el cansancio no apague mis ganas de servir a los demás.",
+            "María, acompáñame en el camino y quita la pereza de mi vida.",
+            "Inmaculado Corazón de María, enciende en mí el celo por las almas."
+          ]
+        },
+        {
+          "med": "En la noche fría de Belén, María envolvió al Niño en pañales y lo acostó en el pesebre. Y luego se lo ofreció a los pastores pobres para que lo adoraran. Así hace la Virgen con cada pecador: cuando te sientes miserable, sucio o indigno, Ella no te rechaza, te toma en sus brazos y te entrega a Jesús. Nunca tengas miedo de amar demasiado a la Virgen: jamás podrás amarla más que Jesús.",
+          "misterio": [
+            "El Creador del cielo y de la tierra nació en un pobre pesebre. ¡Adorado sea!",
+            "Nació el Salvador en la noche de Belén. ¡Gloria a Dios en las alturas!"
+          ],
+          "maria": [
+            "Madre, colocaste al Salvador en un pesebre con infinito amor.",
+            "María, pon a Jesús en mi corazón frío para que lo encienda con su amor."
+          ],
+          "tema": [
+            "Madre mía, pon a Jesús en mis brazos cada vez que me sienta débil.",
+            "Jesús, gracias por darme a tu Madre para cuidarme y guiarme.",
+            "María, nunca podré amarte más de lo que te amó tu propio Hijo.",
+            "Señor, que aprenda de la cueva de Belén a amar la sencillez y la humildad.",
+            "Madre, preséntale a Jesús mi pobreza para que Él la transforme.",
+            "Inmaculada, enséñame a adorar a Jesús con tu misma reverencia y fe.",
+            "San José, padre y custodio del Redentor, cuida y provee a mi familia.",
+            "Jesús, que en mi hogar reine la paz y la caridad de la Sagrada Familia.",
+            "Madre, no permitas que busque riquezas vanas que me aparten de Dios.",
+            "Señor, acógeme en tu amor como acogiste a los pastores en el portal.",
+            "Inmaculado Corazón de María, sé refugio seguro para mi alma."
+          ]
+        },
+        {
+          "med": "Simeón tomó al Niño en brazos y le dijo a María: a ti misma una espada te traspasará el alma. María no huyó de la profecía: la guardó en su corazón y ofreció su dolor junto con el de su Hijo. Entregarle todo a Dios a través de María significa entregarle también lo que nos duele, nuestras cruces familiares y nuestras enfermedades. Todo sufrimiento puesto en las manos de la Madre se convierte en gracia redentora.",
+          "misterio": [
+            "Jesús fue presentado en el templo como luz de las naciones. ¡Gloria a ti!",
+            "El anciano Simeón vio la salvación prometida y bendijo a Dios."
+          ],
+          "maria": [
+            "Madre dolorosa, aceptaste la espada con fe heroica y silenciosa.",
+            "María, enséñame a ofrecer mis dolores sin quejas ni amarguras."
+          ],
+          "tema": [
+            "Madre, en tus manos pongo mis cruces, mis angustias y mis pruebas.",
+            "Jesús, acepta el pequeño sacrificio de hoy por la conversión de pecadores.",
+            "María, cuando el dolor me visite, enséñame a permanecer de pie.",
+            "Señor, que no desperdicie ningún sufrimiento: lo uno a tu cruz.",
+            "Madre, cura las heridas de mi corazón con el bálsamo de tu consuelo.",
+            "Inmaculada, toma mis preocupaciones y preséntalas ante el altar de Dios.",
+            "Jesús, que mi fe no dependa de los consuelos sino del amor fiel.",
+            "Madre, enséñame a guardar y meditar los acontecimientos en silencio.",
+            "Padre, que aprenda a desprenderme de lo que más amo por agradarte.",
+            "Señor, dame la fortaleza de María para abrazar mi deber de estado.",
+            "Inmaculado Corazón de María, consuelo de los afligidos, ruega por mí."
+          ]
+        },
+        {
+          "med": "María y José buscaron al Niño angustiados durante tres días hasta hallarlo en el templo. En las prédicas de Lazos se repite esta hermosa imagen: el Santo Rosario no es una cadena que te ata, es la cuerda bendita con la que la Virgen te saca del pozo del pecado. Si has perdido a Jesús por tu tibieza o tus caídas, no te desesperes: reza el Rosario con María y Ella te llevará de inmediato al templo de la confesión.",
+          "misterio": [
+            "A los tres días hallaron a Jesús en el templo entre los doctores. ¡Bendito sea!",
+            "El Niño Jesús crecía en sabiduría, estatura y gracia ante Dios y los hombres."
+          ],
+          "maria": [
+            "Madre, buscaste a tu Hijo sin descanso. Enséñame a buscarlo siempre.",
+            "María, en tus manos pongo el Rosario como mi cuerda de salvación."
+          ],
+          "tema": [
+            "Madre, si pierdo la gracia por el pecado, llévame pronto a confesarme.",
+            "Jesús, que nunca me acostumbre a vivir lejos de tu amistad y presencia.",
+            "María, el Rosario es el arma que me diste para vencer en la batalla.",
+            "Señor, que no pase un solo día sin rezar el Rosario con devoción.",
+            "Madre, rescátame de los pozos de tibieza y pereza espiritual.",
+            "Inmaculada, enséñame a amar la casa de Dios y los santos sacramentos.",
+            "Jesús, hazme dócil a las enseñanzas de tu Santa Iglesia Católica.",
+            "Madre, custodia la fe y la pureza de mis hijos con tu intercesión.",
+            "Señor, que busque primero las cosas de mi Padre celestial.",
+            "María, no me sueltes de tu mano en los momentos de mayor tentación.",
+            "Inmaculado Corazón de María, guárdame siempre en tu regazo maternal."
+          ]
+        }
+      ],
+      "lam3": [
+        {
+          "med": "María dijo sí al ángel sin saber cómo se resolverían las cosas humanamente, fiándose solo de la palabra de Dios. La misión de un cristiano no espera a que todo esté seguro y cómodo para arrancar: se lanza con fe. Como predicaba Rodrigo Jaramillo: nunca desaprovecharé una oportunidad para amar. Decir sí a Dios cada mañana es ponerse la armadura de la fe y salir a ganar almas para el cielo.",
+          "misterio": [
+            "El Verbo se hizo carne y asumió nuestra fragilidad. ¡Quién como Dios!",
+            "Hágase en mí según tu palabra: la fe valiente de la esclava del Señor."
+          ],
+          "maria": [
+            "Madre, te jugaste la vida en un sí: enséñame a confiar sin reservas.",
+            "María, reina de los misioneros, infunde en mí tu audacia en la fe."
+          ],
+          "tema": [
+            "Señor, aquí estoy: envíame a donde quieras para tu gloria.",
+            "Jesús, que nunca desaproveche una sola oportunidad para amar.",
+            "Padre, dame la fe que se arriesga por ti sin pedir garantías humanas.",
+            "Señor, quita de mi corazón las excusas y la cobardía para evangelizar.",
+            "Jesús, hazme valiente para dar testimonio de mi fe en el trabajo.",
+            "Madre, enséñame a dar el primer paso aunque no vea el camino completo.",
+            "Señor, no permitas que la comodidad apague el celo por las almas.",
+            "Jesús, toma mis talentos y ponlos al servicio de tu Reino.",
+            "Padre, que no tema al rechazo ni al cansancio cuando hablo de ti.",
+            "Señor, haz que mi vida entera sea un sí continuo a tu voluntad.",
+            "Inmaculado Corazón de María, enciende mi alma en celo apostólico."
+          ]
+        },
+        {
+          "med": "María fue de prisa a la montaña para servir a Isabel. El verdadero apostolado no es una teoría: empieza en la puerta de al lado, en la propia casa, con la persona que tenemos cerca y que necesita una mano. Santa Teresita del Niño Jesús enseñaba que no es el tamaño del sacrificio lo que cuenta, sino el amor con que se ofrece. Servir con una sonrisa y sin quejarse es la mayor predicación.",
+          "misterio": [
+            "María llegó de prisa a la montaña llevando la salvación a Isabel.",
+            "Dichosa tú que has creído: la fe de María derrama bendiciones. ¡Gloria a Dios!"
+          ],
+          "maria": [
+            "Madre misionera, saliste al encuentro del necesitado sin demora.",
+            "María, enséñame a desgastarme con alegría por el bien de mi prójimo."
+          ],
+          "tema": [
+            "Señor, que mi apostolado empiece en mi propia casa con mi familia.",
+            "Jesús, dame prontitud para ayudar a quien está en necesidad hoy.",
+            "Padre, no es el tamaño de la obra sino el amor con que la realizo.",
+            "Señor, líbrame de la pereza y del egoísmo que me encierran en mí mismo.",
+            "Jesús, que sirva con una sonrisa incluso cuando esté agotado.",
+            "Madre, ponme en el camino del que sufre en soledad para llevarle a Cristo.",
+            "Señor, que no busque agradecimientos humanos por hacer el bien.",
+            "Jesús, hazme instrumento de reconciliación y paz entre mis hermanos.",
+            "Padre, enséñame a ver tu rostro en cada persona que me rodea.",
+            "Madre, alcánzame la caridad ardiente que no se cansa de entregarse.",
+            "Inmaculado Corazón de María, enséñame a amar como Jesús ama."
+          ]
+        },
+        {
+          "med": "En Belén, la salvación del mundo comenzó en el rincón más pobre y escondido. San José y la Virgen nos enseñan la santidad de los laicos comunes: cumplir con fidelidad el deber diario, soportar el frío y las estrecheces con paciencia y amor. Los santos veían en cada pequeña dificultad una perla preciosa para ofrecer a Dios. Nada de lo que hacemos con amor por Dios se pierde en el cielo.",
+          "misterio": [
+            "El Creador de todo nació en la pobreza oculta de un establo.",
+            "Paz en la tierra a los hombres de buena voluntad. ¡Alabado sea el Señor!"
+          ],
+          "maria": [
+            "Madre, en la sencillez del pesebre cuidaste al Salvador del mundo.",
+            "María, enséñame a valorar lo pequeño y ordinario de cada jornada."
+          ],
+          "tema": [
+            "Señor, te ofrezco las pequeñas renuncias y contrariedades de hoy.",
+            "Jesús, que santifique mi trabajo y mis tareas cotidianas por amor.",
+            "Padre, que no desprecie los sacrificios invisibles que solo tú conoces.",
+            "San José, padre trabajador, enséñame a proveer y servir con humildad.",
+            "Señor, hazme descubrir en cada cruz ordinaria una perla para el cielo.",
+            "Jesús, dame paciencia en las molestias del tráfico y del cansancio.",
+            "Madre, que aprenda a vivir contento con lo necesario sin ambiciones vanas.",
+            "Padre, que mi hogar sea un remanso de fe, sencillez y oración.",
+            "Señor, que no me queje del frío ni del calor: todo lo ofrezco por amor.",
+            "Jesús, hazme grande en la caridad y pequeño en la soberbia.",
+            "Inmaculado Corazón de María, modelo de vida oculta, ruega por mí."
+          ]
+        },
+        {
+          "med": "En la Presentación, José y María ofrecieron dos tórtolas, la ofrenda de los pobres. Al empezar el día, el consagrado ofrece su jornada completa: el trabajo, las decisiones de negocios, los esfuerzos familiares y la fatiga. Como enseñaba San Josemaría y repetimos en Lazos: todo trabajo honesto, ofrecido en gracia de Dios, se convierte en oración y en motor de salvación para muchas almas.",
+          "misterio": [
+            "Cristo fue presentado en el templo como luz para alumbrar a las naciones.",
+            "Simeón bendijo a Dios al contemplar al Mesías prometido. ¡Gloria al Señor!"
+          ],
+          "maria": [
+            "Madre, ofreciste a tu Hijo primogénito al Padre con generosidad total.",
+            "María, ayúdame a ofrecer cada día mi vida como hostia viva para Dios."
+          ],
+          "tema": [
+            "Señor, al empezar este día te consagro mis obras, palabras y fatigas.",
+            "Jesús, que mi trabajo honrado sea fuente de bendición para mi familia.",
+            "Padre, toma mis planes de hoy y ordénalos según tu santa voluntad.",
+            "San José, custodio fiel, protege mi hogar de todo peligro material y moral.",
+            "Señor, que no trabaje solo por el dinero sino por ganar almas para ti.",
+            "Jesús, dame rectitud de intención en mis negocios y en mi profesión.",
+            "Madre, enséñame a presentar al Señor mis limitaciones con confianza.",
+            "Padre, que cada hora de labor sea un acto de amor y adoración a ti.",
+            "Señor, líbrame de la avaricia y hazme generoso con los necesitados.",
+            "Jesús, que la luz de tu Evangelio brille en todo lo que emprenda hoy.",
+            "Inmaculado Corazón de María, custodia mi jornada de todo pecado."
+          ]
+        },
+        {
+          "med": "Durante tres días María y José buscaron a Jesús en medio de la angustia y sin sentir ningún consuelo. En la vida espiritual y en la misión llegan momentos de aridez, donde parece que las oraciones no son escuchadas y el cansancio aprieta. Perseverar cuando no se siente nada es la prueba del amor verdadero. San Juan de la Cruz decía: el amor verdadero busca a Dios en la cruz, no en el consuelo.",
+          "misterio": [
+            "Tras tres días de búsqueda angustiosa, hallaron a Jesús en el templo.",
+            "El Señor estaba en los asuntos de su Padre celestial. ¡Bendito sea!"
+          ],
+          "maria": [
+            "Madre, perseveraste en la búsqueda sin desfallecer. Enséñame tu constancia.",
+            "María, acompáñame en los desiertos espirituales para no abandonar la oración."
+          ],
+          "tema": [
+            "Señor, dame la gracia de perseverar cuando no sienta consuelo en la fe.",
+            "Jesús, no te busco por tus dones, te busco a ti que eres el Dador.",
+            "Padre, que la aridez no me haga aflojar en mi vida de sacramentos.",
+            "Señor, la oración prolongada es la madre de la oración profunda.",
+            "Jesús, aunque esté cansado, rezaré mi Rosario completo con amor.",
+            "Madre, no permitas que el desánimo me haga tirar la toalla en la misión.",
+            "Señor, purifica mi fe en el crisol de la espera y la dificultad.",
+            "Jesús, que mi fidelidad no dependa del sentimiento sino del deber de amar.",
+            "Padre, fortalece a los misioneros que están a punto de claudicar.",
+            "Madre, llévame al Sagrario cada vez que me sienta vacío o seco.",
+            "Inmaculado Corazón de María, auxilio en las pruebas, sálvame."
+          ]
+        }
+      ],
       "soberbia": [
         {
           "med": "Piensa un segundo en el tamaño de esto: Dios, que sostiene el universo entero, se hizo un embrión en el vientre de una muchacha de pueblo. No hay abajamiento más grande. Y frente a eso, tú y yo peleando por quién tiene la razón, por que nos reconozcan, por quedar bien. Si Dios se hizo tan pequeño por ti, ¿de qué te estás inflando hoy?",
@@ -5602,6 +6703,372 @@
             "Madre, llévame al Sagrario esta semana, aunque sean cinco minutos.",
             "Señor, lo que hoy no puedo resolver te lo dejo en el altar.",
             "Jesús, líbrame de llegar cortante a la puerta de mi casa."
+          ]
+        }
+      ],
+      "lam1": [
+        {
+          "med": "El Padre abrió los cielos y dijo: este es mi Hijo amado. No era una aprobación de sus obras —Jesús no había hecho nada todavía— era una declaración de amor puro, gratuito, previo. Wilson Tamayo lo dijo así: Dios no solo responde 'sí', sino también 'sí, pero todavía no' o 'no, porque tengo algo mejor para ti'. Pero siempre escucha. El problema es que somos nosotros los sordos. Shemá Israel: escucha, pueblo mío.",
+          "misterio": [
+            "Padre, abriste los cielos y dijiste que Jesús era tu Hijo. Me basta su amor.",
+            "Jesús, te declararon amado antes de hacer nada. Yo también soy amado así."
+          ],
+          "maria": [
+            "Madre, enséñame a escuchar a Dios como lo escuchabas tú en Nazaret.",
+            "María, meditabas todo en tu corazón. Enséñame a no pasar de largo ante Dios."
+          ],
+          "tema": [
+            "Señor, no eres tú el sordo. Soy yo el que no te escucha. Perdón.",
+            "Jesús, Shemá: hazme escuchar tu voz antes de escuchar la del mundo.",
+            "Padre, obedecer viene de escuchar y ejecutar. Hoy quiero hacer los dos.",
+            "Señor, tú puedes decirme sí, todavía no, o algo mejor. Me fío de ti.",
+            "Jesús, dame escucharte en la misa, en la palabra, en el silencio.",
+            "Padre, mi voluntad está herida. Sin tu gracia no voy a poder. Dámela.",
+            "Señor, sin los sacramentos no lo lograré. Dame no perder ninguno.",
+            "Jesús, si el bombardeo del mundo es diario, mi oración también debe serlo.",
+            "Padre, un alma que no ora es un alma que se va muriendo despacito.",
+            "Señor, no hágase mi voluntad. Hágase la tuya, que es mejor.",
+            "María, tú fuiste la primera en escuchar y ejecutar el plan de Dios. Ruega por mí."
+          ]
+        },
+        {
+          "med": "La Virgen le dijo a los sirvientes: haced lo que él os diga. Y no dijo más. Wilson Tamayo enseñó que esas son las únicas palabras que nuestra Señora dirige a la humanidad en las Escrituras, y todo el mensaje de Fátima, de Lourdes, de Guadalupe, se puede resumir ahí mismo: haced lo que él os diga. El primero que tiene que escuchar no es Dios. Soy yo. El que tiene que ejecutar soy yo. Solo que solo no puedo. Necesito la gracia.",
+          "misterio": [
+            "Jesús, tu madre intercedió y el agua se volvió vino. Así intercede hoy por mí.",
+            "Señor, hiciste el primer milagro porque María lo pidió. ¡Quién como Dios!"
+          ],
+          "maria": [
+            "Madre, tú dijiste haced lo que él os diga. Pide para mí la gracia de hacerlo.",
+            "María, no te quedaste callada en Caná. Fuiste a pedir. Enséñame tu fe."
+          ],
+          "tema": [
+            "Señor, que el resumen de mi vida cristiana sea: hice lo que Él me dijo.",
+            "Jesús, haced lo que él os diga: eso es ser católico. No un buen sentimiento.",
+            "Señor, muchas veces solo te sigo en las buenas. Perdóname.",
+            "Jesús, el que busca a Dios solo en el consuelo no lo ama de verdad.",
+            "Padre, dame seguirte también cuando implica sacrificio, cuando duele.",
+            "Señor, tienes muchos amigos en tu mesa. Quiero estar contigo en tu cruz.",
+            "Jesús, en la cena estaban todos; en la cruz casi nadie. Que yo me quede.",
+            "Padre, la Virgen dijo hágase en mí aunque no sabía lo que venía. Eso es fe.",
+            "Señor, me dijiste que el que pierda su vida por ti la encontrará. Creo.",
+            "Jesús, ¿soy capaz de beber el cáliz que tú bebes? Solo con tu ayuda.",
+            "Inmaculado Corazón de María, que tus palabras de Caná resuenen en mi corazón."
+          ]
+        },
+        {
+          "med": "Jesús anunció el Reino y dijo: busca primero el Reino de Dios y lo demás se te da por añadidura. No lo segundo ni lo tercero: lo primero. Wilson Tamayo preguntó: ¿quién es el número uno de tu vida? Porque al tercero le damos diez horas y al primero le damos las sobras. Y así nos va. Un corazón lleno del mundo no puede sentir hambre de Dios. En el corazón hay un vacío, un hueco que solo Él puede llenar.",
+          "misterio": [
+            "Jesús, anunciaste un Reino que no es de este mundo. Quiero vivir para él.",
+            "Señor, el Reino de Dios está en medio de nosotros. Que no lo pierda de vista."
+          ],
+          "maria": [
+            "Madre, enséñame a buscar primero a Dios, como tú lo hiciste siempre.",
+            "María, tú nunca pusiste nada por encima de Jesús. Enséñame ese orden."
+          ],
+          "tema": [
+            "Jesús, todo vicio es búsqueda desordenada de ti. Ayúdame a buscarte a ti.",
+            "Padre, en mi alma hay un vacío que solo tú puedes llenar. Solo tú.",
+            "Señor, me has dado todo lo que tengo. Que te lo devuelva en obediencia.",
+            "Jesús, el rico de espíritu cree que no te necesita. Que nunca caiga en eso.",
+            "Padre, el pobre de espíritu reconoce que su única riqueza eres tú.",
+            "Señor, destrúyeme y haz un monumento para tu gloria, decía Madre Laura.",
+            "Jesús, todo lo tengo por pérdida ante el conocimiento de ti. Todo.",
+            "Padre, solo quien se siente amado por ti es capaz de cambiar. Hazme sentirlo.",
+            "Señor, la mejor forma de cambiarme es que yo me sienta amado por ti.",
+            "Jesús, sin amor la vida cristiana se vuelve una cruz insoportable.",
+            "Madre, enséñame a vaciarme de mí mismo para que Dios quepa de verdad."
+          ]
+        },
+        {
+          "med": "En la Transfiguración, Jesús se transfiguró delante de ellos. La gracia transfigura; el pecado desfigura. Wilson Tamayo contó la historia de Da Vinci: el mismo hombre que posó para el rostro de Cristo terminó posando para el de Judas. Unos años de pecado lo habían desfigurado por dentro. En cada corazón hay un trono. O lo ocupa Dios gobernando toda la vida, o lo ocupa el yo, como un niño malcriado que no quiere obedecer. Negarse a sí mismo es sacar a ese niño del trono y dárselo a Dios.",
+          "misterio": [
+            "Jesús, te transfiguraste para mostrar lo que tu gracia hace con el hombre.",
+            "Señor, la gracia transfigura y el pecado desfigura. Transfigúrame tú."
+          ],
+          "maria": [
+            "Madre, en ti se veía el rostro de Jesús porque lo llevabas adentro. Ruega por mí.",
+            "María, nunca el pecado oscureció tu rostro. Intercede por mi pureza."
+          ],
+          "tema": [
+            "Señor, en mi corazón hay un trono. Quiero que lo ocupes solo tú.",
+            "Jesús, negarse a uno mismo es sacar al yo del trono y dártelo a ti.",
+            "Padre, no vivo yo, sino que es Cristo quien vive en mí. Hazlo realidad.",
+            "Señor, dame callar una réplica hiriente y responder con mansedumbre.",
+            "Jesús, dame levantarme antes para orar en vez de mirar el celular.",
+            "Padre, dame confesarme aunque me dé vergüenza. No huir del sacramento.",
+            "Señor, sufrir es inevitable. Tomar la cruz es darle sentido redentor.",
+            "Jesús, no quiero llevar mi cruz con amargura: la tomo en tu nombre.",
+            "Padre, sígueme ahora, no cuando sea fácil, dijiste. Te sigo hoy.",
+            "Señor, que cuando alguien me mire vea algo del rostro de Jesús en mí.",
+            "Inmaculado Corazón de María, alcánzame confesarme y borrar lo que me desfigura."
+          ]
+        },
+        {
+          "med": "Jesús tomó el pan, lo partió y dijo: esto es mi cuerpo. Y se quedó en el sagrario esperándonos. José contó en el grupo de oración la historia de Carmen: viuda, enferma de cáncer, de rodillas ante el sagrario, llena de paz. Miguel le preguntó cómo era posible. Carmen le dijo: durante veinte años vine diariamente a visitar a Jesús Sacramento y nunca me ha fallado. Estar a su lado es lo mejor que le puede pasar a mi alma. Eso es todo. Eso es la Eucaristía.",
+          "misterio": [
+            "Jesús, te quedaste en el sagrario para esperarme. No me dejes faltar a la cita.",
+            "Señor, tu carne es verdadera comida y tu sangre verdadera bebida. Creo."
+          ],
+          "maria": [
+            "Madre, tu vida fue oración continua con el Verbo. Enséñame a orar así.",
+            "María, escuela de oración: enséñame a llevar todo a Dios antes de hablar."
+          ],
+          "tema": [
+            "Jesús, estar a tu lado es lo mejor que le puede pasar a mi alma.",
+            "Señor, sáname cambiando el desamor por tu amor, tú que me amaste primero.",
+            "Padre, ¿por qué no voy más al sagrario si siempre salgo cambiado y mejor?",
+            "Jesús, sin ti no podré vencer las tentaciones. Necesito comulgarte.",
+            "Señor, que me duela faltar a la Eucaristía como duele faltar al pan.",
+            "Jesús, un alma sin oración se muere despacito. No dejes morir la mía.",
+            "Padre, la Madre Laura caminaba horas por comulgar. Dame esa hambre a mí.",
+            "Señor, soy tu lápiz. Tú escribes la historia de amor con cada uno.",
+            "Jesús, el Rosario es la escuela de oración que me une a María y a ti.",
+            "Padre, por una sola alma que se salve valió la pena todo el esfuerzo.",
+            "Inmaculado Corazón de María, sé la salvación de mi alma en toda hora."
+          ]
+        }
+      ],
+      "lam2": [
+        {
+          "med": "En el Jordán, Jesús es bautizado y la voz del Padre proclama a su Hijo. María no aparece en primer plano en el texto, pero su presencia silenciosa sostiene el inicio de la misión de Jesús. En la espiritualidad mariana de Lazos, María nos enseña a desaparecer para que Cristo crezca. La verdadera humildad no busca protagonismo ni aplausos: busca que solo Dios sea glorificado en todo.",
+          "misterio": [
+            "Jesús fue bautizado en el Jordán y el Padre lo proclamó su Hijo amado.",
+            "El Espíritu descendió en forma de paloma sobre el Señor. ¡Quién como Dios!"
+          ],
+          "maria": [
+            "Madre silenciosa, tu presencia oculta sostuvo el inicio de la misión.",
+            "María, enséñame a amar el lugar escondido donde solo Dios me ve."
+          ],
+          "tema": [
+            "Madre, enséñame a menguar para que Jesús crezca en mi vida.",
+            "Jesús, que no busque honores humanos sino tu sola gloria.",
+            "Inmaculada, líbrame del veneno del protagonismo y la vanagloria.",
+            "Señor, por intercesión de María renueva en mí la gracia del bautismo.",
+            "Madre humilde, hazme dócil a las mociones del Espíritu Santo.",
+            "Jesús, que mi mayor alegría sea que otros te conozcan y te amen.",
+            "María, cúbreme con tu pureza para ser templo digno de Dios.",
+            "Padre, hazme hijo fiel que no busque brillar sino servir.",
+            "Madre, enséñame a amar el silencio y la oración profunda.",
+            "Señor, sácame de la tibieza y dame un corazón encendido de amor.",
+            "Inmaculado Corazón de María, reina soberana en mi corazón."
+          ]
+        },
+        {
+          "med": "En las bodas de Caná, la Virgen vio que faltaba vino antes que el maestresala y antes que los novios. María es la Madre que se adelanta: su corazón maternal conoce nuestras miserias, nuestras faltas de amor y nuestros apuros familiares. Cuando te falte la alegría, la paciencia o la fe, acude a la Mamita. Ella irá de inmediato a Jesús y le dirá: no tienen vino, haz Tú el milagro.",
+          "misterio": [
+            "Jesús convirtió el agua en vino por la súplica de su Madre santísima.",
+            "En Caná manifestó Jesús su gloria y sus discípulos creyeron en Él."
+          ],
+          "maria": [
+            "Madre atenta, viste la necesidad y te adelantaste con prontitud.",
+            "María, abogada nuestra, presenta mis apuros y pobrezas a tu Hijo."
+          ],
+          "tema": [
+            "Madre, no tengo vino: me falta paciencia, caridad y fervor. Ayúdame.",
+            "Jesús, por las súplicas de tu Madre, transforma mi agua tibia en vino nuevo.",
+            "María, intercede por mi matrimonio y por la unidad de mi hogar.",
+            "Señor, me fío del poder de intercesión que le diste a tu Madre.",
+            "Inmaculada, pon tus ojos de misericordia sobre mis dificultades.",
+            "Madre, que nunca dude de tu auxilio oportuno en las pruebas.",
+            "Jesús, bendice a las familias con el vino de tu santo amor.",
+            "María, enséñame a confiar en los tiempos y caminos de Dios.",
+            "Padre, que no me guarde nada: lleno mis tinajas de obediencia.",
+            "Madre de Caná, cuida las intenciones más profundas de mi alma.",
+            "Inmaculado Corazón de María, dulzura y esperanza mía, sálvame."
+          ]
+        },
+        {
+          "med": "Jesús recorrió los pueblos predicando el Reino y llamando a la conversión. Y María resumió todo su magisterio en cinco palabras: haced lo que Él os diga. Como enseñaba Wilson Tamayo en el Congreso Mariano: ese es el resumen de Fátima, de Lourdes y de toda la vida cristiana. La consagración no es una devoción sentimental, es poner por obra la palabra de Jesús cueste lo que cueste.",
+          "misterio": [
+            "Jesús anunció el Reino de Dios e invitó a todos a la conversión.",
+            "El Reino de los cielos está cerca: crean en la Buena Noticia."
+          ],
+          "maria": [
+            "Madre, tus palabras en Caná son la brújula de toda mi vida cristiana.",
+            "María, enséñame a obedecer a Jesús sin excusas ni tardanzas."
+          ],
+          "tema": [
+            "Señor, quiero hacer lo que tú me digas, guiado por tu santa Madre.",
+            "Jesús, no permitas que me quede en escuchar: dame la gracia de obrar.",
+            "Madre, enséñame a cumplir los mandamientos con amor y no por rutina.",
+            "Inmaculada, desarraiga de mi alma la rebeldía y el capricho personal.",
+            "Señor, que el mensaje de María encienda en mí el celo misionero.",
+            "Madre, guíame para ser testigo valiente del Evangelio en mi trabajo.",
+            "Jesús, hazme dócil a las enseñanzas de tu Iglesia católica.",
+            "María, no me dejes pactar con el pecado ni justificar mis faltas.",
+            "Padre, dame la gracia de poner a Dios como el número uno de mi día.",
+            "Madre, alcánzame un corazón puro para comprender la Palabra divina.",
+            "Inmaculado Corazón de María, enséñame a vivir en gracia de Dios."
+          ]
+        },
+        {
+          "med": "En el monte Tabor, los apóstoles contemplaron el rostro luminoso de Jesús y escucharon al Padre. María no estuvo físicamente en la cima, pero vivía transfigurada por la gracia porque conservaba y meditaba todas las cosas en su corazón. En Lazos aprendemos que la vida interior es el fundamento de todo apostolado: orar no es un accesorio, es respirar. En el silencio del corazón Dios revela su gloria.",
+          "misterio": [
+            "Jesús se transfiguró en el Tabor y su rostro brilló como el sol.",
+            "Escuchen a mi Hijo amado, dijo el Padre desde la nube luminosa."
+          ],
+          "maria": [
+            "Madre, tú guardabas y meditabas todas las cosas en tu corazón puro.",
+            "María, enséñame a cultivar el silencio interior para contemplar a Dios."
+          ],
+          "tema": [
+            "Madre, enséñame a orar despacio y con el corazón recogido.",
+            "Jesús, que la contemplación de tu rostro transfigure mi vida entera.",
+            "María, líbrame de la dispersión de las redes y del ruido del mundo.",
+            "Señor, la gracia transfigura y el pecado desfigura: hazme santo.",
+            "Madre, llévame al monte de la oración diaria aunque cueste subir.",
+            "Inmaculada, enséñame a discernir los acontecimientos con los ojos de la fe.",
+            "Jesús, dame momentos profundos de intimidad contigo cada día.",
+            "Madre, custodia mis sentidos para no perder la presencia de Dios.",
+            "Padre, que no busque consuelos humanos cuando tú me llamas a orar.",
+            "Señor, hazme perseverante en la lección divina y el Santo Rosario.",
+            "Inmaculado Corazón de María, santuario del Espíritu, ruega por mí."
+          ]
+        },
+        {
+          "med": "En el Cenáculo, Jesús instituyó el sacramento de su Cuerpo y de su Sangre. La misma carne que tomó de las entrañas de María es la que recibimos en cada comunión. María es la primera mujer eucarística: nadie adoró a Jesús en el vientre ni en el pesebre como Ella. Consagrarse a María es el camino más directo para enamorarse locamente de Jesús en el Santísimo Sacramento del altar.",
+          "misterio": [
+            "Jesús nos dio su Cuerpo y su Sangre en la última cena. ¡Adorado sea!",
+            "Hagan esto en memoria mía: el Señor instituyó el sacerdocio eterno."
+          ],
+          "maria": [
+            "Madre del Redentor, primera custodia viviente de Jesús Eucaristía.",
+            "María, llévame de la mano al Sagrario cada vez que esté afligido."
+          ],
+          "tema": [
+            "Madre, enséñame a comulgar con tu misma pureza, humildad y devoción.",
+            "Jesús en el Sagrario, te adoro, te amo y te pido perdón por los pecadores.",
+            "María, que nunca reciba el Cuerpo de tu Hijo en estado de pecado.",
+            "Señor, hazme un alma eucarística que viva de tu presencia real.",
+            "Madre, acompáñame en la Santa Misa para ofrecer mi vida con Cristo.",
+            "Inmaculada, alcánzame hambre diaria del Pan vivo bajado del cielo.",
+            "Jesús Sacramentado, enciende mi alma con el fuego de tu amor divino.",
+            "Madre, que encuentre en el Sagrario la medicina y fuerza para mi alma.",
+            "Señor, repara con mi pobre amor las ofensas que recibes en el altar.",
+            "María, condúceme siempre al Corazón Eucarístico de tu divino Hijo.",
+            "Inmaculado Corazón de María, trono de la Divina Sabiduría, sálvame."
+          ]
+        }
+      ],
+      "lam3": [
+        {
+          "med": "Jesús bajó a las aguas del Jordán mezclado entre los pecadores, cargando la debilidad de todos. La misión de un católico no se hace desde un pedestal de orgullo ni juzgando a los demás: se hace bajando a servir, acogiendo con misericordia y dando testimonio con la propia vida. Como nos recordaba San Agustín: cuanto más grande eres, más humilde debes ser.",
+          "misterio": [
+            "Jesús se humilló en el Jordán para abrirnos las puertas de la gracia.",
+            "Este es mi Hijo amado en quien me complazco. ¡Alabado sea Dios!"
+          ],
+          "maria": [
+            "Madre humilde, enséñame a servir a los más pobres con tu ternura.",
+            "María, reina de la paz, aleja de mi corazón todo juicio hacia los demás."
+          ],
+          "tema": [
+            "Señor, que baje de mi pedestal de orgullo para servir con humildad.",
+            "Jesús, dame un corazón misericordioso que no condene a nadie.",
+            "Padre, hazme testigo creíble de tu amor en medio de los pecadores.",
+            "Señor, líbrame de la soberbia espiritual de creerme mejor que otros.",
+            "Jesús, que aprenda a lavar los pies de mis hermanos en el hogar.",
+            "Madre, alcánzame la mansedumbre para corregir con amor y paciencia.",
+            "Señor, hazme pescador de almas en los ambientes más necesitados.",
+            "Jesús, por las aguas del Jordán renueva mi compromiso de ser santo.",
+            "Padre, que no me avergüence de proclamar tu Evangelio ante el mundo.",
+            "Madre, condúceme con humildad en cada misión que el Señor me confíe.",
+            "Inmaculado Corazón de María, refugio de los humildes, ruega por mí."
+          ]
+        },
+        {
+          "med": "En Caná, Jesús mandó llenar de agua seis tinajas de piedra destinadas a las purificaciones. A los ojos humanos parecía una pérdida de tiempo: hacía falta vino, no agua. Pero los sirvientes obedecieron y las llenaron hasta arriba. En la misión y en el trabajo diario Dios nos pide a veces cosas sencillas o fatigosas que parecen no dar fruto. La obediencia fiel y alegre es la que desata el milagro de Dios.",
+          "misterio": [
+            "Llenaron las tinajas de agua y Jesús las convirtió en vino generoso.",
+            "En Caná comenzó Jesús sus signos y manifestó su gloria. ¡Gloria a Dios!"
+          ],
+          "maria": [
+            "Madre, tú dijiste haced lo que Él os diga: enséñame la santa obediencia.",
+            "María, que nunca dude de que Dios saca fruto de lo que parece inútil."
+          ],
+          "tema": [
+            "Señor, quiero llenar mis tinajas de deber cumplido con amor hasta el tope.",
+            "Jesús, dame obedecer tus mandatos aunque no entienda el resultado.",
+            "Padre, que no me canse de hacer el bien aunque no vea frutos inmediatos.",
+            "Señor, haz milagros de conversión en mi familia por nuestra fidelidad.",
+            "Jesús, pon el vino de tu gracia en mi matrimonio y en mi comunidad.",
+            "Madre, cuando sienta que mi esfuerzo no vale nada, aliéntame a seguir.",
+            "Señor, que no trabaje para mi vanidad sino para cumplir tu plan.",
+            "Jesús, transforma mi debilidad en fortaleza para la misión.",
+            "Padre, hazme dócil a las indicaciones de mis directores y pastores.",
+            "Madre de Caná, cuida a los que trabajan silenciosamente por la Iglesia.",
+            "Inmaculado Corazón de María, modelo de obediencia, ruega por mí."
+          ]
+        },
+        {
+          "med": "Al pasar junto al mar de Galilea, Jesús llamó a Pedro, a Juan y a Santiago: ellos dejaron las redes y lo siguieron de inmediato. No se puede seguir a Cristo con las manos llenas de apegos y comodidades. En el grupo de oración José nos exhortaba a cortar con el pecado radicalmente: si tu ojo derecho te es ocasión de caer, sácatelo. Seguir a Jesús exige soltar hoy aquello que estorba a la gracia.",
+          "misterio": [
+            "Jesús proclamó el Reino y llamó a sus discípulos a ser pescadores de hombres.",
+            "El tiempo se ha cumplido: conviértanse y crean. ¡Quién como Dios!"
+          ],
+          "maria": [
+            "Madre, dejaste todo por seguir el plan divino. Enséñame a soltar apegos.",
+            "María, reina de los apóstoles, suscita misioneros santos y entregados."
+          ],
+          "tema": [
+            "Señor, hoy renuncio al apego concreto que me aparta de tu intimidad.",
+            "Jesús, no permitas que las redes del mundo me impidan seguirte hoy.",
+            "Padre, dame la valentía de cortar con las ocasiones de pecado.",
+            "Señor, prefiero perder ganancias humanas antes que perder mi alma.",
+            "Jesús, hazme libre de la avaricia, la vanidad y la impureza.",
+            "Madre, ayúdame a poner filtros en mis ojos y custodia en mi corazón.",
+            "Señor, que no posponga mi entrega total: quiero seguirte ahora mismo.",
+            "Jesús, dame un corazón generoso para dar mi tiempo al apostolado.",
+            "Padre, rompe las cadenas del vicio y la pereza que atan mi voluntad.",
+            "Madre, sostenme en las renuncias diarias que exige el camino de santidad.",
+            "Inmaculado Corazón de María, sé mi auxilio en el combate espiritual."
+          ]
+        },
+        {
+          "med": "En el monte Tabor, Pedro quería quedarse allí haciendo tres tiendas. Pero Jesús les mandó bajar del monte y volver al camino que llevaba a Jerusalén y a la cruz. La oración no es un refugio para huir de la realidad: es el manantial de donde sacamos fuerzas para volver a la rutina, al trabajo, a los problemas del hogar y a la misión. Bajar del monte es llevar la luz de Cristo a la calle de cada día.",
+          "misterio": [
+            "Jesús se transfiguró mostrando su gloria antes de subir al Calvario.",
+            "Este es mi Hijo amado, escúchenlo. ¡Alabado sea el Señor!"
+          ],
+          "maria": [
+            "Madre, vivías en continua oración mientras cumplías tus labores en Nazaret.",
+            "María, enséñame a ser contemplativo en medio de mis ocupaciones diarias."
+          ],
+          "tema": [
+            "Señor, que la fuerza de la oración se note en mi paciencia en el trabajo.",
+            "Jesús, dame ánimo para bajar del monte y afrontar las cruces de hoy.",
+            "Padre, no permitas que use la piedad como excusa para desatender mis deberes.",
+            "Señor, que sea luz y testimonio de caridad para mis compañeros de labor.",
+            "Jesús, transforma mi rutina diaria en una ofrenda continua de amor.",
+            "Madre, enséñame a ordenar mis horarios para no descuidar la oración.",
+            "Señor, dame perseverancia en el cansancio y en las contrariedades del día.",
+            "Jesús, que mi fe no sea solo de palabras sino de obras santas.",
+            "Padre, hazme testigo de tu verdad en medio de un mundo confundido.",
+            "Madre, acompáñame en mi jornada para que todo lo haga por agradar a Dios.",
+            "Inmaculado Corazón de María, fortaleza de los misioneros, sálvame."
+          ]
+        },
+        {
+          "med": "En la noche antes de su Pasión, Jesús instituyó la Eucaristía para quedarse con nosotros todos los días. En las prédicas de Lazos se insiste siempre: la Eucaristía no es un símbolo, es Jesús vivo, verdadero alimento y medicina para el alma en combate. Como enseñaba el Padre Rodrigo Jaramillo: sin este alimento santo no seremos capaces de resistir las tentaciones del mundo ni de perseverar en la misión.",
+          "misterio": [
+            "Jesús nos entregó su Cuerpo y su Sangre como pan de vida eterna.",
+            "El que come mi carne y bebe mi sangre habita en mí y yo en él. ¡Gloria a Dios!"
+          ],
+          "maria": [
+            "Madre del Redentor, condúceme siempre con fervor a la Santa Misa.",
+            "María, primera adoradora de Jesús Eucaristía, enséñame a recibirlo."
+          ],
+          "tema": [
+            "Jesús Eucaristía, sé mi fuerza, mi alimento y mi armadura en el combate.",
+            "Señor, que no falte nunca a la Misa dominical ni deje enfriar mi devoción.",
+            "Padre, dame hambre diaria del Pan del cielo para mantenerme en pie.",
+            "Jesús, sáciame en el Sagrario de toda tristeza, angustia y soledad.",
+            "Madre, que cada comunión sea un encuentro transformador con tu Hijo.",
+            "Señor, que me duela faltar al Sagrario como le duele al cuerpo el hambre.",
+            "Jesús, fortalece a los misioneros enfermos y perseguidos con tu Eucaristía.",
+            "Padre, que de rodillas ante el Santísimo aprenda a amar y perdonar.",
+            "Señor, repara con mi amor las profanaciones cometidas contra el Sacramento.",
+            "Madre, haz de mi vida un sagrario vivo donde Jesús habite siempre.",
+            "Inmaculado Corazón de María, enséñame a vivir de la Santa Eucaristía."
           ]
         }
       ],
