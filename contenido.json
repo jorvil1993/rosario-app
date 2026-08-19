@@ -79,7 +79,8 @@
     "ansioso": "Cuando estoy ansioso",
     "dormir": "Cuando no puedo dormir",
     "planes": "Cuando mis planes no salen como quiero",
-    "voluntad": "Cuando me cuesta aceptar la voluntad de Dios"
+    "voluntad": "Cuando me cuesta aceptar la voluntad de Dios",
+    "compras": "Cuando quiero comprar algo que no necesito"
   },
   "contenido": {
     "dolorosos": {
@@ -1056,6 +1057,103 @@
             "Madre, ahí tienes a tu hijo. Recíbeme tal como soy.",
             "Señor, llévame a confesarme esta semana, sin excusas.",
             "Inmaculado Corazón de María, sé la salvación del alma mía."
+          ]
+        }
+      ],
+      "compras": [
+        {
+          "med": "En Getsemaní, Jesús sintió el miedo entero y aun así dijo: no se haga mi voluntad, sino la tuya. El impulso de comprar algo que no necesitas casi siempre nace de un miedo que no quieres sentir: miedo a que falte, miedo al aburrimiento, miedo al vacío. Antes de resolverlo comprando, llévalo al huerto: dile a Dios el miedo tal cual es, y pídele que se haga su voluntad y no la del impulso.",
+          "misterio": [
+            "Jesús sudó sangre por el miedo, y no lo resolvió huyendo: lo entregó."
+          ],
+          "maria": [
+            "María, tú también sentiste el filo de la espada y no huiste de él."
+          ],
+          "tema": [
+            "Señor, este miedo que me empuja a comprar, te lo entrego tal cual es.",
+            "Jesús, no se haga mi voluntad de comprar, sino la tuya de confiar.",
+            "Madre, vela conmigo esta hora en que el impulso pesa más que la razón.",
+            "Señor, que no busque en una compra lo que solo la oración me quita.",
+            "Dios mío, tú sudaste sangre por mí. Puedo esperar un poco por ti.",
+            "Jesús, si este cáliz no puede pasar, dame fuerza para beberlo sin comprar.",
+            "Señor, mis apóstoles se durmieron cuando más los necesitaba. Perdona mi prisa.",
+            "Madre, que el miedo de hoy se resuelva rezando, no comprando."
+          ]
+        },
+        {
+          "med": "Cada azote fue un exceso que Jesús no merecía y aun así cargó en su cuerpo. El deseo que hoy te golpea por dentro pidiendo comprar sin freno también es un exceso: no viene de una necesidad real, viene de un apetito que creció más de lo que debía. Jesús azotado sana precisamente eso: los excesos del cuerpo y del deseo que se salieron de su medida.",
+          "misterio": [
+            "Jesús, cargaste en tu cuerpo los excesos que yo no supe medir."
+          ],
+          "maria": [
+            "María, cada azote también te dolió a ti. Acompaña mi falta de medida."
+          ],
+          "tema": [
+            "Señor, sana en mí el deseo que ya no sabe medirse.",
+            "Jesús, por tus llagas soy sanado, también de lo que no sé frenar.",
+            "Madre, que tu Hijo azotado me enseñe a poner límite a mi apetito.",
+            "Señor, columna flagelada, sostén tú lo que a mí me falta de firmeza.",
+            "Dios mío, mi cuerpo pide más y más. Enséñame a decirle basta.",
+            "Jesús, tu carne pagó los excesos ajenos. Que la mía no cobre gustos de más.",
+            "Señor, renuncio hoy a comprar lo que solo calma un capricho de un rato.",
+            "Madre, ponme la medida donde a mí me falta."
+          ]
+        },
+        {
+          "med": "Se burlaron de Jesús vistiéndolo de rey falso, con una corona que hería en vez de honrar. Muchas cosas que compramos prometen exactamente eso: hacernos ver como alguien más, una realeza de mentira que cuesta caro y no corona nada de verdad. Jesús, coronado de espinas, sigue siendo Rey sin necesitar ningún signo exterior. Tu valor tampoco necesita ese disfraz.",
+          "misterio": [
+            "Le pusieron corona de espinas y burlas, y era Rey de verdad debajo de todo."
+          ],
+          "maria": [
+            "María, viste burlado a tu Hijo y no dejaste de reconocer en él al Rey."
+          ],
+          "tema": [
+            "Señor, que no busque coronarme con cosas que en realidad hieren.",
+            "Jesús, tu realeza no necesitó ningún signo exterior. La mía tampoco.",
+            "Madre, quítame las ganas de aparentar lo que no soy comprando algo.",
+            "Señor, coronado de espinas y sin embargo Rey. Enséñame ese valor.",
+            "Dios mío, que mi identidad no dependa de lo que muestro que tengo.",
+            "Jesús, la burla de esa corona no te quitó nada. A mí tampoco, sin ella.",
+            "Señor, quiero la corona que tú prometes, no la que vende una tienda.",
+            "Madre, enséñame a valer por dentro, no por lo que estreno."
+          ]
+        },
+        {
+          "med": "Jesús cargó la cruz cuesta arriba, cansado, sin escaparse del peso ni un solo paso. El tedio de un día sin nada que hacer también es un peso, y la tentación es escaparlo comprando algo nuevo para distraerse. Pero el camino no se acorta huyendo: se camina. Carga hoy el aburrimiento como quien carga una cruz pequeña, sabiendo que también ese camino termina en algo bueno.",
+          "misterio": [
+            "Jesús cargó la cruz sin desviarse ni un paso del camino que le tocaba."
+          ],
+          "maria": [
+            "María, acompañaste el camino sin poder quitarle el peso a tu Hijo."
+          ],
+          "tema": [
+            "Señor, que hoy cargue el aburrimiento sin huir de él comprando algo.",
+            "Jesús, ayúdame como el Cirineo te ayudó: a cargar sin escaparme.",
+            "Madre, cuando el día se sienta pesado y vacío, camina tú a mi lado.",
+            "Señor, que el tedio de hoy no me lo resuelva un paquete, sino tu compañía.",
+            "Dios mío, la Verónica te limpió el rostro con un gesto pequeño. Dame gestos así.",
+            "Jesús, si caigo en el impulso, ayúdame a levantarme y seguir el camino.",
+            "Señor, mi cruz de hoy es aguantar el aburrimiento sin comprarlo.",
+            "Madre, que llegue al final del día sin haber huido de lo que sentía."
+          ]
+        },
+        {
+          "med": "Todo está cumplido, dijo Jesús en la cruz, y lo dijo teniéndolo todo y no teniendo nada: ni ropa, ni posesiones, ni un lugar propio. Y en ese momento se cumplió la salvación entera. A ti hoy te puede bastar con lo que ya tienes, exactamente como a Él le bastó lo que tenía en la cruz: nada material, y todo lo que importa.",
+          "misterio": [
+            "Todo está cumplido. Nada le faltó a Jesús para salvar al mundo, y no tenía nada."
+          ],
+          "maria": [
+            "María, de pie junto a la cruz, sin nada en las manos y con todo en el corazón."
+          ],
+          "tema": [
+            "Señor, que hoy me baste con lo que tengo, como a ti te bastó en la cruz.",
+            "Jesús, todo está cumplido: mi vida también está completa sin esa compra.",
+            "Madre, junto a la cruz aprendiste que lo esencial no se pierde nunca.",
+            "Señor, en tus manos encomiendo hoy también mis ganas de comprar de más.",
+            "Dios mío, tú lo diste todo sin tener nada. Enséñame a dar sin aferrarme.",
+            "Jesús, consumado es: que hoy mi deseo de más también quede consumado.",
+            "Señor, si a ti te bastó la cruz desnuda, que a mí me baste el día de hoy.",
+            "Madre, junto a la cruz hasta el final: quédate también junto a mi impulso."
           ]
         }
       ],
@@ -3104,6 +3202,103 @@
           ]
         }
       ],
+      "compras": [
+        {
+          "med": "Jesús resucitado no volvió a la vida de antes: entró en una vida nueva que ya no termina. El ciclo de comprar algo, sentir el gusto un rato y volver a querer otra cosa es exactamente lo contrario: una rueda que nunca llega a ningún lado. La Resurrección te ofrece salir de esa rueda: una vida que no necesita reiniciarse con cada compra nueva, porque ya está viva de verdad.",
+          "misterio": [
+            "Cristo resucitado rompe para siempre el ciclo de la muerte."
+          ],
+          "maria": [
+            "María, tú fuiste la primera en la alegría de la Resurrección, sin necesitar nada más."
+          ],
+          "tema": [
+            "Señor, sácame del ciclo de comprar, aburrirme y volver a querer otra cosa.",
+            "Jesús, resucitado, dame una vida que no necesite reiniciarse cada semana.",
+            "Madre, que la alegría de hoy sea la tuya de Pascua, no la de un estreno.",
+            "Señor, si tú venciste a la muerte, puedo vencer yo esta rueda pequeña.",
+            "Dios mío, quiero vida nueva, no una cosa nueva.",
+            "Jesús, aleluya: hoy elijo la alegría que no se apaga al abrir el paquete.",
+            "Señor, que cada vez que compre por costumbre, recuerde que ya tengo vida de sobra.",
+            "Madre, contagia mi día de tu alegría de la mañana de Pascua."
+          ]
+        },
+        {
+          "med": "Jesús subió al cielo y les dijo a los suyos: pongan la mirada arriba. No les prohibió mirar la tierra, les pidió no quedarse mirando solo eso. Cuando tu mirada se queda pegada en una pantalla comparando precios y modelos, se te olvida que hay una mirada más alta esperándote. Levanta los ojos hoy antes de levantar la cartera.",
+          "misterio": [
+            "Se elevó a los cielos y ya no midió su gloria por nada de la tierra."
+          ],
+          "maria": [
+            "María, con los ojos puestos en el cielo y los pies bien puestos en la tierra."
+          ],
+          "tema": [
+            "Señor, pon mi corazón arriba, donde tú estás, no en la próxima compra.",
+            "Jesús, subiste al cielo para que yo no viva pegado a las vitrinas.",
+            "Madre, levanta mi mirada hoy antes de que se quede en una pantalla.",
+            "Señor, ¿por qué te quedas mirando lo que no tienes en vez de a Dios?",
+            "Dios mío, mi tesoro está donde tú estás. Que ahí esté mi corazón.",
+            "Jesús, ascendiste sin cargar equipaje. Enséñame a viajar liviano.",
+            "Señor, que mi vista alta de hoy no la baje ninguna oferta.",
+            "Madre, sube conmigo la mirada cada vez que caiga en un catálogo."
+          ]
+        },
+        {
+          "med": "El Espíritu Santo bajó sobre los apóstoles y los llenó de tal manera que ya no necesitaron nada más para salir a hablar sin miedo. El vacío que sientes y que te empuja a comprar no se llena con cosas: se llena con Espíritu. Pide hoy, en serio, que venga Él a llenar ese hueco antes de que lo llenes tú con otra cosa que se va a vaciar de nuevo mañana.",
+          "misterio": [
+            "Vino un ruido del cielo y los llenó por completo. Nada material los había llenado así."
+          ],
+          "maria": [
+            "María, presente en el Cenáculo, ya llena de Dios desde el primer día."
+          ],
+          "tema": [
+            "Ven, Espíritu Santo, llena hoy el vacío que quiero llenar comprando.",
+            "Señor, envía tu Espíritu antes de que yo envíe la tarjeta.",
+            "Jesús, que el fuego de hoy sea el tuyo, no el de una oferta de un día.",
+            "Madre, tú estuviste llena de gracia sin necesitar nada más. Pide eso para mí.",
+            "Espíritu Santo, ven a llenar lo que ninguna compra ha llenado nunca.",
+            "Señor, renueva la faz de mi día: que no la renueve un paquete nuevo.",
+            "Dios mío, sopla sobre este vacío antes de que yo lo tape con otra cosa.",
+            "Jesús, lengua de fuego, quema en mí las ganas de llenarme sin ti."
+          ]
+        },
+        {
+          "med": "María fue llevada al cielo en cuerpo y alma, sin dejar nada suyo atrás que reclamar: toda su vida fue entrega, y esa entrega fue su corona. Nadie sube más liviano que quien no se aferró a nada en la tierra. Cuanto menos te aferres hoy a lo que crees necesitar, más cerca estás de lo que ella ya vive.",
+          "misterio": [
+            "María es llevada al cielo en cuerpo y alma, sin nada terreno que la retuviera."
+          ],
+          "maria": [
+            "María, subiste liviana porque nunca te aferraste a nada de aquí abajo."
+          ],
+          "tema": [
+            "Madre, enséñame a no aferrarme a lo que puedo comprar y perder igual.",
+            "Señor, que suba liviano por la vida, como subió tu Madre al cielo.",
+            "Virgen asunta, líbrame del peso de lo que creo que necesito tener.",
+            "Jesús, tu Madre no dejó nada terreno que reclamar. Que yo tampoco necesite tanto.",
+            "Dios mío, lo que no me llevo al cielo, hoy puedo soltarlo con más calma.",
+            "Madre, tu premio fue no aferrarte a nada. Ayúdame a soltar lo que hoy quiero comprar.",
+            "Señor, que mi corazón viaje liviano, sin equipaje de más.",
+            "Virgen María, asunta en cuerpo y alma, líbrame del apego a las cosas."
+          ]
+        },
+        {
+          "med": "María es coronada Reina, y su corona no la compró: se la dio Dios por haber vivido entregada del todo. Como el hijo pródigo que vuelve a casa sin méritos y su padre lo recibe como hijo y no como jornalero, tú tampoco necesitas ganarte a fuerza de compras un lugar que ya tienes gratis. Ya eres hijo. Esa es la corona que ninguna tienda vende.",
+          "misterio": [
+            "María es coronada Reina del cielo y de la tierra, sin haber comprado nada de esa gloria."
+          ],
+          "maria": [
+            "Reina y Madre, tu corona te la dio Dios por amor, no la ganaste comprando nada."
+          ],
+          "tema": [
+            "Reina del cielo, recuérdame que ya soy hijo, no un cliente que se gana el lugar.",
+            "Señor, como el hijo pródigo, vuelvo a casa sin nada que ofrecer y me recibes igual.",
+            "Madre coronada, tu gloria no se compró. La mía, contigo, tampoco lo necesita.",
+            "Jesús, ya soy tu hijo antes de cualquier compra que haga o deje de hacer.",
+            "Dios mío, mi herencia ya está asegurada. Que no la cambie por un capricho.",
+            "Reina Madre, cúbreme con tu manto cuando sienta que necesito tener más para valer.",
+            "Señor, corona tú mi día con tu paz, no yo con una compra de más.",
+            "Madre, contigo entiendo que ya tengo todo lo que hace falta para ser feliz."
+          ]
+        }
+      ],
       "dormir": [
         {
           "med": "Cada noche, el cristiano baja a su pequeño sepulcro; cada mañana, resucita con Cristo. Los antiguos veían en el sueño un ensayo de la Pascua: te acuestas el viernes cansado o derrotado, y despiertas el domingo. Duerme con fe pascual: la noche entera trabaja a favor del que espera en Dios.",
@@ -5149,6 +5344,103 @@
           ]
         }
       ],
+      "compras": [
+        {
+          "med": "María no compró la paz cuando el ángel llegó con una noticia que le cambiaba la vida entera: la recibió con miedo y aun así dijo que sí. Tú, cuando sientes ese vacío que te empuja a comprar algo que no necesitas, no estás buscando un objeto: estás buscando la misma certeza que buscó ella. Y esa certeza no se compra, se recibe de rodillas. Pídesela hoy, antes de abrir cualquier pantalla.",
+          "misterio": [
+            "Dios entró al mundo sin traer nada, y trajo todo lo que hace falta."
+          ],
+          "maria": [
+            "María, tú dijiste que sí sin saber cómo. Dame de esa confianza que no compra nada."
+          ],
+          "tema": [
+            "Señor, lo que tengo me basta. Tú provees.",
+            "Jesús, este vacío no se llena en una tienda. Lo sabes tú mejor que yo.",
+            "Madre, cuando el impulso de comprar me gane, susúrrame tu sí de Nazaret.",
+            "Señor, antes de abrir el carrito, quiero abrir el corazón.",
+            "Dios mío, no necesito una cosa nueva. Necesito confiar un poco más.",
+            "Jesús, María no negoció su paz con nada material. Que yo tampoco.",
+            "Señor, calma tú la prisa que me lleva a comprar sin pensar.",
+            "Madre, tú esperaste en silencio la promesa. Enséñame a esperar sin comprar."
+          ]
+        },
+        {
+          "med": "María, recién embarazada de Dios, no se quedó atesorando la noticia para sí: salió de prisa a servir a su prima. El que busca llenar un vacío comprando se guarda para sí mismo; el que ama, sale a dar. La próxima vez que sientas ganas de comprar algo que no hace falta, prueba salir a servir a alguien primero: es el mismo impulso, puesto al servicio del amor y no del vacío.",
+          "misterio": [
+            "Jesús, todavía escondido, ya llenabas de alegría una casa entera sin repartir nada."
+          ],
+          "maria": [
+            "María, tu prisa era servicio y no consumo. Cámbiame el impulso, Madre."
+          ],
+          "tema": [
+            "Señor, que mis manos vayan a servir antes que a comprar.",
+            "Jesús, lo que llena una casa de verdad no se envuelve en papel de regalo.",
+            "Madre, cuando quiera algo nuevo, ayúdame a dar algo mío primero.",
+            "Señor, Isabel se alegró con una visita, no con un regalo.",
+            "Dios mío, cambia mis ganas de tener por ganas de dar.",
+            "Jesús, que el saludo de hoy valga más que cualquier compra de hoy.",
+            "Señor, tres meses se quedó María sirviendo sin comprar nada. Dame constancia.",
+            "Madre, engrandece mi alma cuando la sienta chica por no tener algo nuevo."
+          ]
+        },
+        {
+          "med": "Dios nació en un establo prestado, sin nada propio, y no le hizo falta nada más para ser exactamente quien tenía que ser. Si al Hijo de Dios le bastó un pesebre, algo tienes que aprender cuando sientes que lo que tienes hoy no es suficiente. No es pobreza lo que te pide el pesebre: es la certeza de que lo esencial nunca dependió de tener más.",
+          "misterio": [
+            "El dueño de todo nació sin nada propio, y le bastó."
+          ],
+          "maria": [
+            "María, no tenías cuna y tenías al Salvador en los brazos. Eso te bastaba."
+          ],
+          "tema": [
+            "Señor, naciste pobre para enseñarme que lo esencial no se compra.",
+            "Jesús, si a ti te bastó un pesebre, que a mí me baste lo que ya tengo.",
+            "Madre, tú no medías tu alegría en cosas. Ayúdame a medir la mía igual.",
+            "Padre, danos hoy nuestro pan de hoy: no el capricho de mañana.",
+            "Señor, gloria a ti en el cielo, y paz aquí adentro, sin necesitar más.",
+            "Jesús, naces hoy en mi corazón, no en mi lista de compras.",
+            "Dios mío, lo que tengo hoy ya es un regalo tuyo. Ayúdame a verlo.",
+            "Señor, José proveyó lo justo y bastó. Enséñame a conformarme con lo justo."
+          ]
+        },
+        {
+          "med": "José y María llevaron al Niño al templo y lo entregaron: no lo retuvieron para sí, lo pusieron en manos de Dios. Lo contrario de comprar por impulso es justamente esto: ofrecer, soltar, entregar. Cuando sientas el impulso de quedarte con algo que no necesitas, prueba el gesto inverso: entrega algo, ofrece algo, suelta algo. Ahí es donde se rompe el ciclo.",
+          "misterio": [
+            "Jesús, te dejaste llevar en brazos ajenos, tú que sostienes el mundo entero."
+          ],
+          "maria": [
+            "María, entregaste en el templo lo que más amabas. Enséñame a soltar."
+          ],
+          "tema": [
+            "Señor, hoy prefiero ofrecerte algo que comprarme algo.",
+            "Jesús, Simeón esperó toda la vida sin necesitar tener nada. Dame esa paz.",
+            "Madre, lo que suelto hoy no lo pierdo: lo entrego al que provee.",
+            "Señor, luz de las naciones, alúmbrame antes de que abra la cartera.",
+            "Padre, si me apura el deseo de comprar, detenme tú primero.",
+            "Jesús, en tus brazos aprendo que no necesito acumular para estar en paz.",
+            "Señor, ofrecieron dos palomas porque no daba para más. Y bastó.",
+            "Virgen del templo, quítame el apuro de querer todo ya."
+          ]
+        },
+        {
+          "med": "Tres días buscaron José y María a Jesús, y no lo encontraron en ningún mercado ni en ninguna caravana: estaba quieto, en la casa de su Padre. Cuando algo te falta y sales corriendo a llenarlo comprando, es fácil buscar en el lugar equivocado. Lo que de verdad se te perdió no está en una tienda: está donde siempre estuvo, esperándote en silencio.",
+          "misterio": [
+            "Dios de doce años, quieto en la casa del Padre mientras el mundo lo buscaba afuera."
+          ],
+          "maria": [
+            "María, caminaste tres días buscando lo que ya estaba cerca de ti."
+          ],
+          "tema": [
+            "Jesús, lo que busco comprando ya lo tengo, y está en tu casa.",
+            "Señor, si perdí la paz es porque te perdí de vista, no porque me falte algo.",
+            "Madre, ayúdame a buscar donde de verdad estás, no en el próximo carrito.",
+            "Jesús, vivías tranquilo porque vivías en el Padre. Ese es el secreto.",
+            "Señor, tres días de búsqueda y estabas donde siempre. El que se fue soy yo.",
+            "Dios mío, nada me falta si te tengo a ti. Ayúdame a creerlo hoy.",
+            "Virgen de Nazaret, en tu casa había lo justo y había Dios. Así quiero la mía.",
+            "Señor, cuando te encuentro, hasta las ganas de comprar se me olvidan."
+          ]
+        }
+      ],
       "dormir": [
         {
           "med": "Dios le hablaba a José mientras dormía: sus mensajes le llegaron en sueños. Dormir no es perder el tiempo ni desertar de tus problemas: es confiárselos a Dios, que trabaja de noche. Di tu hágase y acuéstate en paz: el mundo queda en las manos del Padre.",
@@ -7191,6 +7483,103 @@
             "Corazón de Jesús, en Vos confío. Yo solo no puedo con nada.",
             "Madre, llévame al confesionario aunque me dé vergüenza.",
             "Jesús, que en mi casa yo también sepa arrodillarme."
+          ]
+        }
+      ],
+      "compras": [
+        {
+          "med": "En el Jordán, el Padre no dijo «este es mi Hijo porque tiene esto o aquello»: dijo «este es mi Hijo amado», sin condición ninguna. Tu valor tampoco se mide en lo que compras ni en lo que estrenas: ya eres hijo amado antes de cualquier compra, y lo seguirás siendo si nunca compras esa cosa que hoy te tienta. Escucha esa voz antes de escuchar la del anuncio.",
+          "misterio": [
+            "Se abrieron los cielos y bajó el Espíritu como paloma sobre el Hijo amado."
+          ],
+          "maria": [
+            "María, tú supiste siempre quién era tu Hijo sin que nada lo demostrara."
+          ],
+          "tema": [
+            "Padre, soy tu hijo amado aunque hoy no compre nada nuevo.",
+            "Señor, mi valor no sube ni baja con lo que tengo en las manos.",
+            "Jesús, bautízame de nuevo en la certeza de que ya soy suficiente.",
+            "Espíritu Santo, baja sobre mis ganas de comprar y aquiétalas.",
+            "Madre, recuérdame quién soy cuando el anuncio me diga quién debería ser.",
+            "Señor, tu voz me nombra amado. La del marketing solo me nombra cliente.",
+            "Dios mío, que hoy me baste con ser tuyo.",
+            "Jesús, tu identidad no dependió de nada que se compra. La mía tampoco."
+          ]
+        },
+        {
+          "med": "En Caná faltó algo real, y María lo notó antes que nadie: no fue ella a comprar más vino, fue a pedírselo a su Hijo. Cuando notes que algo te falta, antes de salir a comprarlo, prueba el camino de María: nómbraselo a Jesús y espera. Lo que Él transforma alcanza y sobra; lo que uno compra por su cuenta, tarde o temprano vuelve a faltar.",
+          "misterio": [
+            "Jesús, tu primera señal fue transformar lo poco en más que suficiente."
+          ],
+          "maria": [
+            "María, notaste lo que faltaba y se lo dijiste a tu Hijo, no lo compraste tú sola."
+          ],
+          "tema": [
+            "Madre, lo que hoy siento que me falta, te lo digo a ti primero.",
+            "Señor, hagan lo que Él les diga: hoy quiero obedecer antes que comprar.",
+            "Jesús, transforma tú lo poco que tengo en lo que de verdad necesito.",
+            "Señor, el vino nuevo lo pusiste tú, no lo compró nadie. Provee tú también.",
+            "Madre, confiaste sin ver la solución todavía. Dame esa misma calma.",
+            "Jesús, que lo que me falta se lo pida a ti antes que a una tienda.",
+            "Señor, guardaste el mejor vino para el final. Confío en que provees a tiempo.",
+            "Dios mío, lo poco contigo alcanza. Lo mucho sin ti, nunca alcanza."
+          ]
+        },
+        {
+          "med": "Jesús no empezó a predicar diciendo «cambien de compras», dijo «conviértanse», cambien el corazón. El problema nunca fue el objeto que estás por comprar: es hacia dónde mira tu corazón cuando lo compras. Convertirse hoy no es prohibirte algo, es voltear la mirada de la próxima cosa hacia el Reino que ya tienes cerca.",
+          "misterio": [
+            "El Reino de Dios está cerca, y no se anuncia en ninguna vitrina."
+          ],
+          "maria": [
+            "María, tu corazón entero miraba al Reino. Voltea el mío hacia allá también."
+          ],
+          "tema": [
+            "Señor, convierte mi corazón, no solo mi lista de compras.",
+            "Jesús, el Reino que buscas no está en ninguna tienda. Recuérdamelo hoy.",
+            "Madre, que mi conversión de hoy sea de mirada, no solo de conducta.",
+            "Señor, arrepiéntete y cree: hoy elijo creer que ya tengo lo que necesito.",
+            "Dios mío, que buscar tu Reino me quite las ganas de buscar otra cosa.",
+            "Jesús, tu Reino no se compra ni se estrena. Se recibe.",
+            "Señor, cambia mi corazón antes de que cambie mi carrito.",
+            "Madre, ayúdame a predicarme a mí mismo la conversión que hoy necesito."
+          ]
+        },
+        {
+          "med": "En el Tabor, por un instante, los apóstoles vieron una gloria que ningún objeto terreno puede dar: la del mismo Dios. Cualquier cosa nueva que compres brillará un rato y después será como cualquier otra; esa gloria, en cambio, no se apaga. Pide hoy ver, aunque sea un instante, que ya tienes cerca una gloria más grande que cualquier estreno.",
+          "misterio": [
+            "Su rostro resplandeció como el sol. Ninguna cosa comprada brilla así."
+          ],
+          "maria": [
+            "María, tú viste esa gloria sin necesitar tocarla ni poseerla."
+          ],
+          "tema": [
+            "Señor, muéstrame un instante de tu gloria antes de que busque otra.",
+            "Jesús, lo que brilla de verdad no se compra ni se estrena.",
+            "Madre, que prefiera contemplarte a ti que mirar una vitrina.",
+            "Señor, este es mi Hijo amado, escúchenlo. Hoy elijo escucharte primero.",
+            "Dios mío, que la gloria que busco no sea la de lo nuevo, sino la tuya.",
+            "Jesús, bajaste del monte y seguiste siendo el mismo. Que yo también me baste.",
+            "Señor, transfigúrame el deseo: que brille lo eterno, no lo pasajero.",
+            "Madre, guarda tú esto en tu corazón. Guárdame a mí también."
+          ]
+        },
+        {
+          "med": "Este es mi Cuerpo, dijo Jesús, y desde entonces ese pan sacia lo que ningún otro pan sacia. La caza de lo nuevo promete llenarte y, apenas lo tienes en las manos, ya se te fue el interés: el paquete se abre y el deseo se apaga solo. La Eucaristía es lo único que no se agota al recibirlo: cada vez que comulgas de verdad, sacia y deja hambre de más de lo mismo, no de otra cosa.",
+          "misterio": [
+            "Tomó el pan, lo partió, y ese pan sigue saciando hoy lo que ninguna cosa sacia."
+          ],
+          "maria": [
+            "María, tú llevaste a Jesús en tu cuerpo antes que nadie. Que yo lo lleve bien."
+          ],
+          "tema": [
+            "Señor, que tu pan me sacie más que cualquier paquete que espero.",
+            "Jesús, lo que compro se agota apenas lo abro. Tú, no.",
+            "Madre, prepárame para comulgar como quien tiene hambre de verdad.",
+            "Señor, hagan esto en memoria mía: que mi memoria de hoy sea tuya.",
+            "Dios mío, ninguna caja me va a saciar como tu Cuerpo me sacia.",
+            "Jesús, permaneced en mí: quiero quedarme, no salir a comprar.",
+            "Señor, el hambre que siento hoy es de ti, aunque se disfrace de otra cosa.",
+            "Madre, acompáñame a comulgar con más hambre de Dios que de cosas."
           ]
         }
       ],
