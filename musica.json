@@ -35,6 +35,15 @@
    "bytes": 4800384,
    "bps": 8000,
    "seg": 600.05
+  },
+  {
+   "id": "chant-of-the-mystics",
+   "nombre": "Chant of the Mystics",
+   "fuente": "https://www.youtube.com/watch?v=zq_uWsjvQdg",
+   "archivo": "musica/chant-of-the-mystics-bb63a07f.mp3",
+   "bytes": 3680352,
+   "bps": 8000,
+   "seg": 460.04
   }
  ]
 }
