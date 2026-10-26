@@ -80,7 +80,8 @@
     "dormir": "Cuando no puedo dormir",
     "planes": "Cuando mis planes no salen como quiero",
     "voluntad": "Cuando me cuesta aceptar la voluntad de Dios",
-    "compras": "Cuando quiero comprar algo que no necesito"
+    "compras": "Cuando quiero comprar algo que no necesito",
+    "combate": "Combate espiritual interior"
   },
   "contenido": {
     "dolorosos": {
@@ -4487,6 +4488,128 @@
             "Señor, si te pierdo de vista, pierdo la paz. Que no te pierda.",
             "Dios mío, nada soy; pero lo que soy es todo tuyo. Toma esta noche.",
             "Madre, después del susto volvieron juntos a Nazaret. Gracias."
+          ]
+        }
+      ],
+      "combate": [
+        {
+          "med": "Hijo mío, mira el silencio de Nazaret: el Verbo eterno se encarnó sin trompetas ni ruidos, en la paz de mi corazón humilde. ¿Por qué huyes tanto del silencio? Tienes miedo de quedarte a solas porque temes ver tu vacío, pero ese vacío fue creado para Dios, no para pantallas ni compras. Yo soy tu Madre: entra en mi regazo, aquieta tu mente y deja que Jesús nazca hoy en tu pequeñez.",
+          "misterio": [
+            "El Verbo se hizo carne en el silencio de Nazaret.",
+            "Jesús, te abajaste hasta el seno de una Virgen humilde."
+          ],
+          "maria": [
+            "Madre del silencio, enséñame a acallar el ruido de mi alma.",
+            "María, en tu sí encontré la paz que el mundo no me da."
+          ],
+          "tema": [
+            "Hijo, deja el celular y mírame: nada de lo que buscas te saciará.",
+            "Madre, me da pavor estar quieto; abrázame y dame tu paz.",
+            "Hijo mío, tu valor no está en lo que haces, sino en que eres mío.",
+            "Virgen María, arráncame la necesidad de estar siempre activo.",
+            "Hijo, calla el ruido de tu mente; en la quietud te espera Dios.",
+            "Madre mía, perdona mis fugas a las pantallas cuando me siento solo.",
+            "Hijo, no necesitas comprar nada nuevo para llenar tu corazón.",
+            "Jesús, que tu silencio en Nazaret venza mi apego a la novedad.",
+            "Madre Santa, enséñame a descansar en Dios sin culpa ni ansiedad.",
+            "Hijo, Dios no te ama por ser perfecto; te ama porque es tu Padre.",
+            "Virgen del Amor Hermoso, reina soberana sobre mis pensamientos."
+          ]
+        },
+        {
+          "med": "Hijo de mi corazón, apenas supe que Isabel me necesitaba, no me quedé encerrada en mis planes ni buscando compensaciones; me levanté y fui de prisa por la montaña a servir. Tu mente se desgasta rumiando el futuro, temiendo que el negocio quiebre o amargándote con los tuyos. Sal de esa prisión interior: mira a tu esposa Carol, mira a tu hijo José. El verdadero descanso no es aislarte en un juego; es darte con ternura a los que Dios te dio.",
+          "misterio": [
+            "Bendita tú entre las mujeres y bendito el fruto de tu vientre.",
+            "Apenas oí tu voz, la criatura saltó de gozo en mi seno."
+          ],
+          "maria": [
+            "Madre servidora, hazme salir de mi egoísmo melancólico.",
+            "María, tú llevaste a Jesús y la alegría inundó la casa."
+          ],
+          "tema": [
+            "Hijo mío, deja la amargura; el amor verdadero se dona sin quejas.",
+            "Madre, quítame el mal humor cuando mis planes se tuercen.",
+            "Hijo, mira a tu esposa con mis ojos de ternura y no con rivalidad.",
+            "Virgen María, enséñame a no desquitar mi estrés con los inocentes.",
+            "Hijo, deja de pelear por tener la razón; la mansedumbre vence todo.",
+            "Madre, libérame de la ira y del berrinche cuando pierdo el control.",
+            "Hijo mío, un abrazo a los tuyos vale más que ganar cualquier juego.",
+            "Señor Jesús, sella mi boca para no herir con palabras duras.",
+            "Hijo, aprende de mí a caminar con prisa al servicio y con calma.",
+            "Madre, transforma mi orgullo herido en paciencia cristiana.",
+            "Virgen Santísima, que en mi hogar se respire tu paz y tu alegría."
+          ]
+        },
+        {
+          "med": "Hijo mío, contempla a tu Dios acostado en un pesebre de paja, entre el frío y la austeridad. Si el Creador del cielo no necesitó lujos, ni aparatos, ni compras para ser feliz, ¿por qué caes en la trampa de creer que cada antojo es una necesidad? La dopamina de la compra te promete el cielo y te deja el alma vacía a los diez minutos. Mírame a mí y a mi Niño: la sencillez y la sobriedad son la verdadera libertad. Aprende a decir: Dios me basta.",
+          "misterio": [
+            "Nació Jesús en Belén, y los ángeles cantaron la gloria de Dios.",
+            "Envolviste a tu Niño en pañales y lo acostaste en un pesebre."
+          ],
+          "maria": [
+            "Madre de los pobres, enséñame la alegría del desprendimiento.",
+            "María, tu riqueza fue tener a Jesús entre tus brazos virginales."
+          ],
+          "tema": [
+            "Hijo, no compres cosas para tapar el dolor; tráeme tu herida a mí.",
+            "Madre mía, rompe las cadenas del impulso y la compra desordenada.",
+            "Hijo mío, la paz no viene en una caja de encomienda ni en un juego.",
+            "Jesús pobre en Belén, sana mi apego al dinero y a la novedad.",
+            "Hijo, descansa en la paja de mi pesebre: lo que tienes te basta.",
+            "Madre, quítame la astucia de justificar gastos que no necesito.",
+            "Hijo, no arriesgues la tranquilidad de tu hogar por un capricho.",
+            "Virgen María, enséñame a disfrutar lo que ya está sobre mi mesa.",
+            "Hijo mío, vence la cacería de compras con la adoración en silencio.",
+            "Señor, Tú eres mi herencia y mi copa: nada me falta si te tengo.",
+            "Madre bondadosa, cobíjame en tu manto cuando queme la tentación."
+          ]
+        },
+        {
+          "med": "Hijo mío, cuando puse a mi pequeño Jesús en los brazos del anciano Simeón, escuché la profecía: una espada atravesará tu propia alma. No entré en pánico ni me desesperé por el dolor futuro; confié plenamente en la Providencia del Padre. Tú vives aterrorizado pensando que tu negocio va a quebrar, que no va a alcanzar el dinero, que el mundo se acaba. Entrega tus temores en el altar del templo. El Dios que te ha sostenido seis años no te abandonará hoy.",
+          "misterio": [
+            "Luz para alumbrar a las naciones y gloria de tu pueblo Israel.",
+            "Una espada atravesará tu alma para que se revelen muchos corazones."
+          ],
+          "maria": [
+            "Madre del dolor sereno, enséñame a no temerle al sufrimiento.",
+            "María, entregaste a tu Hijo al Padre con abandono absoluto."
+          ],
+          "tema": [
+            "Hijo mío, no te angusties por el mañana: mi Padre cuida de ti.",
+            "Madre mía, pongo las ventas y las deudas en las llagas de Jesús.",
+            "Hijo, el miedo al futuro es una mentira del demonio; confía.",
+            "Virgen María, arráncame el catastrofismo y la obsesión de control.",
+            "Hijo, ¿cuándo te ha faltado el pan? Mira hacia atrás y da gracias.",
+            "Señor Jesús, líbrame del pánico económico y de la desconfianza.",
+            "Hijo mío, la espada del dolor ofrecida a Dios se convierte en gracia.",
+            "Madre, enséñame a aceptar los imprevistos con paz y sin quejas.",
+            "Hijo, camina en la fe: Dios abre puertas donde no ves camino.",
+            "Jesús, en tus manos encomiendo mi trabajo, mi tienda y mi hogar.",
+            "Madre de la Esperanza, sé mi fortaleza cuando me falte el ánimo."
+          ]
+        },
+        {
+          "med": "Hijo mío, cuando José y yo no encontrábamos a Jesús, lo buscamos con angustia durante tres días hasta hallarlo en la casa de su Padre. Cuando tú caes en tus vicios, en tus compras o en tu ira, tu mente te dice: 'Dios ya no te ama, escóndete de Él'. ¡Qué engaño tan grande! No te escondas entre los árboles como Adán. Yo te busco con lágrimas de Madre cada vez que te extravías. Ven corriendo a mis brazos: la misericordia de Jesús es infinita y su amor por ti jamás se acaba.",
+          "misterio": [
+            "¿Por qué me buscabais? ¿No sabíais que debo ocuparme de mi Padre?",
+            "Bajó con ellos a Nazaret y vivía sujeto a ellos."
+          ],
+          "maria": [
+            "Madre del Buen Pastor, encuéntrame cuando me pierdo en el pecado.",
+            "María, guardabas todas estas cosas meditándolas en tu corazón."
+          ],
+          "tema": [
+            "Hijo mío, no te escondas de Dios: Él te ama en medio de tu miseria.",
+            "Madre, cuando caigo me da vergüenza orar; tómame de la mano.",
+            "Hijo, Dios no te retira su amor cuando fallas: te espera para sanarte.",
+            "Virgen María, destruye la mentira del acusador que me roba la paz.",
+            "Hijo, la Comunión y la Confesión son tus medicinas, no un premio.",
+            "Señor Jesús, Tú conoces mi barro: ten compasión de este hijo débil.",
+            "Hijo mío, no te quedes en el suelo sintiendo culpa; ven a mí.",
+            "Madre Santísima, rescátame de la trampa del escrúpulo y el miedo.",
+            "Hijo, quien persevera a mi lado jamás se perderá; descansa en mi amor.",
+            "Jesús, manso y humilde de corazón, haz el mío semejante al tuyo.",
+            "Madre mía, a ti me consagro hoy y para siempre: soy todo tuyo."
           ]
         }
       ],

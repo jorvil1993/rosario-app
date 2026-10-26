@@ -306,11 +306,33 @@ function pintarHome(){
     return false;
   };
   const ids = Object.keys(TEMAS);
-  let top = ids.filter(esDestacado);
+  let top = ids.filter(t => t !== "combate" && esDestacado(t));
   if(!top.length) top = ids.slice(0, 5);          // formato viejo: los 5 primeros
   const resto = ids.filter(t => !top.includes(t));
 
-  const elegir = tid => {
+  const TEMA_PIN_HASH = "ac5c52d20b6c83c13fbcd256c64f6c3b83f8a0f750ae1485b321dc3444dc286e";
+  async function verificarClaveTema(tid){
+    if(tid !== "combate") return true;
+    if(sessionStorage.getItem("combate_unlocked") === "1") return true;
+    const pin = prompt("Categoría protegida. Ingresa la contraseña de acceso:");
+    if(!pin) return false;
+    try {
+      const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(pin.trim()));
+      const hash = Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, "0")).join("");
+      if(hash === TEMA_PIN_HASH){
+        sessionStorage.setItem("combate_unlocked", "1");
+        return true;
+      }
+    } catch(e){}
+    alert("Contraseña incorrecta.");
+    return false;
+  }
+
+  const elegir = async tid => {
+    if(!(await verificarClaveTema(tid))){
+      pintarHome();
+      return;
+    }
     sel.tema = tid; pintarHome();
     // llevar directo a los botones de acción, sin scroll manual
     $("btn-rezar").scrollIntoView({behavior:"smooth", block:"center"});
@@ -320,7 +342,7 @@ function pintarHome(){
     const b = document.createElement("button");
     b.className = "opt tema" + (sel.tema===tid ? " sel":"") + (sel.set && !hay ? " off":"");
     b.innerHTML = TEMAS[tid] + (sel.set && !hay ? " <small>· próximamente</small>":"");
-    b.onclick = ()=> elegir(tid);
+    b.onclick = async ()=> await elegir(tid);
     ct.appendChild(b);
   }
   if(resto.length){
@@ -338,7 +360,7 @@ function pintarHome(){
       o.textContent = TEMAS[tid] + (sel.set && !hay ? " · próximamente" : "");
       sl.appendChild(o);
     }
-    sl.onchange = ()=>{ if(sl.value) elegir(sl.value); };
+    sl.onchange = async ()=>{ if(sl.value) await elegir(sl.value); };
     ct.appendChild(sl);
   }
   pintarMusica();
@@ -963,6 +985,9 @@ $("btn-instalar").onclick = async ()=>{
   // el tema sí se recuerda de la última vez.
   sel.set = setDelDia();
   sel.tema = (guardada && TEMAS[guardada.tema]) ? guardada.tema : null;
+  if(sel.tema === "combate" && sessionStorage.getItem("combate_unlocked") !== "1"){
+    sel.tema = null;
+  }
   $("cargando").style.display = "none";
   show("scr-home");
   pintarHome();
